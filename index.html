@@ -18,6 +18,7 @@
                 <div class="flex-shrink-0">
                     <a href="/" class="text-xl font-bold">Aventra Systems</a>
                 </div>
+                <!-- Desktop Menu -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a href="#solutions" class="text-gray-700 hover:text-gray-900 px-3 py-2">Solutions</a>
@@ -28,6 +29,28 @@
                         <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-md">Contact</a>
                     </div>
                 </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger icon -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+                <a href="#solutions" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Solutions</a>
+                <a href="#industries" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Industries</a>
+                <a href="#resources" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Resources</a>
+                <a href="#impact" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Impact</a>
+                <a href="#about" class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="#contact" class="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
             </div>
         </div>
     </nav>
@@ -220,6 +243,56 @@
             </div>
         </div>
     </section>
+    
+    <!-- Resources Section -->
+    <section id="resources" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Resources</h2>
+                <p class="mt-4 text-lg text-gray-600">
+                    Resources to help MSMEs make better, faster, and safer decisions.
+                </p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <!-- Blog/Insights -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Blog & Insights</h3>
+                    <ul class="space-y-4 mb-6">
+                        <li class="text-gray-600">MCB vs MCCB Basics</li>
+                        <li class="text-gray-600">GST-ready invoicing</li>
+                        <li class="text-gray-600">AI wins in procurement</li>
+                        <li class="text-gray-600">FAT vs SAT</li>
+                        <li class="text-gray-600">Top mistakes in MSME projects</li>
+                    </ul>
+                    <a href="#blog" class="text-blue-600 hover:text-blue-800 font-medium">View All Insights →</a>
+                </div>
+
+                <!-- Downloads -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Downloads</h3>
+                    <ul class="space-y-4 mb-6">
+                        <li class="text-gray-600">Product Catalog</li>
+                        <li class="text-gray-600">Panel Manufacturing Checklist</li>
+                        <li class="text-gray-600">MSME Digital Audit Checklist</li>
+                    </ul>
+                    <a href="#downloads" class="text-blue-600 hover:text-blue-800 font-medium">Download Resources →</a>
+                </div>
+
+                <!-- FAQs -->
+                <div class="bg-gray-50 rounded-xl p-8">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">FAQs</h3>
+                    <ul class="space-y-4 mb-6">
+                        <li class="text-gray-600">Siemens products</li>
+                        <li class="text-gray-600">ERP-lite adoption</li>
+                        <li class="text-gray-600">Site installation</li>
+                        <li class="text-gray-600">Training programs</li>
+                    </ul>
+                    <a href="#faqs" class="text-blue-600 hover:text-blue-800 font-medium">More FAQs →</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Impact Section -->
     <section id="impact" class="py-20 bg-gray-50">
@@ -263,6 +336,72 @@
                         <li class="text-gray-600">Sustainable operations training</li>
                     </ul>
                     <a href="#sustainability" class="text-blue-600 hover:text-blue-800 font-medium">Explore Our Efforts →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">About Us</h2>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <!-- Mission & Vision -->
+                <div class="bg-white rounded-xl p-8 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Mission & Vision</h3>
+                    <p class="text-gray-600 mb-4">
+                        Empowering industries and MSMEs with smart electrical solutions and digital transformation for sustainable growth.
+                    </p>
+                </div>
+
+                <!-- Company Story -->
+                <div class="bg-white rounded-xl p-8 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Company Story</h3>
+                    <p class="text-gray-600 mb-4">
+                        From humble beginnings to becoming a trusted partner in industrial solutions, our journey is built on expertise and innovation.
+                    </p>
+                </div>
+
+                <!-- Leadership -->
+                <div class="bg-white rounded-xl p-8 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Leadership</h3>
+                    <p class="text-gray-600 mb-4">
+                        Led by industry veterans with decades of experience in electrical systems, automation, and MSME consulting.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <!-- Certifications -->
+                <div class="bg-white rounded-xl p-8 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Certifications</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>ISO 9001:2015</li>
+                        <li>Siemens Certified Partner</li>
+                        <li>IS/IEC Compliance</li>
+                    </ul>
+                </div>
+
+                <!-- Partnerships -->
+                <div class="bg-white rounded-xl p-8 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Partnerships</h3>
+                    <p class="text-gray-600 mb-4">
+                        Strategic alliances with global technology leaders and local industry bodies to deliver comprehensive solutions.
+                    </p>
+                </div>
+
+                <!-- Careers -->
+                <div class="bg-white rounded-xl p-8 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Careers</h3>
+                    <p class="text-gray-600 mb-4">
+                        Join our team of innovators shaping the future of industrial technology and MSME growth.
+                    </p>
+                    <a href="#careers" class="text-blue-600 hover:text-blue-800 font-medium">View Opportunities →</a>
                 </div>
             </div>
         </div>
@@ -354,6 +493,33 @@
         </div>
     </section>
 
+    <script>
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            const isMenuHidden = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            
+            // Add slide animation classes
+            if (isMenuHidden) {
+                mobileMenu.classList.add('animate-slide-in');
+                mobileMenu.classList.remove('animate-slide-out');
+            } else {
+                mobileMenu.classList.add('animate-slide-out');
+                mobileMenu.classList.remove('animate-slide-in');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        Array.from(mobileMenuLinks).forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
     <script src="js/main.js"></script>
 </body>
 </html>
