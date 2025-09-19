@@ -9,6 +9,27 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <style>
+        .left-fade-in {
+            opacity:0;
+            transform: translateX(-10%);
+            transition: all 1s;
+        }
+        .animate-fade-in-from-left {
+            transform: translateX(0);
+            opacity:1;
+        }
+        
+        .bottom-fade-in {
+            opacity:0;
+            transform: translateY(20%);
+            transition: all 1s;
+        }
+        .animate-fade-in-from-bottom {
+            transform: translateY(0);
+            opacity:1;
+        }
+    </style>
 </head>
 <body class="font-sans">
     <!-- Navigation -->
@@ -106,27 +127,27 @@
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">
                     Why Aventra
                 </h2>
             </div>
             <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
                 <!-- Integration -->
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Integration</h3>
                     <p class="text-gray-600">
                         Electrical systems, panels, and switchgears delivered together for seamless performance and one-point accountability.
                     </p>
                 </div>
                 <!-- Digital Mindset -->
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Digital Mindset</h3>
                     <p class="text-gray-600">
                         AI-ready consulting, ERP-lite processes, and MSME transformation that bridge traditional operations with future technology.
                     </p>
                 </div>
                 <!-- Future-Ready -->
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Future-Ready</h3>
                     <p class="text-gray-600">
                         Solutions that are sustainable, scalable, and designed to help clients grow confidently for the long term.
@@ -140,13 +161,13 @@
     <section id="solutions" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">
                     Our Solutions
                 </h2>
             </div>
             <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <!-- Trading -->
-                <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-lg">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-4">Trading</h3>
                     <p class="text-gray-600 mb-6">
                         Genuine Siemens low-voltage components including MCBs, MCCBs, ACBs, RCCBs/RCBOs, relays, drives, meters, terminals, and busbars.
@@ -158,7 +179,7 @@
                 </div>
 
                 <!-- Panel Manufacturing -->
-                <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-lg">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-4">Panel Manufacturing</h3>
                     <p class="text-gray-600 mb-6">
                         Custom-engineered panels for industries and government projects: PCC, MCC, distribution boards, automation & control panels, and OEM solutions — IS/IEC compliant with FAT/SAT.
@@ -170,7 +191,7 @@
                 </div>
 
                 <!-- Consulting -->
-                <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-lg">
                     <h3 class="text-2xl font-semibold text-gray-900 mb-4">Consulting</h3>
                     <p class="text-gray-600 mb-6">
                         Tailored consulting for MSMEs: process audits, ERP-lite setups, GST-ready workflows, AI-driven assistants, and training for sustainable transformation.
@@ -188,13 +209,13 @@
     <section id="industries" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">
                     Industries We Serve
                 </h2>
             </div>
             <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Steel -->
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Steel</h3>
                     <p class="text-gray-600">
                         Reliable MCCs and control systems designed to maximize uptime, safety, and productivity in demanding mill environments.
@@ -202,7 +223,7 @@
                 </div>
 
                 <!-- Cement -->
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Cement</h3>
                     <p class="text-gray-600">
                         Rugged panels and switchgear built to handle harsh conditions, reduce trips, and extend equipment life.
@@ -210,7 +231,7 @@
                 </div>
 
                 <!-- FMCG -->
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">FMCG</h3>
                     <p class="text-gray-600">
                         Hygienic, traceable, and audit-ready electrical systems to support fast-moving, compliance-driven production.
@@ -218,7 +239,7 @@
                 </div>
 
                 <!-- Water/Infrastructure -->
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Water / Infrastructure</h3>
                     <p class="text-gray-600">
                         Panels and automation solutions for pumping, treatment, and distribution — with full compliance to utility standards.
@@ -226,7 +247,7 @@
                 </div>
 
                 <!-- Government & EB -->
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Government & EB</h3>
                     <p class="text-gray-600">
                         Tender-ready documentation and IS/IEC-aligned panels tailored for government projects and distribution utilities.
@@ -234,7 +255,7 @@
                 </div>
 
                 <!-- Commercial -->
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Commercial</h3>
                     <p class="text-gray-600">
                         Safe, aesthetic, and efficient panels for commercial complexes, institutions, and residential projects.
@@ -248,7 +269,7 @@
     <section id="resources" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Resources</h2>
+                <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">Resources</h2>
                 <p class="mt-4 text-lg text-gray-600">
                     Resources to help MSMEs make better, faster, and safer decisions.
                 </p>
@@ -256,7 +277,7 @@
 
             <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <!-- Blog/Insights -->
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Blog & Insights</h3>
                     <ul class="space-y-4 mb-6">
                         <li class="text-gray-600">MCB vs MCCB Basics</li>
@@ -269,7 +290,7 @@
                 </div>
 
                 <!-- Downloads -->
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Downloads</h3>
                     <ul class="space-y-4 mb-6">
                         <li class="text-gray-600">Product Catalog</li>
@@ -280,7 +301,7 @@
                 </div>
 
                 <!-- FAQs -->
-                <div class="bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">FAQs</h3>
                     <ul class="space-y-4 mb-6">
                         <li class="text-gray-600">Siemens products</li>
@@ -298,7 +319,7 @@
     <section id="impact" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Our Impact</h2>
+                <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">Our Impact</h2>
                 <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
                     Aventra measures success not just by products delivered, but by the impact created. From reducing downtime in industries to helping MSMEs adopt digital practices, we focus on outcomes that matter.
                 </p>
@@ -306,7 +327,7 @@
 
             <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <!-- Case Studies -->
-                <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-lg">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Case Studies</h3>
                     <ul class="space-y-4 mb-6">
                         <li class="text-gray-600">Steel Plant — Reduced Downtime (15% improvement)</li>
@@ -317,7 +338,7 @@
                 </div>
 
                 <!-- Testimonials -->
-                <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-lg">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Client Testimonials</h3>
                     <div class="space-y-6 mb-6">
                         <blockquote class="text-gray-600 italic">
@@ -328,7 +349,7 @@
                 </div>
 
                 <!-- Sustainability -->
-                <div class="bg-white rounded-xl p-8 shadow-lg">
+                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-lg">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Sustainability & Growth</h3>
                     <ul class="space-y-4 mb-6">
                         <li class="text-gray-600">Energy-efficient panel solutions</li>
@@ -347,12 +368,12 @@
     <section id="about" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">About Us</h2>
+                <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">About Us</h2>
             </div>
 
             <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <!-- Mission & Vision -->
-                <div class="bg-white rounded-xl p-8 shadow-sm">
+                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-sm">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Mission & Vision</h3>
                     <p class="text-gray-600 mb-4">
                         Empowering industries and MSMEs with smart electrical solutions and digital transformation for sustainable growth.
@@ -360,7 +381,7 @@
                 </div>
 
                 <!-- Company Story -->
-                <div class="bg-white rounded-xl p-8 shadow-sm">
+                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-sm">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Company Story</h3>
                     <p class="text-gray-600 mb-4">
                         From humble beginnings to becoming a trusted partner in industrial solutions, our journey is built on expertise and innovation.
@@ -368,7 +389,7 @@
                 </div>
 
                 <!-- Leadership -->
-                <div class="bg-white rounded-xl p-8 shadow-sm">
+                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-sm">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Leadership</h3>
                     <p class="text-gray-600 mb-4">
                         Led by industry veterans with decades of experience in electrical systems, automation, and MSME consulting.
@@ -378,7 +399,7 @@
 
             <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <!-- Certifications -->
-                <div class="bg-white rounded-xl p-8 shadow-sm">
+                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-sm">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Certifications</h3>
                     <ul class="space-y-2 text-gray-600">
                         <li>ISO 9001:2015</li>
@@ -388,7 +409,7 @@
                 </div>
 
                 <!-- Partnerships -->
-                <div class="bg-white rounded-xl p-8 shadow-sm">
+                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-sm">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Partnerships</h3>
                     <p class="text-gray-600 mb-4">
                         Strategic alliances with global technology leaders and local industry bodies to deliver comprehensive solutions.
@@ -396,7 +417,7 @@
                 </div>
 
                 <!-- Careers -->
-                <div class="bg-white rounded-xl p-8 shadow-sm">
+                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-sm">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Careers</h3>
                     <p class="text-gray-600 mb-4">
                         Join our team of innovators shaping the future of industrial technology and MSME growth.
@@ -411,7 +432,7 @@
     <section id="contact" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">Contact Us</h2>
+                <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">Contact Us</h2>
                 <p class="mt-4 text-lg text-gray-600">
                     We're here to help you with switchgear, panels, or consulting. Share your requirement and our team will respond within 1 business day.
                 </p>
@@ -493,34 +514,7 @@
             </div>
         </div>
     </section>
-
-    <script>
-        // Mobile menu functionality
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuButton.addEventListener('click', () => {
-            const isMenuHidden = mobileMenu.classList.contains('hidden');
-            mobileMenu.classList.toggle('hidden');
-            
-            // Add slide animation classes
-            if (isMenuHidden) {
-                mobileMenu.classList.add('animate-slide-in');
-                mobileMenu.classList.remove('animate-slide-out');
-            } else {
-                mobileMenu.classList.add('animate-slide-out');
-                mobileMenu.classList.remove('animate-slide-in');
-            }
-        });
-
-        // Close mobile menu when clicking on a link
-        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-        Array.from(mobileMenuLinks).forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
     <script src="js/main.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>
