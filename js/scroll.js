@@ -10,6 +10,20 @@ const leftFadeObserver = new IntersectionObserver((entries) => {
 const leftFadeClasses = document.querySelectorAll('.left-fade-in');
 leftFadeClasses.forEach((el) => leftFadeObserver.observe(el));
 
+
+const rightFadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in-from-right');
+        } else {
+            entry.target.classList.remove('animate-fade-in-from-right');
+        }
+    });
+});
+const rightFadeClasses = document.querySelectorAll('.right-fade-in');
+rightFadeClasses.forEach((el) => rightFadeObserver.observe(el));
+
+
 const bottomFadeObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {

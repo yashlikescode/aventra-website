@@ -31,6 +31,17 @@
             opacity: 1;
         }
 
+        .right-fade-in {
+            opacity: 0;
+            transform: translateX(10%);
+            transition: transform 1s;
+        }
+
+        .animate-fade-in-from-right {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
         .bottom-fade-in {
             opacity: 0;
             transform: translateY(1cm);
@@ -115,6 +126,44 @@
         .aventra-text:hover {
             color: var(--color-aventra-hover);
         }
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
     </style>
 </head>
 
@@ -186,7 +235,8 @@
                     class="left-fade-in text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                     Smart Systems Delivered
                 </h1>
-                <p class="left-fade-in mt-3 max-w-md mx-0 text-base sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+                <p
+                    class="left-fade-in mt-3 text-white max-w-md mx-0 text-base sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                     From Siemens switchgear and precision-engineered panels to ERP and AI consulting for MSMEs—Aventra
                     Systems delivers technology that works. Simple, scalable, and built to last.
                 </p>
@@ -208,27 +258,35 @@
                 </div>
 
                 <!-- Trust Badges -->
-                <div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4 max-w-3xl mx-0">
-                    <div
-                        class="bottom-fade-in bg-white p-4 rounded-lg shadow-sm items-center justify-center text-center ">
-                        <p class="font-semibold">Authorized Siemens LV Dealer</p>
+                <div class="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-4 max-w-3xl mx-0">
+                    <div class="bottom-fade-in text-sm flex items-center justify-center text-center 
+                            backdrop-blur-xl bg-gray-200/20 border border-white/20 
+                            rounded-lg shadow-sm p-4
+                            ">
+                        <p class="font-semibold">Siemens LV</p>
                     </div>
-                    <div
-                        class="bottom-fade-in bg-white p-4 rounded-lg shadow-sm items-center justify-center text-center ">
-                        <p class="font-semibold">LV Panel Manufacturing</p>
+                    <div class="bottom-fade-in text-sm flex items-center justify-center text-center 
+                            backdrop-blur-xl bg-gray-200/20 border border-white/20 
+                            rounded-lg shadow-sm p-4
+                            ">
+                        <p class="font-semibold">LV Panel</p>
                     </div>
-                    <div
-                        class="bottom-fade-in bg-white p-4 rounded-lg shadow-sm items-center justify-center text-center ">
-                        <p class="font-semibold">Odoo ERP Implementation Partner</p>
+                    <div class="bottom-fade-in text-sm flex items-center justify-center text-center 
+                            backdrop-blur-xl bg-gray-200/20 border border-white/20 
+                            rounded-lg shadow-sm p-4
+                            ">
+                        <p class="font-semibold">Odoo ERP</p>
                     </div>
-                    <div
-                        class="bottom-fade-in bg-white p-4 rounded-lg shadow-sm items-center justify-center text-center ">
-                        <p class="font-semibold">Regional Support Across East India</p>
+                    <div class="bottom-fade-in text-sm flex items-center justify-center text-center 
+                            backdrop-blur-xl bg-gray-200/20 border border-white/20 
+                            rounded-lg shadow-sm p-4
+                            ">
+                        <p class="font-semibold">Regional Support</p>
                     </div>
                 </div>
 
                 <!-- Quick Stats -->
-                <div class="bottom-fade-in mt-10 max-w-4xl mx-0 text-sm">
+                <div class="bottom-fade-in mt-5 text-white max-w-4xl mx-0 text-sm">
                     <p>End-to-End (Trading • Panel Manufacturing • ERP Implementation • MSME Consulting) | Docs Ready
                         (GST, DO/DC, FAT/SAT) | Regional Reach
                         (Jharkhand • Bihar • Odisha • West Bengal • Africa)</p>
@@ -322,7 +380,7 @@
                 <div class="max-w-4xl mx-auto space-y-8">
 
                     <!-- Card 1: Trading – Siemens LV Switchgear -->
-                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <div class="left-fade-in bg-white rounded-2xl shadow-lg p-8">
                         <h2 class="text-2xl font-semibold text-gray-800 mb-4">Trading – Siemens LV Switchgear &
                             Accessories</h2>
                         <p class="text-gray-700 mb-4">
@@ -344,7 +402,7 @@
                     </div>
 
                     <!-- Card 2: Panel Manufacturing -->
-                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <div class="left-fade-in bg-white rounded-2xl shadow-lg p-8">
                         <h2 class="text-2xl font-semibold text-gray-800 mb-4">Panel Manufacturing</h2>
                         <p class="text-gray-700 mb-4">
                             Custom-Engineered Electrical Panels. Certified. Factory & Site Tested.
@@ -377,7 +435,7 @@
                     </div>
 
                     <!-- Card 3: ERP Implementation -->
-                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <div class="left-fade-in bg-white rounded-2xl shadow-lg p-8">
                         <h2 class="text-2xl font-semibold text-gray-800 mb-4">ERP Implementation for MSMEs</h2>
                         <p class="text-gray-700 mb-2">Simple. Affordable. Effective.</p>
                         <p class="text-gray-700 mb-4">
@@ -400,7 +458,7 @@
                     </div>
 
                     <!-- Card 4: MSME Consulting -->
-                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                    <div class="left-fade-in bg-white rounded-2xl shadow-lg p-8">
                         <h2 class="text-2xl font-semibold text-gray-800 mb-4">MSME Consulting</h2>
                         <p class="text-gray-700 mb-4">Practical. Cost-Effective. Results-Driven.</p>
                         <p class="text-gray-700 mb-2">
@@ -450,7 +508,8 @@
                         class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Steel & Metal Processing</h3>
                     <p class="text-gray-600">
-                        Rugged MCCs, automation panels, and process control systems designed for maximum uptime and harsh environments.
+                        Rugged MCCs, automation panels, and process control systems designed for maximum uptime and
+                        harsh environments.
                     </p>
                 </div>
 
@@ -460,7 +519,8 @@
                         class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Cement & Heavy Manufacturing</h3>
                     <p class="text-gray-600">
-                        Heavy-duty panels engineered for continuous operation, extreme temperatures, and dust-laden conditions.
+                        Heavy-duty panels engineered for continuous operation, extreme temperatures, and dust-laden
+                        conditions.
                     </p>
                 </div>
 
@@ -470,7 +530,8 @@
                         class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">FMCG & Packaging</h3>
                     <p class="text-gray-600">
-                        Audit-ready electrical systems with precise control, energy monitoring, and compliance documentation.
+                        Audit-ready electrical systems with precise control, energy monitoring, and compliance
+                        documentation.
                     </p>
                 </div>
 
@@ -480,7 +541,8 @@
                         class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Water Treatment & Infrastructure</h3>
                     <p class="text-gray-600">
-                        Pumping stations, treatment plants, and utility-grade automation panels with full regulatory compliance.
+                        Pumping stations, treatment plants, and utility-grade automation panels with full regulatory
+                        compliance.
                     </p>
                 </div>
 
@@ -500,281 +562,330 @@
                         class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Commercial Buildings & Institutions</h3>
                     <p class="text-gray-600">
-                        Safe, aesthetic, and efficient electrical distribution for offices, hospitals, schools, and shopping complexes.
+                        Safe, aesthetic, and efficient electrical distribution for offices, hospitals, schools, and
+                        shopping complexes.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-gray-50 py-16 px-6" id="panel-manufacturing">
-  <div class="max-w-5xl mx-auto text-center mb-12 mt-5">
-    <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">
-      Our Panel Manufacturing Process
-    </h2>
-    <p class="text-gray-600 text-lg">
-      From Concept to Commissioning—Every Step Managed.
-    </p>
-  </div>
+    <section class="py-16 px-6" id="panel-manufacturing"
+        style="background-color: var(--color-aventra-light-blue); border-radius: 2em 0 0 2em;">
+        <div class="max-w-5xl mx-auto text-center mb-12 mt-5">
+            <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                Our Panel Manufacturing Process
+            </h2>
+            <p class="text-gray-600 text-lg">
+                From Concept to Commissioning—Every Step Managed.
+            </p>
+        </div>
 
-  <div class="relative max-w-4xl mx-auto">
-    <!-- Vertical Line -->
-    <div class="absolute left-1/2 top-0 w-1 bg-blue-100 h-full transform -translate-x-1/2"></div>
+        <div class="relative max-w-4xl mx-auto">
+            <!-- Vertical Line -->
+            <div class="absolute left-1/2 top-0 w-1 bg-blue-100 h-full transform -translate-x-1/2"></div>
 
-    <div class="space-y-12">
+            <div class="space-y-12">
 
-      <!-- Step 1 -->
-      <div class="relative flex items-center">
-        <div class="w-1/2 pr-8 text-right">
-          <h3 class="text-xl font-semibold text-gray-800">Step 1: Requirement Gathering</h3>
-          <p class="text-gray-600 mt-2">
-            We start with your load list, SLD/GA drawings, site conditions, and compliance requirements.
-          </p>
-        </div>
-        <div class="flex-shrink-0">
-          <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">1</div>
-        </div>
-        <div class="w-1/2"></div>
-      </div>
+                <!-- Step 1 -->
+                <div class="relative flex items-center">
+                    <div class="left-fade-in w-1/2 pr-8 text-right">
+                        <h3 class="text-xl font-semibold text-gray-800">Step 1: Requirement Gathering</h3>
+                        <p class="text-gray-600 mt-2">
+                            We start with your load list, SLD/GA drawings, site conditions, and compliance requirements.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <div
+                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                            1</div>
+                    </div>
+                    <div class="w-1/2"></div>
+                </div>
 
-      <!-- Step 2 -->
-      <div class="relative flex items-center">
-        <div class="w-1/2"></div>
-        <div class="flex-shrink-0">
-          <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">2</div>
-        </div>
-        <div class="w-1/2 pl-8">
-          <h3 class="text-xl font-semibold text-gray-800">Step 2: Engineering & BOM</h3>
-          <p class="text-gray-600 mt-2">
-            IS/IEC-aligned design, component selection, and detailed bill of materials with transparent costing.
-          </p>
-        </div>
-      </div>
+                <!-- Step 2 -->
+                <div class="relative flex items-center">
+                    <div class="w-1/2"></div>
+                    <div class="flex-shrink-0">
+                        <div
+                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                            2</div>
+                    </div>
+                    <div class="right-fade-in w-1/2 pl-8">
+                        <h3 class="text-xl font-semibold text-gray-800">Step 2: Engineering & BOM</h3>
+                        <p class="text-gray-600 mt-2">
+                            IS/IEC-aligned design, component selection, and detailed bill of materials with transparent
+                            costing.
+                        </p>
+                    </div>
+                </div>
 
-      <!-- Step 3 -->
-      <div class="relative flex items-center">
-        <div class="w-1/2 pr-8 text-right">
-          <h3 class="text-xl font-semibold text-gray-800">Step 3: Manufacturing & QA</h3>
-          <p class="text-gray-600 mt-2">
-            Precision assembly, systematic wiring, torque verification, and multi-stage quality testing.
-          </p>
-        </div>
-        <div class="flex-shrink-0">
-          <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">3</div>
-        </div>
-        <div class="w-1/2"></div>
-      </div>
+                <!-- Step 3 -->
+                <div class="relative flex items-center">
+                    <div class="left-fade-in w-1/2 pr-8 text-right">
+                        <h3 class="text-xl font-semibold text-gray-800">Step 3: Manufacturing & QA</h3>
+                        <p class="text-gray-600 mt-2">
+                            Precision assembly, systematic wiring, torque verification, and multi-stage quality testing.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <div
+                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                            3</div>
+                    </div>
+                    <div class="w-1/2"></div>
+                </div>
 
-      <!-- Step 4 -->
-      <div class="relative flex items-center">
-        <div class="w-1/2"></div>
-        <div class="flex-shrink-0">
-          <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">4</div>
-        </div>
-        <div class="w-1/2 pl-8">
-          <h3 class="text-xl font-semibold text-gray-800">Step 4: Factory Acceptance Test (FAT)</h3>
-          <p class="text-gray-600 mt-2">
-            Full functional testing, documentation, and client inspection before dispatch.
-          </p>
-        </div>
-      </div>
+                <!-- Step 4 -->
+                <div class="relative flex items-center">
+                    <div class="w-1/2"></div>
+                    <div class="flex-shrink-0">
+                        <div
+                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                            4</div>
+                    </div>
+                    <div class="right-fade-in w-1/2 pl-8">
+                        <h3 class="text-xl font-semibold text-gray-800">Step 4: Factory Acceptance Test (FAT)</h3>
+                        <p class="text-gray-600 mt-2">
+                            Full functional testing, documentation, and client inspection before dispatch.
+                        </p>
+                    </div>
+                </div>
 
-      <!-- Step 5 -->
-      <div class="relative flex items-center">
-        <div class="w-1/2 pr-8 text-right">
-          <h3 class="text-xl font-semibold text-gray-800">Step 5: Dispatch & Site Acceptance Test (SAT)</h3>
-          <p class="text-gray-600 mt-2">
-            Delivery, installation support, on-site commissioning, and final sign-off.
-          </p>
-        </div>
-        <div class="flex-shrink-0">
-          <div class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">5</div>
-        </div>
-        <div class="w-1/2"></div>
-      </div>
+                <!-- Step 5 -->
+                <div class="relative flex items-center">
+                    <div class="left-fade-in w-1/2 pr-8 text-right">
+                        <h3 class="text-xl font-semibold text-gray-800">Step 5: Dispatch & Site Acceptance Test (SAT)
+                        </h3>
+                        <p class="text-gray-600 mt-2">
+                            Delivery, installation support, on-site commissioning, and final sign-off.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <div
+                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                            5</div>
+                    </div>
+                    <div class="w-1/2"></div>
+                </div>
 
-    </div>
-  </div>
-</section>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Impact Section -->
-<section id="impact" class="py-20 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center">
-      <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">
-        Impact & Results
-      </h2>
-      <p class="left-fade-in mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-        Technology That Delivers Measurable Outcomes
-      </p>
-      <p class="left-fade-in mt-4 text-gray-700 max-w-3xl mx-auto">
-        At Aventra, we measure success by results: reduced downtime, faster operations, digital adoption, and regulatory compliance.
-      </p>
-    </div>
+    <section id="impact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Impact & Results
+                </h2>
+                <p class="left-fade-in mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                    Technology That Delivers Measurable Outcomes
+                </p>
+                <p class="left-fade-in mt-4 text-gray-700 max-w-3xl mx-auto">
+                    At Aventra, we measure success by results: reduced downtime, faster operations, digital adoption,
+                    and regulatory compliance.
+                </p>
+            </div>
 
-    <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
-      <!-- Sustainability & Growth -->
-      <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-md hover:shadow-lg">
-        <h3 class="text-xl font-semibold text-gray-900 mb-4">
-          Our Commitment to Sustainability & Growth
-        </h3>
-        <ul class="space-y-4 mb-6 text-gray-600">
-          <li><strong>Energy-Efficient Solutions:</strong> APFC panels, VFD integration, and energy monitoring systems</li>
-          <li><strong>Skill Development:</strong> Technical training programs for MSME staff</li>
-          <li><strong>Digital Inclusion:</strong> Affordable ERP and AI tools for small manufacturers</li>
-          <li><strong>Local Impact:</strong> Creating jobs and supporting regional industrial growth</li>
-        </ul>
-        <a href="#impact-details" class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-          Explore Our Impact
-        </a>
-      </div>
+            <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Sustainability & Growth -->
+                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-md hover:shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                        Our Commitment to Sustainability & Growth
+                    </h3>
+                    <ul class="space-y-4 mb-6 text-gray-600">
+                        <li><strong>Energy-Efficient Solutions:</strong> APFC panels, VFD integration, and energy
+                            monitoring systems</li>
+                        <li><strong>Skill Development:</strong> Technical training programs for MSME staff</li>
+                        <li><strong>Digital Inclusion:</strong> Affordable ERP and AI tools for small manufacturers</li>
+                        <li><strong>Local Impact:</strong> Creating jobs and supporting regional industrial growth</li>
+                    </ul>
+                    <a href="#impact-details"
+                        class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                        Explore Our Impact
+                    </a>
+                </div>
 
-      <!-- Results Overview -->
-      <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-md hover:shadow-lg flex flex-col justify-center">
-        <h3 class="text-xl font-semibold text-gray-900 mb-4">
-          Proven Outcomes
-        </h3>
-        <ul class="space-y-4 text-gray-600 mb-6">
-          <li>⏱️ Reduced downtime and faster operational response</li>
-          <li>💻 Accelerated digital adoption across MSMEs</li>
-          <li>📊 Improved energy utilization and process transparency</li>
-          <li>📈 Strengthened regulatory compliance and documentation</li>
-        </ul>
-        <a href="#case-studies" class="text-blue-600 hover:text-blue-800 font-medium">
-          View Case Studies →
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Resources Section -->
-<section id="resources" class="py-20 bg-white"
-  style="background-color: var(--color-aventra-light-blue); border-radius: 2em 0 0 2em;">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Header -->
-    <div class="text-center mb-12">
-      <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">
-        Resources & Knowledge Hub
-      </h2>
-      <p class="left-fade-in mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-        Insights, downloads, and FAQs to help MSMEs make smarter, faster, and safer decisions.
-      </p>
-    </div>
-
-    <!-- Blog & Downloads Row -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-      <!-- Blog & Insights -->
-      <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
-        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Blog & Insights</h3>
-        <p class="text-gray-600 mb-3 font-medium">Popular Articles:</p>
-        <ul class="space-y-3 mb-6 text-gray-600">
-          <li>• MCB vs MCCB: Choosing the Right Protection</li>
-          <li>• AI Quick Wins for MSME Procurement</li>
-          <li>• MSME ERP Adoption</li>
-          <li>• Top 5 Mistakes in MSME Projects</li>
-        </ul>
-        <a href="#blog"
-          class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-          View All Insights
-        </a>
-      </div>
-
-      <!-- Downloads -->
-      <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
-        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Downloads</h3>
-        <p class="text-gray-600 mb-3 font-medium">Free Resources:</p>
-        <ul class="space-y-3 mb-6 text-gray-600">
-          <li>• Siemens Product Catalog 2024</li>
-          <li>• Panel Manufacturing Checklist</li>
-          <li>• MSME Digital Audit Template</li>
-          <li>• ERP Readiness Assessment</li>
-          <li>• Electrical Safety Guidelines</li>
-        </ul>
-        <a href="#downloads"
-          class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-          Download Resources
-        </a>
-      </div>
-    </div>
-
-    <!-- FAQ Section (Expandable Accordion) -->
-    <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md">
-      <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">Frequently Asked Questions</h3>
-
-      <div class="space-y-4" x-data="{ open: null }">
-        <!-- Switchgear & Trading -->
-        <div class="border-b border-gray-200 pb-4">
-          <button @click="open === 1 ? open = null : open = 1"
-            class="flex justify-between items-center w-full text-left text-gray-800 font-semibold text-lg focus:outline-none">
-            <span>Switchgear & Trading</span>
-            <svg :class="{ 'rotate-180': open === 1 }" class="w-5 h-5 text-gray-600 transition-transform duration-300"
-              fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div x-show="open === 1" x-collapse class="mt-3 text-gray-600 space-y-2">
-            <p>• What's the difference between MCB and MCCB?</p>
-            <p>• How do I verify genuine Siemens products?</p>
-            <p>• What's your typical delivery timeline?</p>
-          </div>
+                <!-- Results Overview -->
+                <div
+                    class="bottom-fade-in bg-white rounded-xl p-8 shadow-md hover:shadow-lg flex flex-col justify-center">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                        Proven Outcomes
+                    </h3>
+                    <ul class="space-y-4 text-gray-600 mb-6">
+                        <li>⏱️ Reduced downtime and faster operational response</li>
+                        <li>💻 Accelerated digital adoption across MSMEs</li>
+                        <li>📊 Improved energy utilization and process transparency</li>
+                        <li>📈 Strengthened regulatory compliance and documentation</li>
+                    </ul>
+                    <a href="#case-studies" class="text-blue-600 hover:text-blue-800 font-medium">
+                        View Case Studies →
+                    </a>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Panel Manufacturing -->
-        <div class="border-b border-gray-200 pb-4">
-          <button @click="open === 2 ? open = null : open = 2"
-            class="flex justify-between items-center w-full text-left text-gray-800 font-semibold text-lg focus:outline-none">
-            <span>Panel Manufacturing</span>
-            <svg :class="{ 'rotate-180': open === 2 }" class="w-5 h-5 text-gray-600 transition-transform duration-300"
-              fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div x-show="open === 2" x-collapse class="mt-3 text-gray-600 space-y-2">
-            <p>• What certifications do your panels carry?</p>
-            <p>• Can you retrofit existing panels?</p>
-            <p>• How long does FAT and SAT take?</p>
-          </div>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-20 bg-white"
+        style="background-color: var(--color-aventra-light-blue); border-radius: 2em 0 0 2em;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    Resources & Knowledge Hub
+                </h2>
+                <p class="left-fade-in mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                    Insights, downloads, and FAQs to help MSMEs make smarter, faster, and safer decisions.
+                </p>
+            </div>
+
+            <!-- Blog & Downloads Row -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                <!-- Blog & Insights -->
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Blog & Insights</h3>
+                    <p class="text-gray-600 mb-3 font-medium">Popular Articles:</p>
+                    <ul class="space-y-3 mb-6 text-gray-600">
+                        <li>• MCB vs MCCB: Choosing the Right Protection</li>
+                        <li>• AI Quick Wins for MSME Procurement</li>
+                        <li>• MSME ERP Adoption</li>
+                        <li>• Top 5 Mistakes in MSME Projects</li>
+                    </ul>
+                    <a href="#blog"
+                        class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                        View All Insights
+                    </a>
+                </div>
+
+                <!-- Downloads -->
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Downloads</h3>
+                    <ul class="space-y-3 mb-6 text-gray-600">
+                        <li>• Siemens Product Catalog 2024</li>
+                        <li>• Panel Manufacturing Checklist</li>
+                        <li>• MSME Digital Audit Template</li>
+                        <li>• ERP Readiness Assessment</li>
+                        <li>• Electrical Safety Guidelines</li>
+                    </ul>
+                    <a href="#downloads"
+                        class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                        Download Resources
+                    </a>
+                </div>
+            </div>
+
+            <!-- FAQ Section (Expandable Accordion) -->
+            <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">Frequently Asked Questions</h3>
+
+                <div class="space-y-4" x-data="{ open: null }">
+                    <!-- Switchgear & Trading -->
+                    <div class="border-b border-gray-200 pb-4">
+                        <button @click="open === 1 ? open = null : open = 1"
+                            class="flex mb-5 justify-between items-center w-full text-left text-gray-800 font-semibold text-lg focus:outline-none">
+                            <span>Switchgear & Trading</span>
+                        </button>
+                        <button class="accordion">What's the difference between MCB and MCCB?</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <button class="accordion">How do I verify genuine Siemens products?</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <button class="accordion">What's your typical delivery timeline?</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+
+                    <!-- Panel Manufacturing -->
+                    <div class="border-b border-gray-200 pb-4">
+                        <button @click="open === 2 ? open = null : open = 2"
+                            class="flex mb-5 justify-between items-center w-full text-left text-gray-800 font-semibold text-lg focus:outline-none">
+                            <span>Panel Manufacturing</span>
+                        </button>
+                        <button class="accordion">What certifications do your panels carry?</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <button class="accordion">Can you retrofit existing panels?</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <button class="accordion">How long does FAT and SAT take?</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+
+                    <!-- ERP & Consulting -->
+                    <div class="border-b border-gray-200 pb-4">
+                        <button @click="open === 3 ? open = null : open = 3"
+                            class="flex mb-5 justify-between items-center w-full text-left text-gray-800 font-semibold text-lg focus:outline-none">
+                            <span>ERP & Consulting</span>
+                        </button>
+                        <button class="accordion">Which ERP is best for small manufacturers?</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <button class="accordion">How long does ERP implementation take?</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <button class="accordion">Do you provide post-implementation support?</button>
+                        <div class="panel">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="text-center mt-8">
+                    <a href="#faqs"
+                        class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                        View All FAQs
+                    </a>
+                </div>
+            </div>
         </div>
-
-        <!-- ERP & Consulting -->
-        <div class="border-b border-gray-200 pb-4">
-          <button @click="open === 3 ? open = null : open = 3"
-            class="flex justify-between items-center w-full text-left text-gray-800 font-semibold text-lg focus:outline-none">
-            <span>ERP & Consulting</span>
-            <svg :class="{ 'rotate-180': open === 3 }" class="w-5 h-5 text-gray-600 transition-transform duration-300"
-              fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div x-show="open === 3" x-collapse class="mt-3 text-gray-600 space-y-2">
-            <p>• Which ERP is best for small manufacturers?</p>
-            <p>• How long does ERP implementation take?</p>
-            <p>• Do you provide post-implementation support?</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center mt-8">
-        <a href="#faqs"
-          class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-          View All FAQs
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
 
     <!-- About Us Section -->
-    <section id="about" class="py-20 bg-gray-50"
-        style="background-color: var(--color-aventra-light-blue);border-radius: 2em 0 0 0;">
+    <section id="about" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">About Us</h2>
@@ -782,30 +893,38 @@
 
             <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <!-- Mission & Vision -->
-                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-md hover:shadow-lg">
-                    <img src="assets/about-us/rocket-for-mission.svg" alt="Mission & Vision" class="w-16 h-16 mb-4">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Mission & Vision</h3>
-                    <p class="text-gray-600 mb-4">
+                <div class="bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <img src="assets/about-us/rocket-for-mission.svg" alt="Mission & Vision" class="w-10 h-10">
+                        <h3 class="text-xl font-semibold text-gray-900">Mission & Vision</h3>
+                    </div>
+                    <p class="text-gray-600">
                         Empowering industries and MSMEs with smart electrical solutions and digital transformation for
                         sustainable growth.
                     </p>
                 </div>
 
+
+
                 <!-- Company Story -->
-                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-md hover:shadow-lg">
-                    <img src="assets/about-us/copy-for-story.svg" alt="Company Story" class="w-16 h-16 mb-4">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Company Story</h3>
-                    <p class="text-gray-600 mb-4">
+                <div class="bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <img src="assets/about-us/copy-for-story.svg" alt="Company Story" class="w-10 h-10">
+                        <h3 class="text-xl font-semibold text-gray-900">Company Story</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">
                         From humble beginnings to becoming a trusted partner in industrial solutions, our journey is
                         built on expertise and innovation.
                     </p>
                 </div>
 
                 <!-- Leadership -->
-                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-md hover:shadow-lg">
-                    <img src="assets/about-us/flag-for-leadership.svg" alt="Leadership" class="w-16 h-16 mb-4">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Leadership</h3>
-                    <p class="text-gray-600 mb-4">
+                <div class="bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <img src="assets/about-us/flag-for-leadership.svg" alt="Leadership" class="w-10 h-10">
+                        <h3 class="text-xl font-semibold text-gray-900">Leadership</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">
                         Led by industry veterans with decades of experience in electrical systems, automation, and MSME
                         consulting.
                     </p>
@@ -814,9 +933,11 @@
 
             <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <!-- Certifications -->
-                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-md hover:shadow-lg">
-                    <img src="assets/about-us/badge-for-certification.svg" alt="Certifications" class="w-16 h-16 mb-4">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Certifications</h3>
+                <div class="bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <img src="assets/about-us/badge-for-certification.svg" alt="Certifications" class="w-10 h-10">
+                        <h3 class="text-xl font-semibold text-gray-900">Certifications</h3>
+                    </div>
                     <ul class="space-y-2 text-gray-600">
                         <li>ISO 9001:2015</li>
                         <li>Siemens Certified Partner</li>
@@ -825,24 +946,29 @@
                 </div>
 
                 <!-- Partnerships -->
-                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-md hover:shadow-lg">
-                    <img src="assets/about-us/partnership.svg" alt="Partnerships" class="w-16 h-16 mb-4">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Partnerships</h3>
-                    <p class="text-gray-600 mb-4">
+                <div class="bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <img src="assets/about-us/partnership.svg" alt="Partnerships" class="w-10 h-10">
+                        <h3 class="text-xl font-semibold text-gray-900">Partnerships</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">
                         Strategic alliances with global technology leaders and local industry bodies to deliver
                         comprehensive solutions.
                     </p>
                 </div>
 
                 <!-- Careers -->
-                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-md hover:shadow-lg">
-                    <img src="assets/about-us/suitcase-for-careers.svg" alt="Careers" class="w-16 h-16 mb-4">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Careers</h3>
-                    <p class="text-gray-600 mb-4">
+                <div class="bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <img src="assets/about-us/suitcase-for-careers.svg" alt="Careers" class="w-10 h-10">
+                        <h3 class="text-xl font-semibold text-gray-900">Careers</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">
                         Join our team of innovators shaping the future of industrial technology and MSME growth.
+                        <a href="#careers" class="cursor-not-allowed text-blue-600 hover:text-blue-800 font-medium">View
+                            Opportunities →</a>
                     </p>
-                    <a href="#careers" class="cursor-not-allowed text-blue-600 hover:text-blue-800 font-medium">View
-                        Opportunities →</a>
+
                 </div>
             </div>
         </div>
@@ -937,7 +1063,22 @@
             </div>
         </div>
     </footer>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
 
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
     <script>
         // small script to set year in footer and keep file lightweight
         (function () { var y = new Date().getFullYear(); var el = document.getElementById('year'); if (el) el.textContent = y; })();
