@@ -9,6 +9,19 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <style>
+        /* Replace this block in your index.html <style> */
+:root {
+  /* Hex fallback for wide compatibility */
+  --color-aventra: #01102e;
+
+  /* Modern OKLCH override — browsers that understand OKLCH will use this */
+  /* (L either 0..1 or percentage; chroma and hue in perceptual units/degrees) */
+  --color-aventra: oklch(18.16% 0.0664 259.82);
+
+  /* Optional helper variants */
+  --color-aventra-foreground: #ffffff;
+  --color-aventra-muted: #0b2a47; /* simple darker/lighter fallback if needed */
+}
         .left-fade-in {
             opacity:0;
             transform: translateX(-10%);
@@ -36,7 +49,7 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
-                    <a href="/" class="text-xl font-bold">Aventra Systems</a>
+                    <a href="/" style="color: var(--color-aventra);" class="text-xl font-bold">Aventra Systems</a>
                 </div>
                 <!-- Desktop Menu -->
                 <div class="hidden md:block">
@@ -218,7 +231,8 @@
             </div>
             <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Steel -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-lg">
+                    <img src="assets/industries/steel.jpg" alt="Steel industry" class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Steel</h3>
                     <p class="text-gray-600">
                         Reliable MCCs and control systems designed to maximize uptime, safety, and productivity in demanding mill environments.
@@ -226,7 +240,8 @@
                 </div>
 
                 <!-- Cement -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-lg">
+                    <img src="assets/industries/cement.jpg" alt="Cement industry" class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Cement</h3>
                     <p class="text-gray-600">
                         Rugged panels and switchgear built to handle harsh conditions, reduce trips, and extend equipment life.
@@ -234,7 +249,8 @@
                 </div>
 
                 <!-- FMCG -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-lg">
+                    <img src="assets/industries/fmcg.jpg" alt="FMCG industry" class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">FMCG</h3>
                     <p class="text-gray-600">
                         Hygienic, traceable, and audit-ready electrical systems to support fast-moving, compliance-driven production.
@@ -242,7 +258,8 @@
                 </div>
 
                 <!-- Water/Infrastructure -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-lg">
+                    <img src="assets/industries/water-infra.jpg" alt="Water / Infrastructure" class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Water / Infrastructure</h3>
                     <p class="text-gray-600">
                         Panels and automation solutions for pumping, treatment, and distribution — with full compliance to utility standards.
@@ -250,7 +267,8 @@
                 </div>
 
                 <!-- Government & EB -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-lg">
+                    <img src="assets/industries/govt-docs.jpg" alt="Government & EB" class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Government & EB</h3>
                     <p class="text-gray-600">
                         Tender-ready documentation and IS/IEC-aligned panels tailored for government projects and distribution utilities.
@@ -258,7 +276,8 @@
                 </div>
 
                 <!-- Commercial -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8">
+                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-lg">
+                    <img src="assets/industries/panels.jpg" alt="Commercial" class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Commercial</h3>
                     <p class="text-gray-600">
                         Safe, aesthetic, and efficient panels for commercial complexes, institutions, and residential projects.
