@@ -271,10 +271,14 @@
                     class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Solutions</a>
                 <a href="#industries"
                     class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Industries</a>
-                <a href="#resources"
-                    class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Resources</a>
+                <a href="#panel-manufacturing"
+                    class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Panel
+                    Manufacturing</a>
                 <a href="#impact"
                     class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Impact</a>
+                <a href="#resources"
+                    class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Resources
+                </a>
                 <a href="#about"
                     class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">About
                     Us</a>
@@ -1084,6 +1088,16 @@
             }
         });
     </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('Service Worker registered', reg))
+            .catch(err => console.log('Service Worker registration failed', err));
+        });
+        }
+    </script>
+
     <script src="js/main.js"></script>
     <script src="js/scroll.js"></script>
 </body>
