@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCB vs MCCB: Complete Selection Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-700: #0B64A0;
+            --primary-600: #0E74B8;
+            --primary-500: #1185D0;
+            --primary-100: #E6F2FB;
+            --secondary-700: #5A48A6;
+            --secondary-600: #6B57C0;
+            --secondary-100: #F0EDFB;
+            --ink-900: #1B2633;
+            --ink-700: #334154;
+            --ink-500: #5B6B80;
+            --ink-200: #D6DEE8;
+            --ink-050: #F5F7FA;
+            --success: #2E7D32;
+            --warning: #E69B00;
+            --error: #D32F2F;
+            --info: #0288D1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--ink-700);
+            background: var(--ink-050);
+            font-size: 16px;
+            font-weight: 400;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1185D0 0%, #6B57C0 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 48px;
+            line-height: 1.1;
+            margin-bottom: 12px;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .header p {
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        
+        .content {
+            padding: 64px 40px;
+            background: white;
+        }
+        
+        .section {
+            margin-bottom: 64px;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            line-height: 1.2;
+            color: var(--ink-900);
+            margin-bottom: 32px;
+            font-weight: 700;
+        }
+        
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--ink-200);
+            box-shadow: 0 8px 24px rgba(17, 133, 208, 0.08);
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(17, 133, 208, 0.12);
+            border-color: var(--primary-500);
+        }
+        
+        .card h3 {
+            color: var(--ink-900);
+            font-size: 22px;
+            line-height: 1.35;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        
+        .card-label {
+            display: inline-block;
+            background: var(--primary-600);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 999px;
+            font-size: 14px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        
+        .card p {
+            color: var(--ink-700);
+            margin: 12px 0;
+            line-height: 1.6;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: var(--ink-700);
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(17, 133, 208, 0.08);
+        }
+        
+        .comparison-table th {
+            background: var(--primary-600);
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .comparison-table td {
+            padding: 20px;
+            border-bottom: 1px solid var(--ink-200);
+            color: var(--ink-700);
+        }
+        
+        .comparison-table tr:hover {
+            background: var(--primary-100);
+        }
+        
+        .comparison-table td:first-child {
+            font-weight: 600;
+            color: var(--ink-900);
+        }
+        
+        .mistake-box {
+            background: #FFF9E6;
+            border-left: 4px solid var(--warning);
+            padding: 24px;
+            margin: 20px 0;
+            border-radius: 12px;
+        }
+        
+        .mistake-box h4 {
+            color: var(--ink-900);
+            margin-bottom: 12px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .mistake-box p {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        
+        .mistake-box .problem {
+            color: var(--error);
+            font-weight: 600;
+        }
+        
+        .mistake-box .fix {
+            color: var(--success);
+            font-weight: 600;
+        }
+        
+        .checklist {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 32px 0;
+        }
+        
+        .checklist-box {
+            background: var(--primary-100);
+            padding: 32px;
+            border-radius: 16px;
+            border-top: 4px solid var(--primary-600);
+        }
+        
+        .checklist-box h4 {
+            color: var(--primary-700);
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .checklist-box ul {
+            list-style: none;
+        }
+        
+        .checklist-box li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: var(--ink-700);
+        }
+        
+        .checklist-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-600);
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .example-box {
+            background: #F1F8F4;
+            padding: 24px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid var(--success);
+        }
+        
+        .example-box h4 {
+            color: var(--success);
+            margin-bottom: 16px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .example-box p {
+            margin: 8px 0;
+            color: var(--ink-700);
+        }
+        
+        .key-takeaway {
+            background: linear-gradient(135deg, #E6F2FB 0%, #F5F7FA 100%);
+            padding: 40px;
+            border-radius: 16px;
+            margin: 48px 0;
+            border-top: 4px solid var(--primary-600);
+        }
+        
+        .key-takeaway h3 {
+            color: var(--ink-900);
+            margin-bottom: 24px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .key-takeaway ol {
+            padding-left: 24px;
+        }
+        
+        .key-takeaway li {
+            margin: 12px 0;
+            font-weight: 500;
+            color: var(--ink-700);
+            line-height: 1.6;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #1185D0 0%, #6B57C0 100%);
+            color: white;
+            padding: 48px 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 64px;
+        }
+        
+        .cta-box h3 {
+            font-size: 28px;
+            line-height: 1.3;
+            margin-bottom: 24px;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .cta-box ul {
+            list-style: none;
+            display: inline-block;
+            text-align: left;
+            max-width: 600px;
+        }
+        
+        .cta-box li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        .cta-box li:before {
+            content: "□";
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 48px 24px;
+            }
+            
+            .header h1 {
+                font-size: 32px;
+            }
+            
+            .header p {
+                font-size: 16px;
+            }
+            
+            .content {
+                padding: 48px 24px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .cards, .checklist {
+                grid-template-columns: 1fr;
+            }
+            
+            .card, .checklist-box {
+                padding: 24px;
+            }
+            
+            .comparison-table {
+                font-size: 14px;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .header h1 {
+                font-size: 28px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .key-takeaway {
+                padding: 24px;
+            }
+            
+            .cta-box {
+                padding: 32px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MCB vs MCCB</h1>
+            <p>The Complete Selection Guide for MSMEs & Engineers</p>
+        </div>
+        
+        <div class="content">
+            <!-- Understanding Basics -->
+            <div class="section">
+                <h2 class="section-title">Understanding the Basics</h2>
+                
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-label">MCB</div>
+                        <h3>Miniature Circuit Breaker</h3>
+                        <p><strong>Current Rating:</strong> 0.5A - 125A</p>
+                        <p><strong>Breaking Capacity:</strong> Up to 10kA</p>
+                        <ul class="feature-list">
+                            <li>Compact & modular design</li>
+                            <li>Fixed trip characteristics</li>
+                            <li>Ideal for lighting & outlets</li>
+                            <li>DIN rail mounting</li>
+                            <li>Cost-effective solution</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-label">MCCB</div>
+                        <h3>Molded Case Circuit Breaker</h3>
+                        <p><strong>Current Rating:</strong> 16A - 2,500A</p>
+                        <p><strong>Breaking Capacity:</strong> 10kA - 200kA</p>
+                        <ul class="feature-list">
+                            <li>Heavy-duty construction</li>
+                            <li>Adjustable trip settings</li>
+                            <li>Industrial applications</li>
+                            <li>Panel mounting</li>
+                            <li>Advanced protection features</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Comparison Table -->
+            <div class="section">
+                <h2 class="section-title">Key Differences</h2>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Parameter</th>
+                            <th>MCB</th>
+                            <th>MCCB</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Current Range</td>
+                            <td>0.5A - 125A</td>
+                            <td>16A - 2,500A</td>
+                        </tr>
+                        <tr>
+                            <td>Breaking Capacity</td>
+                            <td>Up to 10kA</td>
+                            <td>10kA - 200kA</td>
+                        </tr>
+                        <tr>
+                            <td>Adjustability</td>
+                            <td>Fixed settings</td>
+                            <td>Fully adjustable</td>
+                        </tr>
+                        <tr>
+                            <td>Size</td>
+                            <td>Compact</td>
+                            <td>Larger</td>
+                        </tr>
+                        <tr>
+                            <td>Typical Cost</td>
+                            <td>₹200 - ₹5,000</td>
+                            <td>₹2,000 - ₹50,000+</td>
+                        </tr>
+                        <tr>
+                            <td>Application</td>
+                            <td>Branch circuits</td>
+                            <td>Main feeders</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Common Mistakes -->
+            <div class="section">
+                <h2 class="section-title">Common Selection Mistakes</h2>
+                
+                <div class="mistake-box">
+                    <h4>❌ Mistake #1: Oversizing for "Safety"</h4>
+                    <p><strong>Example:</strong> Installing a 63A MCB on a 16A circuit</p>
+                    <p class="problem">⚠️ Problem: Breaker won't trip during overload → cable overheating → fire risk</p>
+                    <p class="fix">✓ Fix: Match breaker to cable capacity, not load size</p>
+                </div>
+                
+                <div class="mistake-box">
+                    <h4>❌ Mistake #2: Using MCBs in High-Fault Areas</h4>
+                    <p><strong>Example:</strong> 6kA MCB near transformer with 15kA fault current</p>
+                    <p class="problem">⚠️ Problem: MCB cannot interrupt fault → explosion risk</p>
+                    <p class="fix">✓ Fix: Calculate fault levels → use MCCB or 10kA MCB</p>
+                </div>
+                
+                <div class="mistake-box">
+                    <h4>❌ Mistake #3: Wrong Trip Curve</h4>
+                    <p><strong>Example:</strong> Type B MCB on motor circuit</p>
+                    <p class="problem">⚠️ Problem: Nuisance tripping during motor startup</p>
+                    <p class="fix">✓ Fix: Use Type C (motors) or Type D (transformers)</p>
+                </div>
+            </div>
+            
+            <!-- Selection Checklist -->
+            <div class="section">
+                <h2 class="section-title">When to Use What?</h2>
+                
+                <div class="checklist">
+                    <div class="checklist-box">
+                        <h4>Use MCB When:</h4>
+                        <ul>
+                            <li>Load current < 100A</li>
+                            <li>Individual branch circuits</li>
+                            <li>Fixed protection adequate</li>
+                            <li>Space is limited</li>
+                            <li>Budget constraints exist</li>
+                            <li>Fault levels are low</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="checklist-box">
+                        <h4>Use MCCB When:</h4>
+                        <ul>
+                            <li>Load current > 100A</li>
+                            <li>Main feeders & sub-mains</li>
+                            <li>Adjustability needed</li>
+                            <li>High fault currents expected</li>
+                            <li>Critical applications</li>
+                            <li>Harsh environments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Real Examples -->
+            <div class="section">
+                <h2 class="section-title">Real-World Examples</h2>
+                
+                <div class="example-box">
+                    <h4>🏭 Small Manufacturing Unit (200A supply)</h4>
+                    <p><strong>Main Incomer:</strong> 250A MCCB (adjustable, 35kA)</p>
+                    <p><strong>CNC Machine:</strong> 63A MCCB (motor-rated)</p>
+                    <p><strong>Lighting Panel:</strong> 32A MCB Type C</p>
+                    <p><strong>Office AC:</strong> 32A MCB Type C</p>
+                    <p><strong>Power Outlets:</strong> 16A MCB Type B</p>
+                </div>
+                
+                <div class="example-box">
+                    <h4>🏢 Commercial Building (150A supply)</h4>
+                    <p><strong>Main Incomer:</strong> 200A MCCB</p>
+                    <p><strong>Per Floor Sub-Main:</strong> 63A MCCB</p>
+                    <p><strong>HVAC Units:</strong> 32A MCB Type C</p>
+                    <p><strong>Elevators:</strong> 40A MCCB (motor protection)</p>
+                    <p><strong>Lighting:</strong> 16A MCB Type B</p>
+                </div>
+            </div>
+            
+            <!-- Key Takeaways -->
+            <div class="key-takeaway">
+                <h3>💡 Key Takeaways</h3>
+                <ol>
+                    <li>Current rating alone doesn't determine selection—consider breaking capacity & trip curves</li>
+                    <li>Oversizing is dangerous—always match breaker to cable capacity</li>
+                    <li>Use MCCBs for mains, MCBs for branches—proper coordination saves money</li>
+                    <li>Motor loads need Type C/D curves or motor-rated MCCBs</li>
+                    <li>Calculate fault levels—don't guess breaking capacity requirements</li>
+                </ol>
+            </div>
+            
+            <!-- CTA -->
+            <div class="cta-box">
+                <h3>Action Items for Plant Managers</h3>
+                <ul>
+                    <li>Audit current breaker installations</li>
+                    <li>Verify breaking capacities vs fault levels</li>
+                    <li>Check coordination between protection devices</li>
+                    <li>Review motor circuit protection</li>
+                    <li>Train maintenance staff on selection criteria</li>
+                    <li>Schedule periodic MCCB testing</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

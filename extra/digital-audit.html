@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MSME Digital Audit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-slate-50 to-slate-100 p-4 md:p-8">
+
+  <div class="max-w-6xl mx-auto">
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-900 rounded-xl shadow-2xl p-8 mb-8 text-center relative overflow-hidden">
+      <div class="relative">
+        <img 
+          src="https://cdn.prod.website-files.com/679c600e41c2c993e087876c/679c60e23c96e5e8ebe5f7bd_Group%201.svg" 
+          alt="Aventra Systems Logo" 
+          class="h-24 mx-auto mb-4 filter brightness-0 invert"
+        />
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-2 tracking-wide">AVENTRA SYSTEMS</h1>
+        <p class="text-indigo-200 text-lg md:text-xl tracking-widest">SMART SYSTEMS DELIVERED</p>
+      </div>
+    </div>
+
+    <!-- Company Info -->
+    <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">MSME Digital Audit</h2>
+      <p class="text-gray-600 mb-4">Technology Readiness Assessment</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
+          <input type="text" id="companyName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Enter company name">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Audit Date</label>
+          <input type="date" id="auditDate" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+          <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="your@email.com">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Contact Number *</label>
+          <input type="tel" id="contactNumber" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="+91 XXXXX XXXXX">
+        </div>
+      </div>
+      <button id="downloadReportBtn" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors font-semibold">
+        Download Report
+      </button>
+    </div>
+
+    <!-- Audit Categories Container -->
+    <div id="categoriesContainer"></div>
+  </div>
+
+  <script>
+    // JS Variables
+    const categories = [
+      {
+        name: "Digital Infrastructure",
+        areas: [
+          { id: 1, area: "Internet Connectivity & Speed", description: "Quality and reliability of internet connection" },
+          { id: 2, area: "Hardware & Devices", description: "Computers, laptops, tablets, smartphones availability" }
+        ]
+      },
+      {
+        name: "Business Operations",
+        areas: [
+          { id: 3, area: "Accounting & Finance Software", description: "Digital accounting, invoicing, and financial management" }
+        ]
+      }
+    ];
+
+    const ratingScale = [
+      { value: 1, label: "Not Implemented", examples: "Paper-based, Manual processes" },
+      { value: 2, label: "Basic", examples: "Excel, Email, WhatsApp" },
+      { value: 3, label: "Developing", examples: "Software, Website, Social Media" },
+      { value: 4, label: "Advanced", examples: "ERP, CRM, Cloud, E-commerce" },
+      { value: 5, label: "Leading", examples: "AI, Automation, Analytics" }
+    ];
+
+    const ratings = {};
+    const comments = {};
+
+    const categoriesContainer = document.getElementById('categoriesContainer');
+
+    // Render categories and areas
+    categories.forEach(category => {
+      const catDiv = document.createElement('div');
+      catDiv.className = 'bg-white rounded-xl shadow-lg p-6 md:p-8 mb-6';
+      catDiv.innerHTML = `<h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">${category.name}</h2>`;
+
+      category.areas.forEach(area => {
+        const areaDiv = document.createElement('div');
+        areaDiv.className = 'mb-6 pb-6 border-b border-gray-200';
+        areaDiv.innerHTML = `
+          <h3 class="text-base md:text-lg font-semibold text-gray-900">${area.area}</h3>
+          <p class="text-sm text-gray-600 mt-1 mb-2">${area.description}</p>
+          <div class="grid grid-cols-5 gap-2 mb-2" id="ratings-${area.id}"></div>
+          <textarea placeholder="Add comments..." class="w-full px-4 py-2 border border-gray-300 rounded-lg resize-none" rows="2" id="comment-${area.id}"></textarea>
+        `;
+
+        // Render rating buttons
+        const ratingContainer = areaDiv.querySelector(`#ratings-${area.id}`);
+        ratingScale.forEach(r => {
+          const btn = document.createElement('button');
+          btn.className = 'p-3 rounded-lg border border-gray-300 hover:border-indigo-400';
+          btn.innerHTML = `<div>${r.value} - ${r.label}</div><small>${r.examples}</small>`;
+          btn.addEventListener('click', () => {
+            ratings[area.id] = r.value;
+            console.log('Ratings:', ratings);
+          });
+          ratingContainer.appendChild(btn);
+        });
+
+        // Save comments
+        areaDiv.querySelector(`#comment-${area.id}`).addEventListener('input', (e) => {
+          comments[area.id] = e.target.value;
+          console.log('Comments:', comments);
+        });
+
+        catDiv.appendChild(areaDiv);
+      });
+
+      categoriesContainer.appendChild(catDiv);
+    });
+
+    // Download report
+    document.getElementById('downloadReportBtn').addEventListener('click', () => {
+      const companyName = document.getElementById('companyName').value || 'N/A';
+      const auditDate = document.getElementById('auditDate').value || new Date().toISOString().split('T')[0];
+      const email = document.getElementById('email').value || 'N/A';
+      const contactNumber = document.getElementById('contactNumber').value || 'N/A';
+
+      let report = `Company: ${companyName}\nAudit Date: ${auditDate}\nEmail: ${email}\nContact: ${contactNumber}\n\n`;
+      categories.forEach(category => {
+        report += `${category.name.toUpperCase()}\n`;
+        category.areas.forEach(area => {
+          report += `${area.area}\nRating: ${ratings[area.id] || 'Not Rated'}\nComments: ${comments[area.id] || 'No comments'}\n\n`;
+        });
+      });
+
+      const blob = new Blob([report], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Audit_Report_${companyName.replace(/\s+/g,'_')}.txt`;
+      a.click();
+    });
+  </script>
+
+</body>
+</html>

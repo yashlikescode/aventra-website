@@ -164,6 +164,22 @@
             overflow: hidden;
             transition: max-height 0.2s ease-out;
         }
+        .landing-chips{
+            padding: 5px 10px;
+            height: max-content;
+            width: max-content;
+            padding: 5px 10px;
+            height: max-content;
+            width: max-content;
+            background-color: #ffffff66;
+            color: green;
+            border: 1px solid green;
+        }
+        .partner-logos img{
+            height: 4rem;
+            object-fit: contain;
+        }
+
     </style>
 </head>
 
@@ -240,15 +256,15 @@
                     From Siemens switchgear and precision-engineered panels to ERP and AI consulting for MSMEs—Aventra
                     Systems delivers technology that works. Simple, scalable, and built to last.
                 </p>
-                <div class="mt-5 max-w-md mx-0 sm:flex sm:justify-start md:mt-8">
-                    <div class="bottom-fade-in rounded-md shadow">
+                <div class="mt-5 max-w-md mx-0 sm:flex sm:justify-start md:mt-8 left-fade-in">
+                    <div class="rounded-md shadow">
                         <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=L_urEE6ZdkuZTbXRkmkltjKnbANZT4hMq6eBGxCnJ-xUQU42REIzRFZCM0g0RFk5Q0VVRUFWN1A0RC4u"
                             target="_blank" rel="noopener noreferrer"
                             class="aventra-button-bg w-full flex items-center justify-center text-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white md:py-4 md:text-lg md:px-10">
                             Request a Quote
                         </a>
                     </div>
-                    <div class="aventra-text bottom-fade-in mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                    <div class="aventra-text mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                         <a href="https://aventra-systems.odoo.com/book/msme-digital-audit" target="_blank"
                             rel="noopener noreferrer"
                             class="w-full flex items-center justify-center text-center px-8 py-3 border border-transparent text-base font-medium rounded-md bg-white hover:bg-gray-50 hover:shadow-md md:py-4 md:text-lg md:px-10">
@@ -258,38 +274,52 @@
                 </div>
 
                 <!-- Trust Badges -->
-                <div class="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-4 max-w-3xl mx-0">
-                    <div class="bottom-fade-in text-sm flex items-center justify-center text-center 
+                <div class="flex flex-wrap gap-2 justify-start mt-5 left-fade-in">
+                    <div class="landing-chips text-sm flex items-center justify-center text-center 
                             backdrop-blur-xl bg-gray-200/20 border border-white/20 
                             rounded-lg shadow-sm p-4
                             ">
-                        <p class="font-semibold">Siemens LV</p>
+                        <p class="font-semibold">Authorized Siemens LV Dealer</p>
                     </div>
-                    <div class="bottom-fade-in text-sm flex items-center justify-center text-center 
+                    <div class="landing-chips text-sm flex items-center justify-center text-center 
                             backdrop-blur-xl bg-gray-200/20 border border-white/20 
                             rounded-lg shadow-sm p-4
                             ">
-                        <p class="font-semibold">LV Panel</p>
+                        <p class="font-semibold">Panel Manufacturing</p>
                     </div>
-                    <div class="bottom-fade-in text-sm flex items-center justify-center text-center 
+                    <div class="landing-chips text-sm flex items-center justify-center text-center 
                             backdrop-blur-xl bg-gray-200/20 border border-white/20 
                             rounded-lg shadow-sm p-4
                             ">
-                        <p class="font-semibold">Odoo ERP</p>
+                        <p class="font-semibold">Odoo ERP Implementation Partner</p>
                     </div>
-                    <div class="bottom-fade-in text-sm flex items-center justify-center text-center 
+                    <div class="landing-chips text-sm flex items-center justify-center text-center 
                             backdrop-blur-xl bg-gray-200/20 border border-white/20 
                             rounded-lg shadow-sm p-4
                             ">
-                        <p class="font-semibold">Regional Support</p>
+                        <p class="font-semibold">MSME Consultation</p>
+                    </div>
+                    <div class="landing-chips text-sm flex items-center justify-center text-center 
+                            backdrop-blur-xl bg-gray-200/20 border border-white/20 
+                            rounded-lg shadow-sm p-4
+                            ">
+                        <p class="font-semibold">Regional Reach (Jharkhand • Bihar • Odisha • West Bengal • Africa)</p>
                     </div>
                 </div>
 
-                <!-- Quick Stats -->
-                <div class="bottom-fade-in mt-5 text-white max-w-4xl mx-0 text-sm">
-                    <p>End-to-End (Trading • Panel Manufacturing • ERP Implementation • MSME Consulting) | Docs Ready
-                        (GST, DO/DC, FAT/SAT) | Regional Reach
-                        (Jharkhand • Bihar • Odisha • West Bengal • Africa)</p>
+                <div class="partner-logos left-fade-in" style="position:relative">
+                    <img src="assets/partners/siemens.png" alt="Siemens Logo"
+                        class="h-12 w-auto inline-block mr-4 mt-4 bg-white p-1 rounded-md">
+                    <img src="assets/partners/odoo_learning_partner_rgb.png" alt="Odoo Logo"
+                        class="h-12 w-auto inline-block mr-4 mt-4 bg-white rounded-md">
+                    <img src="assets/partners/msme-logo.png" alt="MSME Logo"
+                        class="h-12 w-auto inline-block mr-4 mt-4 bg-white p-1 rounded-md">
+                    <img src="assets/partners/make-in-india.png" alt="Make in India Logo"
+                        class="h-12 w-auto inline-block mr-4 mt-4 bg-white p-2 rounded-md">
+                    <img src="assets/partners/Digital-india-White.jpg" alt="Digital India Logo"
+                        class="h-12 w-auto inline-block mr-4 mt-4 bg-white rounded-md">
+                    <img src="assets/partners/jharkhand-startup.jpg" alt="Jharkhand Startup Logo"
+                        class="h-12 w-auto inline-block mr-4 mt-4 bg-white rounded-md">
                 </div>
             </div>
         </div>
@@ -778,107 +808,6 @@
                     </a>
                 </div>
             </div>
-
-            <!-- FAQ Section (Expandable Accordion) -->
-            <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md">
-                <h3 class="text-2xl font-semibold text-gray-900 mb-6 text-center">Frequently Asked Questions</h3>
-
-                <div class="space-y-4" x-data="{ open: null }">
-                    <!-- Switchgear & Trading -->
-                    <div class="border-b border-gray-200 pb-4">
-                        <button @click="open === 1 ? open = null : open = 1"
-                            class="flex mb-5 justify-between items-center w-full text-left text-gray-800 font-semibold text-lg focus:outline-none">
-                            <span>Switchgear & Trading</span>
-                        </button>
-                        <button class="accordion">What's the difference between MCB and MCCB?</button>
-                        <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-
-                        <button class="accordion">How do I verify genuine Siemens products?</button>
-                        <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-
-                        <button class="accordion">What's your typical delivery timeline?</button>
-                        <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                    </div>
-
-                    <!-- Panel Manufacturing -->
-                    <div class="border-b border-gray-200 pb-4">
-                        <button @click="open === 2 ? open = null : open = 2"
-                            class="flex mb-5 justify-between items-center w-full text-left text-gray-800 font-semibold text-lg focus:outline-none">
-                            <span>Panel Manufacturing</span>
-                        </button>
-                        <button class="accordion">What certifications do your panels carry?</button>
-                        <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-
-                        <button class="accordion">Can you retrofit existing panels?</button>
-                        <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-
-                        <button class="accordion">How long does FAT and SAT take?</button>
-                        <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                    </div>
-
-                    <!-- ERP & Consulting -->
-                    <div class="border-b border-gray-200 pb-4">
-                        <button @click="open === 3 ? open = null : open = 3"
-                            class="flex mb-5 justify-between items-center w-full text-left text-gray-800 font-semibold text-lg focus:outline-none">
-                            <span>ERP & Consulting</span>
-                        </button>
-                        <button class="accordion">Which ERP is best for small manufacturers?</button>
-                        <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-
-                        <button class="accordion">How long does ERP implementation take?</button>
-                        <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-
-                        <button class="accordion">Do you provide post-implementation support?</button>
-                        <div class="panel">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-                <div class="text-center mt-8">
-                    <a href="#faqs"
-                        class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-                        View All FAQs
-                    </a>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1083,6 +1012,32 @@
         // small script to set year in footer and keep file lightweight
         (function () { var y = new Date().getFullYear(); var el = document.getElementById('year'); if (el) el.textContent = y; })();
     </script>
+    <script>
+    // Map keys to section IDs
+    const keyMap = {
+      2: "solutions",
+      3: "industries",
+      4: "panel-manufacturing",
+      5: "impact",
+      6: "resources",
+      7: "about",
+      8: "footer"
+    };
+
+    document.addEventListener("keydown", (e) => {
+      const id = keyMap[e.key.toLowerCase()];
+      if (e.key === "1") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+      if (id) {
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+  </script>
     <script src="js/main.js"></script>
     <script src="js/scroll.js"></script>
 </body>
