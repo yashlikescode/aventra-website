@@ -14,6 +14,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicons/site.webmanifest">
     <style>
+        section {
+            overflow-x: hidden;
+        }
+
         :root {
             --color-aventra: #0A1633;
             --color-aventra-hover: #0d1c3f;
@@ -164,7 +168,8 @@
             overflow: hidden;
             transition: max-height 0.2s ease-out;
         }
-        .landing-chips{
+
+        .landing-chips {
             padding: 5px 10px;
             height: max-content;
             width: max-content;
@@ -175,59 +180,49 @@
             color: green;
             border: 1px solid green;
         }
-        .partner-logos img{
+
+        .partner-logos img {
             height: 4rem;
             object-fit: contain;
         }
+
         .card {
-        border: 2px solid #c3c6ce;
-        transition: 0.1s ease-out;
-        overflow: visible;
+            border: 2px solid #c3c6ce;
+            transition: 0.1s ease-out;
+            overflow: visible;
         }
+
         .card:hover {
-        border-color: #008bf8;
-        box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+            border-color: #008bf8;
+            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
         }
-    /* Image container to control cropping/centering if needed */
-    .img-wrap {
-      width: 600px;            /* desktop default container width */
-      max-width: 100%;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      background: white;
-    }
 
-    /* The image itself */
-    img.responsive-img {
-      display: block;
-      width: 100%;
-      transition: transform 250ms ease, filter 250ms ease;
-      transform-origin: center center;
-      will-change: transform;
-    }
+        /* Image container to control cropping/centering if needed */
+        .img-wrap {
+            width: 600px;
+            /* desktop default container width */
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            background: white;
+        }
 
-    /* --- PHONE: scale the image up slightly for small viewports --- */
-    @media (max-width: 600px) {
-      .img-wrap {
-        width: 92vw;           /* container almost full width on phones */
-      }
+        /* The image itself */
+        img.responsive-img {
+            display: block;
+            width: 100%;
+            transition: transform 250ms ease, filter 250ms ease;
+            transform-origin: center center;
+            will-change: transform;
+        }
 
-      /* Two example behaviors: uncomment one you prefer */
-
-      /* 1) scale up image smoothly */
-      .responsive-img {
-        transform: scale(1.9);   /* scale factor on phone (adjust to taste) */
-      }
-
-      /* 2) alternatively, keep image full-width but increase visual size via padding
-         (comment out the transform above if you prefer this approach)
-      .img-wrap { padding: 12px; }
-      .responsive-img { transform: none; }
-      */
-    }
-
-
+        /* --- PHONE: scale the image up slightly for small viewports --- */
+        @media (max-width: 600px) {
+            img.responsive-img {
+                height: 125vh;
+            }
+        }
     </style>
 </head>
 
@@ -256,13 +251,13 @@
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-button"
-                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
                         <span class="sr-only">Open main menu</span>
                         <!-- Hamburger icon -->
-                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path fill="#ffffff"
+                                d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
                         </svg>
                     </button>
                 </div>
@@ -292,10 +287,10 @@
     <!-- Hero Section -->
     <section class="pt-32 pb-20">
         <div class="img-wrap">
-           <img src="assets/homepage-bg.jpg" alt="Landing page of aventra website"
-            class="responsive-img absolute top-0 left-0 w-full h-full object-cover opacity-100 pointer-events-none"> 
+            <img src="assets/homepage-bg.jpg" alt="Landing page of aventra website"
+                class="responsive-img absolute top-0 left-0 w-full h-full object-cover opacity-100 pointer-events-none">
         </div>
-        
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-left">
                 <h1 style="color: var(--color-aventra);"
@@ -1064,31 +1059,31 @@
         (function () { var y = new Date().getFullYear(); var el = document.getElementById('year'); if (el) el.textContent = y; })();
     </script>
     <script>
-    // Map keys to section IDs
-    const keyMap = {
-      2: "solutions",
-      3: "industries",
-      4: "panel-manufacturing",
-      5: "impact",
-      6: "resources",
-      7: "about",
-      8: "footer"
-    };
+        // Map keys to section IDs
+        const keyMap = {
+            2: "solutions",
+            3: "industries",
+            4: "panel-manufacturing",
+            5: "impact",
+            6: "resources",
+            7: "about",
+            8: "footer"
+        };
 
-    document.addEventListener("keydown", (e) => {
-      const id = keyMap[e.key.toLowerCase()];
-      if (e.key === "1") {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-        return;
-      }
-      if (id) {
-        const section = document.getElementById(id);
-        if (section) {
-          section.scrollIntoView({ behavior: "smooth" });
-        }
-      }
-    });
-  </script>
+        document.addEventListener("keydown", (e) => {
+            const id = keyMap[e.key.toLowerCase()];
+            if (e.key === "1") {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                return;
+            }
+            if (id) {
+                const section = document.getElementById(id);
+                if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+        });
+    </script>
     <script src="js/main.js"></script>
     <script src="js/scroll.js"></script>
 </body>
