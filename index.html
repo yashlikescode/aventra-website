@@ -14,6 +14,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicons/site.webmanifest">
     <style>
+        
+
+        .card {
+            border: 2px solid #c3c6ce;
+            transition: border-color 0.1s ease-out, box-shadow 0.1s ease-out, transform 1s ease-out;
+            overflow: visible;
+        }
+
+        .card:hover {
+            border-color: #008bf8;
+            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+        }
         section {
             overflow-x: hidden;
         }
@@ -188,7 +200,7 @@
 
         .card {
             border: 2px solid #c3c6ce;
-            transition: 0.1s ease-out;
+            transition: border-color 0.1s ease-out, box-shadow 0.1s ease-out, transform 1s ease-out;
             overflow: visible;
         }
 
