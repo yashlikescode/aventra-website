@@ -179,6 +179,54 @@
             height: 4rem;
             object-fit: contain;
         }
+        .card {
+        border: 2px solid #c3c6ce;
+        transition: 0.1s ease-out;
+        overflow: visible;
+        }
+        .card:hover {
+        border-color: #008bf8;
+        box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+        }
+    /* Image container to control cropping/centering if needed */
+    .img-wrap {
+      width: 600px;            /* desktop default container width */
+      max-width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      background: white;
+    }
+
+    /* The image itself */
+    img.responsive-img {
+      display: block;
+      width: 100%;
+      transition: transform 250ms ease, filter 250ms ease;
+      transform-origin: center center;
+      will-change: transform;
+    }
+
+    /* --- PHONE: scale the image up slightly for small viewports --- */
+    @media (max-width: 600px) {
+      .img-wrap {
+        width: 92vw;           /* container almost full width on phones */
+      }
+
+      /* Two example behaviors: uncomment one you prefer */
+
+      /* 1) scale up image smoothly */
+      .responsive-img {
+        transform: scale(1.9);   /* scale factor on phone (adjust to taste) */
+      }
+
+      /* 2) alternatively, keep image full-width but increase visual size via padding
+         (comment out the transform above if you prefer this approach)
+      .img-wrap { padding: 12px; }
+      .responsive-img { transform: none; }
+      */
+    }
+
 
     </style>
 </head>
@@ -242,9 +290,12 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-gray-50">
-        <img src="assets/homepage-bg.jpg" alt="Landing page of aventra website"
-            class="absolute top-0 left-0 w-full h-full object-cover opacity-100 pointer-events-none">
+    <section class="pt-32 pb-20">
+        <div class="img-wrap">
+           <img src="assets/homepage-bg.jpg" alt="Landing page of aventra website"
+            class="responsive-img absolute top-0 left-0 w-full h-full object-cover opacity-100 pointer-events-none"> 
+        </div>
+        
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-left">
                 <h1 style="color: var(--color-aventra);"
@@ -348,7 +399,7 @@
             <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
 
                 <!-- Integration -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Integration-First Engineering</h3>
                     <p class="text-gray-600">
                         End-to-end design, manufacturing, and commissioning ensure every component works together
@@ -356,7 +407,7 @@
                     </p>
                 </div>
                 <!-- Digital Mindset -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Built for Your Operations</h3>
                     <p class="text-gray-600">
                         Every panel, every process is customized to your industry requirements, site conditions, and
@@ -364,7 +415,7 @@
                     </p>
                 </div>
                 <!-- Future-Ready -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Single Point of Accountability</h3>
                     <p class="text-gray-600">
                         From initial design to final commissioning and beyond, you have one trusted partner managing the
@@ -372,14 +423,14 @@
                     </p>
                 </div>
                 <!-- Single Point of Accountability -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Powered by Siemens</h3>
                     <p class="text-gray-600">
                         Authentic Siemens low-voltage switchgear backed by certified engineering and genuine support.
                     </p>
                 </div>
                 <!-- Future-Ready -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Digital-First Mindset</h3>
                     <p class="text-gray-600">
                         We bridge traditional manufacturing with modern technology—ERP systems, AI tools, and smart
@@ -387,7 +438,7 @@
                     </p>
                 </div>
                 <!-- Future-Ready -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Future-Ready Infrastructure </h3>
                     <p class="text-gray-600">
                         Scalable, Industry 4.0-enabled systems that grow with your business, not against it.
@@ -533,7 +584,7 @@
             </div>
             <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Steel -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8  shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-gray-50 rounded-xl p-8  shadow-md hover:shadow-lg">
                     <img src="assets/industries/steel.jpg" alt="Steel industry"
                         class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Steel & Metal Processing</h3>
@@ -544,7 +595,7 @@
                 </div>
 
                 <!-- Cement -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
                     <img src="assets/industries/cement.jpg" alt="Cement industry"
                         class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Cement & Heavy Manufacturing</h3>
@@ -555,7 +606,7 @@
                 </div>
 
                 <!-- FMCG -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
                     <img src="assets/industries/fmcg.jpg" alt="FMCG industry"
                         class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">FMCG & Packaging</h3>
@@ -566,7 +617,7 @@
                 </div>
 
                 <!-- Water/Infrastructure -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
                     <img src="assets/industries/water-infra.jpg" alt="Water / Infrastructure"
                         class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Water Treatment & Infrastructure</h3>
@@ -577,7 +628,7 @@
                 </div>
 
                 <!-- Government & EB -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
                     <img src="assets/industries/govt-docs.jpg" alt="Government & EB"
                         class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Government & Electricity Boards</h3>
@@ -587,7 +638,7 @@
                 </div>
 
                 <!-- Commercial -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
                     <img src="assets/industries/panels.jpg" alt="Commercial"
                         class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Commercial Buildings & Institutions</h3>
@@ -722,7 +773,7 @@
 
             <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Sustainability & Growth -->
-                <div class="bottom-fade-in bg-white rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-white rounded-xl p-8 shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">
                         Our Commitment to Sustainability & Growth
                     </h3>
@@ -741,7 +792,7 @@
 
                 <!-- Results Overview -->
                 <div
-                    class="bottom-fade-in bg-white rounded-xl p-8 shadow-md hover:shadow-lg flex flex-col justify-center">
+                    class="card bottom-fade-in bg-white rounded-xl p-8 shadow-md hover:shadow-lg flex flex-col justify-center">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">
                         Proven Outcomes
                     </h3>
@@ -822,7 +873,7 @@
 
             <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <!-- Mission & Vision -->
-                <div class="bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
                     <div class="flex items-center space-x-2 mb-2">
                         <img src="assets/about-us/rocket-for-mission.svg" alt="Mission & Vision" class="w-10 h-10">
                         <h3 class="text-xl font-semibold text-gray-900">Mission & Vision</h3>
@@ -836,7 +887,7 @@
 
 
                 <!-- Company Story -->
-                <div class="bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
                     <div class="flex items-center space-x-2 mb-2">
                         <img src="assets/about-us/copy-for-story.svg" alt="Company Story" class="w-10 h-10">
                         <h3 class="text-xl font-semibold text-gray-900">Company Story</h3>
@@ -848,7 +899,7 @@
                 </div>
 
                 <!-- Leadership -->
-                <div class="bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
                     <div class="flex items-center space-x-2 mb-2">
                         <img src="assets/about-us/flag-for-leadership.svg" alt="Leadership" class="w-10 h-10">
                         <h3 class="text-xl font-semibold text-gray-900">Leadership</h3>
@@ -862,7 +913,7 @@
 
             <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-3">
                 <!-- Certifications -->
-                <div class="bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
                     <div class="flex items-center space-x-2 mb-2">
                         <img src="assets/about-us/badge-for-certification.svg" alt="Certifications" class="w-10 h-10">
                         <h3 class="text-xl font-semibold text-gray-900">Certifications</h3>
@@ -875,7 +926,7 @@
                 </div>
 
                 <!-- Partnerships -->
-                <div class="bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
                     <div class="flex items-center space-x-2 mb-2">
                         <img src="assets/about-us/partnership.svg" alt="Partnerships" class="w-10 h-10">
                         <h3 class="text-xl font-semibold text-gray-900">Partnerships</h3>
@@ -887,7 +938,7 @@
                 </div>
 
                 <!-- Careers -->
-                <div class="bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+                <div class="card bottom-fade-in bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
                     <div class="flex items-center space-x-2 mb-2">
                         <img src="assets/about-us/suitcase-for-careers.svg" alt="Careers" class="w-10 h-10">
                         <h3 class="text-xl font-semibold text-gray-900">Careers</h3>
