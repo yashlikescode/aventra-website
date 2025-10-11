@@ -14,228 +14,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicons/site.webmanifest">
     <link rel="stylesheet" href="/css/style.css">
-    <style>
-        .card {
-            border: 2px solid #c3c6ce;
-            transition: border-color 0.1s ease-out, box-shadow 0.1s ease-out, transform 1s ease-out;
-            overflow: visible;
-        }
-
-        .card:hover {
-            border-color: #008bf8;
-            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-        }
-
-        section {
-            overflow-x: hidden;
-        }
-
-        :root {
-            --color-aventra: #0A1633;
-            --color-aventra-hover: #0d1c3f;
-            --color-aventra-light-blue: #bcd7ff;
-        }
-
-        .left-fade-in {
-            opacity: 0;
-            transform: translateX(-10%);
-            transition: transform 1s;
-        }
-
-        .animate-fade-in-from-left {
-            transform: translateX(0);
-            opacity: 1;
-        }
-
-        .right-fade-in {
-            opacity: 0;
-            transform: translateX(10%);
-            transition: transform 1s;
-        }
-
-        .animate-fade-in-from-right {
-            transform: translateX(0);
-            opacity: 1;
-        }
-
-        .bottom-fade-in {
-            opacity: 0;
-            transform: translateY(1cm);
-            transition: transform 1s;
-        }
-
-        .animate-fade-in-from-bottom {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        .header {
-            background-color: var(--color-aventra);
-            color: #ffffff;
-            /* anchors that don't explicitly override color will inherit white */
-        }
-
-        /* ...existing rules above... */
-
-        .footer {
-            background-color: var(--color-aventra);
-            color: #ffffff;
-        }
-
-        .footer a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            color: #e6eef8;
-            text-decoration: underline;
-        }
-
-        /* subtle divider line for the footer top */
-        .footer-top-divider {
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .footer {
-                transition: none !important;
-            }
-        }
-
-        ::-webkit-scrollbar {
-            width: 1.1em;
-            height: 1em;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--color-aventra-light-blue);
-            border-radius: 100vw;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--color-aventra);
-            border-radius: 100vw;
-            border: var(--color-aventra-light-blue) 0.15em solid;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--color-aventra-hover);
-        }
-
-        ::-webkit-scrollbar-thumb:active {
-            background: var(--color-aventra);
-        }
-
-        .aventra-button-bg {
-            background-color: var(--color-aventra);
-        }
-
-        .aventra-button-bg:hover {
-            background-color: var(--color-aventra-hover);
-        }
-
-        .aventra-text {
-            color: var(--color-aventra);
-        }
-
-        .aventra-text:hover {
-            color: var(--color-aventra-hover);
-        }
-
-        .accordion {
-            background-color: #eee;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            transition: 0.4s;
-        }
-
-        .active,
-        .accordion:hover {
-            background-color: #ccc;
-        }
-
-        .accordion:after {
-            content: '\002B';
-            color: #777;
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
-        }
-
-        .active:after {
-            content: "\2212";
-        }
-
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-        }
-
-        .landing-chips {
-            padding: 5px 10px;
-            height: max-content;
-            width: max-content;
-            padding: 5px 10px;
-            height: max-content;
-            width: max-content;
-            background-color: #ffffff66;
-            color: green;
-            border: 1px solid green;
-        }
-
-        .partner-logos img {
-            height: 4rem;
-            object-fit: contain;
-        }
-
-        .card {
-            border: 2px solid #c3c6ce;
-            transition: border-color 0.1s ease-out, box-shadow 0.1s ease-out, transform 1s ease-out;
-            overflow: visible;
-        }
-
-        .card:hover {
-            border-color: #008bf8;
-            box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-        }
-
-        /* Image container to control cropping/centering if needed */
-        .img-wrap {
-            width: 600px;
-            /* desktop default container width */
-            max-width: 100%;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-            background: white;
-        }
-
-        /* The image itself */
-        img.responsive-img {
-            display: block;
-            width: 100%;
-            transition: transform 250ms ease, filter 250ms ease;
-            transform-origin: center center;
-            will-change: transform;
-        }
-
-        /* --- PHONE: scale the image up slightly for small viewports --- */
-        @media (max-width: 600px) {
-            img.responsive-img {
-                height: 125vh;
-            }
-        }
-    </style>
 </head>
 
 <body class="font-sans">
@@ -384,12 +162,6 @@
                         </p>
                     </div>
                 </div>
-
-
-
-
-
-
 
                 <div class="partner-logos left-fade-in" style="position:relative">
                     <img src="assets/partners/siemens.png" alt="Siemens Logo"
@@ -881,7 +653,8 @@
     </section>
 
     <!-- Impact Section -->
-    <section id="impact" class="py-20 bg-gray-50">
+    <section id="impact" class="py-20 bg-gray-50"
+        style="background-color: var(--color-aventra-light-blue);border-radius: 2em 0 0 2em;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">
@@ -896,7 +669,7 @@
                 </p>
             </div>
 
-            <div class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <!-- Sustainability & Growth -->
                 <div class="card  bg-white rounded-xl p-8 shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">
@@ -936,8 +709,7 @@
 
 
     <!-- Resources Section -->
-    <section id="resources" class="py-20 bg-white"
-        style="background-color: var(--color-aventra-light-blue); border-radius: 2em 0 0 2em;">
+    <section id="resources" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Header -->
             <div class="text-center mb-12">
@@ -951,37 +723,184 @@
 
             <!-- Blog & Downloads Row -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-                <!-- Blog & Insights -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Blog & Insights</h3>
-                    <p class="text-gray-600 mb-3 font-medium">Popular Articles:</p>
-                    <ul class="space-y-3 mb-6 text-gray-600">
-                        <li>• MCB vs MCCB: Choosing the Right Protection</li>
-                        <li>• AI Quick Wins for MSME Procurement</li>
-                        <li>• MSME ERP Adoption</li>
-                        <li>• Top 5 Mistakes in MSME Projects</li>
-                    </ul>
-                    <a href="#blog"
-                        class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-                        View All Insights
-                    </a>
-                </div>
-
-                <!-- Downloads -->
-                <div class="bottom-fade-in bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-4">Downloads</h3>
-                    <ul class="space-y-3 mb-6 text-gray-600">
-                        <li>• Siemens Product Catalog 2024</li>
-                        <li>• Panel Manufacturing Checklist</li>
-                        <li>• MSME Digital Audit Template</li>
-                        <li>• ERP Readiness Assessment</li>
-                        <li>• Electrical Safety Guidelines</li>
-                    </ul>
-                    <a href="#downloads"
-                        class="inline-block bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-                        Download Resources
-                    </a>
-                </div>
+                <div class="plan" style="background-color: #37a8ff;">
+                        <div class="inner">
+                            <p class="title">Blog & Insights</p>
+                            <p class="info">Popular Articles:</p>
+                            <ul class="features">
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span>MCB vs MCCB: Choosing the Right Protection 
+                                        <a 
+                                            href="/blogs/mcb_mccb_guide.html" 
+                                            class="font-medium ml-5 text-blue-600 dark:text-blue-500 hover:underline">
+                                            Read
+                                        </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span>AI Quick Wins for MSME Procurement 
+                                        <a 
+                                            href="/blogs/ai_procurement_guide.html" 
+                                            class="font-medium ml-5 text-blue-600 dark:text-blue-500 hover:underline">
+                                            Read
+                                        </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span>MSME ERP Adoption 
+                                        <a 
+                                            href="/blogs/msme_erp_adoption.html" 
+                                            class="font-medium ml-5 text-blue-600 dark:text-blue-500 hover:underline">
+                                            Read
+                                        </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span>Top 5 Mistakes in MSME Projects 
+                                        <a 
+                                            href="/blogs/msme_project_mistakes.html" 
+                                            class="font-medium ml-5 text-blue-600 dark:text-blue-500 hover:underline">
+                                            Read
+                                        </a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="plan" style="background-color: #37a8ff;">
+                        <div class="inner">
+                            <p class="title">Downloads</p>
+                            <ul class="features">
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        Siemens Product Catalog 2024 
+                                        <a 
+                                            href="#" 
+                                            class="font-medium ml-5 text-blue-600 dark:text-blue-500 hover:underline">
+                                            Download
+                                        </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span>Panel Checklist 
+                                        <a 
+                                            href="#" 
+                                            class="font-medium ml-5 text-blue-600 dark:text-blue-500 hover:underline">
+                                            Download
+                                        </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span>MSME Digital Audit Template 
+                                        <a 
+                                            href="#" 
+                                            class="font-medium ml-5 text-blue-600 dark:text-blue-500 hover:underline">
+                                            Download
+                                        </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span>ERP Readiness Assessment 
+                                        <a 
+                                            href="#" 
+                                            class="font-medium ml-5 text-blue-600 dark:text-blue-500 hover:underline">
+                                            Download
+                                        </a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span>Electrical Safety Guidelines 
+                                        <a 
+                                            href="#" 
+                                            class="font-medium ml-5 text-blue-600 dark:text-blue-500 hover:underline">
+                                            Download
+                                        </a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
             </div>
         </div>
     </section>
@@ -989,7 +908,8 @@
 
 
     <!-- About Us Section -->
-    <section id="about" class="py-20 bg-gray-50">
+    <section id="about" class="py-20 bg-gray-50"
+        style="background-color: var(--color-aventra-light-blue);border-radius: 2em 0 0 0;">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">About Us</h2>
@@ -1092,9 +1012,9 @@
                     <div class="text-sm text-white/90">
                         <p><strong>Address</strong></p>
                         <p>Ranchi, Jharkhand<br>India</p>
-                        <p class="mt-2">Phone: <a href="tel:+919763163619" class="text-white">+91-9763163619</a></p>
-                        <p>Email: <a href="mailto:info@aventrasystems.com"
-                                class="text-white">info@aventrasystems.com</a></p>
+                        <p class="mt-2">Phone: <a href="tel:+917970798555" class="text-white">+91-7970798555</a></p>
+                        <p>Email: <a href="mailto:sales@aventrasystems.in"
+                                class="text-white">sales@aventrasystems.in</a></p>
                     </div>
                 </div>
 
@@ -1116,7 +1036,7 @@
                     <h4 class="text-lg font-semibold mb-4">Solutions & services</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="#trading">Trading (Siemens LV)</a></li>
-                        <li><a href="#panel-manufacturing">Panel Manufacturing</a></li>
+                        <!-- <li><a href="#panel-manufacturing">Panel</a></li> -->
                         <li><a href="#consulting">Consulting (MSME)</a></li>
                         <li><a href="#faqs">FAT/SAT & Compliance</a></li>
                     </ul>
@@ -1133,20 +1053,12 @@
                     <div class="mt-4">
                         <h4 class="text-lg font-semibold mb-2">Connect</h4>
                         <div class="flex items-center space-x-3">
-                            <a href="#" class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-white/10">
+                            <a href="https://wa.me/917970798555?text=Hello" target="_blank" class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-white/10">
                                 <span class="sr-only">Whatsapp</span>
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                                     <path fill="#ffffff"
                                         d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z" />
-                                </svg>
-                            </a>
-                            <a href="#" class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-white/10">
-                                <span class="sr-only">LinkedIn</span>
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 600 600"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                                    <path fill="#ffffff"
-                                        d="M196.3 512L103.4 512L103.4 212.9L196.3 212.9L196.3 512zM149.8 172.1C120.1 172.1 96 147.5 96 117.8C96 103.5 101.7 89.9 111.8 79.8C121.9 69.7 135.6 64 149.8 64C164 64 177.7 69.7 187.8 79.8C197.9 89.9 203.6 103.6 203.6 117.8C203.6 147.5 179.5 172.1 149.8 172.1zM543.9 512L451.2 512L451.2 366.4C451.2 331.7 450.5 287.2 402.9 287.2C354.6 287.2 347.2 324.9 347.2 363.9L347.2 512L254.4 512L254.4 212.9L343.5 212.9L343.5 253.7L344.8 253.7C357.2 230.2 387.5 205.4 432.7 205.4C526.7 205.4 544 267.3 544 347.7L544 512L543.9 512z" />
                                 </svg>
                             </a>
                         </div>

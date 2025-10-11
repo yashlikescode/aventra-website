@@ -1,126 +1,349 @@
-/* From Uiverse.io by Yaya12085 */ 
+/* From Uiverse.io by Yaya12085 */
 .plan {
-  border-radius: 16px;
-  box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
-  padding: 10px;
-  background-color: #fff;
-  color: #697e91;
-  max-width: 70vw;
+    border-radius: 16px;
+    box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
+    padding: 10px;
+    background-color: #fff;
+    color: #111111;
+    max-width: 70vw;
 }
 
 .plan strong {
-  font-weight: 600;
-  color: #425275;
+    font-weight: 600;
+    color: #111111;
 }
 
 .plan .inner {
-  align-items: center;
-  padding: 20px;
-  padding-top: 40px;
-  background-color: #ecf0ff;
-  border-radius: 12px;
-  position: relative;
+    align-items: center;
+    padding: 20px;
+    padding-top: 40px;
+    background-color: #ecf0ff;
+    border-radius: 12px;
+    position: relative;
 }
 
 .plan .pricing {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #bed6fb;
-  border-radius: 99em 0 0 99em;
-  display: flex;
-  align-items: center;
-  padding: 0.625em 0.75em;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #425475;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #bed6fb;
+    border-radius: 99em 0 0 99em;
+    display: flex;
+    align-items: center;
+    padding: 0.625em 0.75em;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #425475;
 }
 
 .plan .pricing small {
-  color: #707a91;
-  font-size: 0.75em;
-  margin-left: 0.25em;
+    color: #707a91;
+    font-size: 0.75em;
+    margin-left: 0.25em;
 }
 
 .plan .title {
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: #000000;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #000000;
 }
 
-.plan .title + * {
-  margin-top: 0.75rem;
+.plan .title+* {
+    margin-top: 0.75rem;
 }
 
-.plan .info + * {
-  margin-top: 1rem;
+.plan .info+* {
+    margin-top: 1rem;
 }
 
 .plan .features {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .plan .features li {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.plan .features li + * {
-  margin-top: 0.75rem;
+.plan .features li+* {
+    margin-top: 0.75rem;
 }
 
 .plan .features .icon {
-  background-color: #1FCAC5;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
+    background-color: #1FCAC5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
 }
 
 .plan .features .icon svg {
-  width: 14px;
-  height: 14px;
+    width: 14px;
+    height: 14px;
 }
 
-.plan .features + * {
-  margin-top: 1.25rem;
+.plan .features+* {
+    margin-top: 1.25rem;
 }
 
 .plan .action {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    cursor: pointer;
 }
 
 .plan .button {
-  background-color: #6558d3;
-  border-radius: 6px;
-  color: #fff;
-  font-weight: 500;
-  font-size: 1.125rem;
-  text-align: center;
-  border: 0;
-  outline: 0;
-  width: 100%;
-  padding: 0.625em 0.75em;
-  text-decoration: none;
+    background-color: #6558d3;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.125rem;
+    text-align: center;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    padding: 0.625em 0.75em;
+    text-decoration: none;
 }
 
-.plan .button:hover, .plan .button:focus {
-  background-color: #4133B7;
+.plan .button:hover,
+.plan .button:focus {
+    background-color: #4133B7;
 }
 
-li > .icon + span {
-    width:90%;
+li>.icon+span {
+    width: 90%;
 }
 
 .industry-description {
     font-size: 15px;
+}
+
+
+.card {
+    border: 2px solid #c3c6ce;
+    transition: border-color 0.1s ease-out, box-shadow 0.1s ease-out, transform 1s ease-out;
+    overflow: visible;
+}
+
+.card:hover {
+    border-color: #008bf8;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+section {
+    overflow-x: hidden;
+}
+
+:root {
+    --color-aventra: #0A1633;
+    --color-aventra-hover: #0d1c3f;
+    --color-aventra-light-blue: #bcd7ff;
+}
+
+.left-fade-in {
+    opacity: 0;
+    transform: translateX(-10%);
+    transition: transform 1s;
+}
+
+.animate-fade-in-from-left {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.right-fade-in {
+    opacity: 0;
+    transform: translateX(10%);
+    transition: transform 1s;
+}
+
+.animate-fade-in-from-right {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.bottom-fade-in {
+    opacity: 0;
+    transform: translateY(1cm);
+    transition: transform 1s;
+}
+
+.animate-fade-in-from-bottom {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.header {
+    background-color: var(--color-aventra);
+    color: #ffffff;
+    /* anchors that don't explicitly override color will inherit white */
+}
+
+/* ...existing rules above... */
+
+.footer {
+    background-color: var(--color-aventra);
+    color: #ffffff;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #e6eef8;
+    text-decoration: underline;
+}
+
+/* subtle divider line for the footer top */
+.footer-top-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer {
+        transition: none !important;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 1.1em;
+    height: 1em;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-aventra-light-blue);
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-aventra);
+    border-radius: 100vw;
+    border: var(--color-aventra-light-blue) 0.15em solid;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-aventra-hover);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: var(--color-aventra);
+}
+
+.aventra-button-bg {
+    background-color: var(--color-aventra);
+}
+
+.aventra-button-bg:hover {
+    background-color: var(--color-aventra-hover);
+}
+
+.aventra-text {
+    color: var(--color-aventra);
+}
+
+.aventra-text:hover {
+    color: var(--color-aventra-hover);
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.landing-chips {
+    padding: 5px 10px;
+    height: max-content;
+    width: max-content;
+    padding: 5px 10px;
+    height: max-content;
+    width: max-content;
+    background-color: #ffffff66;
+    color: green;
+    border: 1px solid green;
+}
+
+.partner-logos img {
+    height: 4rem;
+    object-fit: contain;
+}
+
+.card {
+    border: 2px solid #c3c6ce;
+    transition: border-color 0.1s ease-out, box-shadow 0.1s ease-out, transform 1s ease-out;
+    overflow: visible;
+}
+
+.card:hover {
+    border-color: #008bf8;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Image container to control cropping/centering if needed */
+.img-wrap {
+    width: 600px;
+    /* desktop default container width */
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    background: white;
+}
+
+/* The image itself */
+img.responsive-img {
+    display: block;
+    width: 100%;
+    transition: transform 250ms ease, filter 250ms ease;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+/* --- PHONE: scale the image up slightly for small viewports --- */
+@media (max-width: 600px) {
+    img.responsive-img {
+        height: 125vh;
+    }
 }
