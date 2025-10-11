@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,13 +28,13 @@
             --error: #D32F2F;
             --info: #0288D1;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
             line-height: 1.7;
@@ -42,28 +43,28 @@
             font-size: 16px;
             font-weight: 400;
         }
-        
+
         .container {
             max-width: 1280px;
             margin: 0 auto;
         }
-        
-        .header {
+
+        .headerr {
             background: linear-gradient(135deg, #1185D0 0%, #6B57C0 100%);
             color: white;
             padding: 80px 40px;
             text-align: center;
         }
-        
-        .header h1 {
+
+        .headerr h1 {
             font-size: 48px;
             line-height: 1.1;
             margin-bottom: 16px;
             font-weight: 700;
             color: white;
         }
-        
-        .header p {
+
+        .headerr p {
             font-size: 18px;
             line-height: 1.6;
             opacity: 0.95;
@@ -71,16 +72,16 @@
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .content {
             padding: 64px 40px;
             background: white;
         }
-        
+
         .section {
             margin-bottom: 64px;
         }
-        
+
         .intro-box {
             background: linear-gradient(135deg, #E6F2FB 0%, #F5F7FA 100%);
             padding: 40px;
@@ -88,14 +89,14 @@
             border-left: 4px solid var(--primary-600);
             margin-bottom: 48px;
         }
-        
+
         .intro-box p {
             font-size: 18px;
             line-height: 1.6;
             color: var(--ink-700);
             margin-bottom: 16px;
         }
-        
+
         .stat-highlight {
             display: inline-block;
             background: white;
@@ -106,7 +107,7 @@
             font-size: 15px;
             margin: 8px 8px 8px 0;
         }
-        
+
         .mistake-section {
             background: white;
             border-radius: 16px;
@@ -116,12 +117,12 @@
             box-shadow: 0 8px 24px rgba(17, 133, 208, 0.08);
             transition: all 0.3s ease;
         }
-        
+
         .mistake-section:hover {
             border-color: var(--error);
             box-shadow: 0 12px 28px rgba(211, 47, 47, 0.12);
         }
-        
+
         .mistake-header {
             display: flex;
             align-items: flex-start;
@@ -130,7 +131,7 @@
             padding-bottom: 20px;
             border-bottom: 2px solid var(--ink-200);
         }
-        
+
         .mistake-number {
             background: var(--error);
             color: white;
@@ -144,11 +145,11 @@
             font-weight: 700;
             flex-shrink: 0;
         }
-        
+
         .mistake-title-group {
             flex: 1;
         }
-        
+
         .mistake-section h3 {
             color: var(--ink-900);
             font-size: 28px;
@@ -156,14 +157,14 @@
             margin-bottom: 8px;
             font-weight: 700;
         }
-        
+
         .mistake-subtitle {
             color: var(--error);
             font-size: 16px;
             font-weight: 600;
             font-style: italic;
         }
-        
+
         .mistake-content h4 {
             color: var(--ink-900);
             font-size: 20px;
@@ -171,13 +172,13 @@
             margin-bottom: 12px;
             font-weight: 600;
         }
-        
+
         .mistake-content p {
             color: var(--ink-700);
             line-height: 1.6;
             margin-bottom: 16px;
         }
-        
+
         .impact-box {
             background: #FFEBEE;
             padding: 20px;
@@ -185,33 +186,33 @@
             border-left: 4px solid var(--error);
             margin: 20px 0;
         }
-        
+
         .impact-box strong {
             color: var(--error);
             display: block;
             margin-bottom: 8px;
             font-size: 15px;
         }
-        
+
         .impact-box ul {
             list-style: none;
             padding: 0;
         }
-        
+
         .impact-box li {
             padding: 6px 0;
             padding-left: 24px;
             position: relative;
             color: var(--ink-700);
         }
-        
+
         .impact-box li:before {
             content: "⚠";
             position: absolute;
             left: 0;
             color: var(--error);
         }
-        
+
         .solution-box {
             background: #E8F5E9;
             padding: 24px;
@@ -219,7 +220,7 @@
             border-left: 4px solid var(--success);
             margin: 20px 0;
         }
-        
+
         .solution-box strong {
             color: var(--success);
             display: block;
@@ -227,19 +228,19 @@
             font-size: 16px;
             font-weight: 600;
         }
-        
+
         .solution-box ul {
             list-style: none;
             padding: 0;
         }
-        
+
         .solution-box li {
             padding: 8px 0;
             padding-left: 28px;
             position: relative;
             color: var(--ink-700);
         }
-        
+
         .solution-box li:before {
             content: "✓";
             position: absolute;
@@ -248,7 +249,7 @@
             font-weight: 700;
             font-size: 18px;
         }
-        
+
         .example-scenario {
             background: #FFF9E6;
             padding: 20px;
@@ -256,27 +257,27 @@
             margin: 20px 0;
             border-left: 4px solid var(--warning);
         }
-        
+
         .example-scenario strong {
             color: var(--warning);
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
         }
-        
+
         .example-scenario p {
             color: var(--ink-700);
             font-style: italic;
             margin: 0;
         }
-        
+
         .framework-section {
             background: linear-gradient(135deg, #E6F2FB 0%, #F5F7FA 100%);
             padding: 64px 48px;
             border-radius: 16px;
             margin-top: 64px;
         }
-        
+
         .framework-section h2 {
             font-size: 36px;
             line-height: 1.2;
@@ -285,7 +286,7 @@
             font-weight: 700;
             text-align: center;
         }
-        
+
         .framework-subtitle {
             text-align: center;
             font-size: 18px;
@@ -293,14 +294,14 @@
             margin-bottom: 48px;
             font-weight: 500;
         }
-        
+
         .framework-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 24px;
             margin-top: 32px;
         }
-        
+
         .framework-card {
             background: white;
             padding: 32px;
@@ -309,18 +310,18 @@
             border-top: 4px solid var(--primary-600);
             transition: all 0.3s ease;
         }
-        
+
         .framework-card:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 28px rgba(17, 133, 208, 0.12);
         }
-        
+
         .framework-icon {
             font-size: 48px;
             margin-bottom: 16px;
             display: block;
         }
-        
+
         .framework-card h3 {
             color: var(--primary-700);
             font-size: 22px;
@@ -328,18 +329,18 @@
             margin-bottom: 16px;
             font-weight: 700;
         }
-        
+
         .framework-card p {
             color: var(--ink-700);
             line-height: 1.6;
             margin-bottom: 16px;
         }
-        
+
         .framework-card ul {
             list-style: none;
             padding: 0;
         }
-        
+
         .framework-card li {
             padding: 6px 0;
             padding-left: 24px;
@@ -347,7 +348,7 @@
             color: var(--ink-700);
             font-size: 15px;
         }
-        
+
         .framework-card li:before {
             content: "→";
             position: absolute;
@@ -355,7 +356,7 @@
             color: var(--primary-600);
             font-weight: 700;
         }
-        
+
         .cta-section {
             background: linear-gradient(135deg, #1185D0 0%, #6B57C0 100%);
             color: white;
@@ -364,7 +365,7 @@
             text-align: center;
             margin-top: 64px;
         }
-        
+
         .cta-section h3 {
             font-size: 36px;
             line-height: 1.2;
@@ -372,7 +373,7 @@
             font-weight: 700;
             color: white;
         }
-        
+
         .cta-section p {
             font-size: 18px;
             line-height: 1.6;
@@ -382,7 +383,7 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .cta-stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -392,26 +393,26 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .cta-stat {
             background: rgba(255, 255, 255, 0.15);
             padding: 24px;
             border-radius: 12px;
             backdrop-filter: blur(10px);
         }
-        
+
         .cta-stat-value {
             font-size: 36px;
             font-weight: 700;
             display: block;
             margin-bottom: 8px;
         }
-        
+
         .cta-stat-label {
             font-size: 14px;
             opacity: 0.9;
         }
-        
+
         .cta-button {
             display: inline-block;
             background: white;
@@ -425,102 +426,167 @@
             transition: all 0.3s ease;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
         }
-        
+
         .cta-button:hover {
             transform: translateY(-2px);
             box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
         }
-        
+
         @media (max-width: 768px) {
-            .header {
+            .headerr {
                 padding: 48px 24px;
             }
-            
-            .header h1 {
+
+            .headerr h1 {
                 font-size: 32px;
             }
-            
-            .header p {
+
+            .headerr p {
                 font-size: 16px;
             }
-            
+
             .content {
                 padding: 48px 24px;
             }
-            
+
             .intro-box {
                 padding: 24px;
             }
-            
+
             .mistake-section {
                 padding: 24px;
             }
-            
+
             .mistake-header {
                 flex-direction: column;
                 gap: 12px;
             }
-            
+
             .mistake-section h3 {
                 font-size: 24px;
             }
-            
+
             .framework-section {
                 padding: 48px 24px;
             }
-            
+
             .framework-section h2 {
                 font-size: 28px;
             }
-            
+
             .framework-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .cta-section {
                 padding: 48px 24px;
             }
-            
+
             .cta-section h3 {
                 font-size: 28px;
             }
-            
+
             .cta-stats {
                 grid-template-columns: 1fr 1fr;
             }
         }
-        
+
         @media (max-width: 640px) {
-            .header h1 {
+            .headerr h1 {
                 font-size: 28px;
             }
-            
+
             .mistake-section h3 {
                 font-size: 22px;
             }
-            
+
             .framework-section h2 {
                 font-size: 24px;
             }
-            
+
             .cta-stats {
                 grid-template-columns: 1fr;
             }
         }
     </style>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Top 5 Mistakes in MSME Projects</h1>
-            <p>Critical Pitfalls That Cost Time, Money, and Credibility—and How to Avoid Them</p>
+    <!-- Navigation -->
+    <nav class="header shadow-lg fixed w-full z-50" style="padding:0;margin:0">
+        <div class=" max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <img src="../assets/AV LOGO.png" alt="Aventra Systems logo"
+                        class="h-12 w-12 object-contain inline-block mr-2">
+                    <a href="/" style="color: white;" class="text-xl font-bold">AVENTRA SYSTEMS</a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="../index.html" class="hover:underline px-3 py-2 cursor-pointer">
+                            Go to Aventra Home
+                        </a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger icon -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path fill="#ffffff"
+                                d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-        
+
+        <!-- Mobile menu, show/hide based on menu state -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+                <a href="../index.html"
+                    class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+                    Go to Aventra Home
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+            alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center" />
+        <div aria-hidden="true"
+            class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
+            <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+                class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"></div>
+        </div>
+        <div aria-hidden="true"
+            class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0">
+            <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+                class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"></div>
+        </div>
+        <div class="mx-auto max-w-7xl px-6 lg:px-8" style="position: relative;">
+            <div class="mx-auto max-w-2xl lg:mx-0">
+                <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">
+                    Top 5 Mistakes in MSME Projects
+                </h2>
+                <p class="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
+                    Critical Pitfalls That Cost Time, Money, and Credibility—and How to Avoid Them</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
         <div class="content">
             <!-- Introduction -->
             <div class="intro-box">
                 <p>
-                    Every year, thousands of MSME projects face delays, cost overruns, and quality issues—not because of bad intentions, but because of preventable mistakes. Whether it's a plant expansion, equipment installation, or digital transformation, the same patterns repeat across industries.
+                    Every year, thousands of MSME projects face delays, cost overruns, and quality issues—not because of
+                    bad intentions, but because of preventable mistakes. Whether it's a plant expansion, equipment
+                    installation, or digital transformation, the same patterns repeat across industries.
                 </p>
                 <p>
                     The good news? These mistakes are entirely avoidable with the right approach and guidance.
@@ -531,7 +597,7 @@
                     <span class="stat-highlight">30% fail quality audits</span>
                 </div>
             </div>
-            
+
             <!-- Mistake 1 -->
             <div class="mistake-section">
                 <div class="mistake-header">
@@ -541,17 +607,21 @@
                         <p class="mistake-subtitle">The "We'll Figure It Out" Syndrome</p>
                     </div>
                 </div>
-                
+
                 <div class="mistake-content">
                     <p>
-                        Many MSMEs rush into execution mode without comprehensive planning. The thinking goes: "Let's get started and adjust as we go." This approach might work for small, simple projects, but it's a recipe for disaster in complex initiatives.
+                        Many MSMEs rush into execution mode without comprehensive planning. The thinking goes: "Let's
+                        get started and adjust as we go." This approach might work for small, simple projects, but it's
+                        a recipe for disaster in complex initiatives.
                     </p>
-                    
+
                     <div class="example-scenario">
                         <strong>Real Scenario:</strong>
-                        <p>A textile unit began a ₹2.5 Cr automation project without detailed scope documentation. Midway through, they realized the new system couldn't integrate with their existing ERP. Result: 8-month delay and ₹65 lakh in additional costs for middleware and customization.</p>
+                        <p>A textile unit began a ₹2.5 Cr automation project without detailed scope documentation.
+                            Midway through, they realized the new system couldn't integrate with their existing ERP.
+                            Result: 8-month delay and ₹65 lakh in additional costs for middleware and customization.</p>
                     </div>
-                    
+
                     <div class="impact-box">
                         <strong>⚠ Business Impact:</strong>
                         <ul>
@@ -562,12 +632,14 @@
                             <li>Compromised quality to meet deadlines</li>
                         </ul>
                     </div>
-                    
+
                     <h4>Why It Happens</h4>
                     <p>
-                        Pressure to show quick progress, underestimating complexity, lack of technical expertise for requirement gathering, and budget constraints that make detailed planning feel like an unnecessary expense.
+                        Pressure to show quick progress, underestimating complexity, lack of technical expertise for
+                        requirement gathering, and budget constraints that make detailed planning feel like an
+                        unnecessary expense.
                     </p>
-                    
+
                     <div class="solution-box">
                         <strong>✓ How to Avoid It:</strong>
                         <ul>
@@ -581,7 +653,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Mistake 2 -->
             <div class="mistake-section">
                 <div class="mistake-header">
@@ -591,17 +663,22 @@
                         <p class="mistake-subtitle">Choosing Cheap Over Reliable</p>
                     </div>
                 </div>
-                
+
                 <div class="mistake-content">
                     <p>
-                        In cost-conscious environments, the temptation to choose the lowest bidder is strong. But vendor selection based purely on price—without evaluating track record, technical capability, and service quality—often leads to expensive problems down the line.
+                        In cost-conscious environments, the temptation to choose the lowest bidder is strong. But vendor
+                        selection based purely on price—without evaluating track record, technical capability, and
+                        service quality—often leads to expensive problems down the line.
                     </p>
-                    
+
                     <div class="example-scenario">
                         <strong>Real Scenario:</strong>
-                        <p>A packaging manufacturer selected a machine supplier offering 20% lower pricing than competitors. The equipment arrived 3 months late, with critical components missing. After installation, frequent breakdowns and poor after-sales support resulted in 35% production downtime for 6 months.</p>
+                        <p>A packaging manufacturer selected a machine supplier offering 20% lower pricing than
+                            competitors. The equipment arrived 3 months late, with critical components missing. After
+                            installation, frequent breakdowns and poor after-sales support resulted in 35% production
+                            downtime for 6 months.</p>
                     </div>
-                    
+
                     <div class="impact-box">
                         <strong>⚠ Business Impact:</strong>
                         <ul>
@@ -612,16 +689,18 @@
                             <li>Difficulty getting support when problems arise</li>
                         </ul>
                     </div>
-                    
+
                     <h4>Why It Happens</h4>
                     <p>
-                        Budget pressure from management, lack of vendor evaluation frameworks, insufficient reference checking, and difficulty assessing technical competence without expert guidance.
+                        Budget pressure from management, lack of vendor evaluation frameworks, insufficient reference
+                        checking, and difficulty assessing technical competence without expert guidance.
                     </p>
-                    
+
                     <div class="solution-box">
                         <strong>✓ How to Avoid It:</strong>
                         <ul>
-                            <li>Evaluate vendors on: technical capability, past project portfolio, financial stability, and after-sales service</li>
+                            <li>Evaluate vendors on: technical capability, past project portfolio, financial stability,
+                                and after-sales service</li>
                             <li>Check references—speak to at least 3 previous clients</li>
                             <li>Visit vendor facilities to assess capabilities</li>
                             <li>Review contractual terms carefully (warranties, SLAs, penalties)</li>
@@ -631,7 +710,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Mistake 3 -->
             <div class="mistake-section">
                 <div class="mistake-header">
@@ -641,17 +720,22 @@
                         <p class="mistake-subtitle">The "We Know What We Did" Trap</p>
                     </div>
                 </div>
-                
+
                 <div class="mistake-content">
                     <p>
-                        Documentation feels like bureaucratic overhead—until you need it. Poor record-keeping becomes a critical liability during audits, compliance reviews, equipment troubleshooting, or when key personnel leave.
+                        Documentation feels like bureaucratic overhead—until you need it. Poor record-keeping becomes a
+                        critical liability during audits, compliance reviews, equipment troubleshooting, or when key
+                        personnel leave.
                     </p>
-                    
+
                     <div class="example-scenario">
                         <strong>Real Scenario:</strong>
-                        <p>During an ISO 9001 audit, a component manufacturer couldn't produce calibration records for critical measurement equipment or change logs for process modifications. Result: Non-conformity, delayed certification by 8 months, and loss of a ₹1.2 Cr export contract that required certification.</p>
+                        <p>During an ISO 9001 audit, a component manufacturer couldn't produce calibration records for
+                            critical measurement equipment or change logs for process modifications. Result:
+                            Non-conformity, delayed certification by 8 months, and loss of a ₹1.2 Cr export contract
+                            that required certification.</p>
                     </div>
-                    
+
                     <div class="impact-box">
                         <strong>⚠ Business Impact:</strong>
                         <ul>
@@ -663,12 +747,13 @@
                             <li>Difficulty scaling processes without documented SOPs</li>
                         </ul>
                     </div>
-                    
+
                     <h4>Why It Happens</h4>
                     <p>
-                        Time pressure making documentation feel like low priority, lack of templates and systems, belief that "everyone knows how things work," and inadequate training on documentation importance.
+                        Time pressure making documentation feel like low priority, lack of templates and systems, belief
+                        that "everyone knows how things work," and inadequate training on documentation importance.
                     </p>
-                    
+
                     <div class="solution-box">
                         <strong>✓ How to Avoid It:</strong>
                         <ul>
@@ -683,7 +768,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Mistake 4 -->
             <div class="mistake-section">
                 <div class="mistake-header">
@@ -693,17 +778,22 @@
                         <p class="mistake-subtitle">Manual Processes in a Digital World</p>
                     </div>
                 </div>
-                
+
                 <div class="mistake-content">
                     <p>
-                        Relying on spreadsheets, paper records, and manual coordination might work for very small operations, but it becomes a bottleneck as you grow. Digital systems aren't just about "being modern"—they're about efficiency, accuracy, and scalability.
+                        Relying on spreadsheets, paper records, and manual coordination might work for very small
+                        operations, but it becomes a bottleneck as you grow. Digital systems aren't just about "being
+                        modern"—they're about efficiency, accuracy, and scalability.
                     </p>
-                    
+
                     <div class="example-scenario">
                         <strong>Real Scenario:</strong>
-                        <p>A furniture manufacturer managed inventory across 3 warehouses using Excel. During a major order, they discovered 40% stock discrepancy between records and physical count, leading to production delays and rush procurement at 25% premium pricing to meet delivery deadlines.</p>
+                        <p>A furniture manufacturer managed inventory across 3 warehouses using Excel. During a major
+                            order, they discovered 40% stock discrepancy between records and physical count, leading to
+                            production delays and rush procurement at 25% premium pricing to meet delivery deadlines.
+                        </p>
                     </div>
-                    
+
                     <div class="impact-box">
                         <strong>⚠ Business Impact:</strong>
                         <ul>
@@ -715,12 +805,13 @@
                             <li>Competitive disadvantage against digitally-enabled peers</li>
                         </ul>
                     </div>
-                    
+
                     <h4>Why It Happens</h4>
                     <p>
-                        Perceived high cost of software, fear of change, lack of technical expertise, belief that "we're too small for digital systems," and concerns about employee adoption.
+                        Perceived high cost of software, fear of change, lack of technical expertise, belief that "we're
+                        too small for digital systems," and concerns about employee adoption.
                     </p>
-                    
+
                     <div class="solution-box">
                         <strong>✓ How to Avoid It:</strong>
                         <ul>
@@ -735,7 +826,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Mistake 5 -->
             <div class="mistake-section">
                 <div class="mistake-header">
@@ -745,17 +836,22 @@
                         <p class="mistake-subtitle">The "Trust and Hope" Approach</p>
                     </div>
                 </div>
-                
+
                 <div class="mistake-content">
                     <p>
-                        Factory Acceptance Testing (FAT) and Site Acceptance Testing (SAT) aren't bureaucratic rituals—they're your opportunity to verify equipment and systems work as promised before full deployment. Skipping these steps to save time or money is penny-wise and pound-foolish.
+                        Factory Acceptance Testing (FAT) and Site Acceptance Testing (SAT) aren't bureaucratic
+                        rituals—they're your opportunity to verify equipment and systems work as promised before full
+                        deployment. Skipping these steps to save time or money is penny-wise and pound-foolish.
                     </p>
-                    
+
                     <div class="example-scenario">
                         <strong>Real Scenario:</strong>
-                        <p>A food processing unit skipped FAT for a ₹45 lakh packaging line to save travel costs and meet deadlines. Upon delivery, the line couldn't handle their specific packaging material. Vendor claimed it wasn't in scope. Six-month dispute followed, delaying production launch and costing ₹18 lakh in lost revenues.</p>
+                        <p>A food processing unit skipped FAT for a ₹45 lakh packaging line to save travel costs and
+                            meet deadlines. Upon delivery, the line couldn't handle their specific packaging material.
+                            Vendor claimed it wasn't in scope. Six-month dispute followed, delaying production launch
+                            and costing ₹18 lakh in lost revenues.</p>
                     </div>
-                    
+
                     <div class="impact-box">
                         <strong>⚠ Business Impact:</strong>
                         <ul>
@@ -767,12 +863,13 @@
                             <li>No leverage for corrective action after acceptance</li>
                         </ul>
                     </div>
-                    
+
                     <h4>Why It Happens</h4>
                     <p>
-                        Timeline pressure, travel and testing costs, trust in vendor reputation, lack of technical personnel for testing, and unclear acceptance criteria in contracts.
+                        Timeline pressure, travel and testing costs, trust in vendor reputation, lack of technical
+                        personnel for testing, and unclear acceptance criteria in contracts.
                     </p>
-                    
+
                     <div class="solution-box">
                         <strong>✓ How to Avoid It:</strong>
                         <ul>
@@ -787,12 +884,13 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Framework Section -->
             <div class="framework-section">
                 <h2>The Aventra MSME Project Framework</h2>
-                <p class="framework-subtitle">A structured approach to avoid these pitfalls and deliver successful projects</p>
-                
+                <p class="framework-subtitle">A structured approach to avoid these pitfalls and deliver successful
+                    projects</p>
+
                 <div class="framework-grid">
                     <div class="framework-card">
                         <span class="framework-icon">📋</span>
@@ -805,7 +903,7 @@
                             <li>Budget and timeline planning</li>
                         </ul>
                     </div>
-                    
+
                     <div class="framework-card">
                         <span class="framework-icon">🤝</span>
                         <h3>Vendor Management</h3>

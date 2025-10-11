@@ -48,14 +48,14 @@
             margin: 0 auto;
         }
         
-        .header {
+        .headerr {
             background: linear-gradient(135deg, #1185D0 0%, #6B57C0 100%);
             color: white;
             padding: 80px 40px;
             text-align: center;
         }
         
-        .header h1 {
+        .headerr h1 {
             font-size: 48px;
             line-height: 1.1;
             margin-bottom: 12px;
@@ -63,7 +63,7 @@
             color: white;
         }
         
-        .header p {
+        .headerr p {
             font-size: 18px;
             line-height: 1.6;
             opacity: 0.95;
@@ -346,15 +346,15 @@
         }
         
         @media (max-width: 768px) {
-            .header {
+            .headerr {
                 padding: 48px 24px;
             }
             
-            .header h1 {
+            .headerr h1 {
                 font-size: 32px;
             }
             
-            .header p {
+            .headerr p {
                 font-size: 16px;
             }
             
@@ -385,7 +385,7 @@
         }
         
         @media (max-width: 640px) {
-            .header h1 {
+            .headerr h1 {
                 font-size: 28px;
             }
             
@@ -402,14 +402,73 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>MCB vs MCCB</h1>
-            <p>The Complete Selection Guide for MSMEs & Engineers</p>
+<body>    <!-- Navigation -->
+    <nav class="header shadow-lg fixed w-full z-50" style="padding:0;margin:0">
+        <div class=" max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <img src="../assets/AV LOGO.png" alt="Aventra Systems logo"
+                        class="h-12 w-12 object-contain inline-block mr-2">
+                    <a href="/" style="color: white;" class="text-xl font-bold">AVENTRA SYSTEMS</a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="../index.html" class="hover:underline px-3 py-2 cursor-pointer">
+                            Go to Aventra Home
+                        </a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger icon -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path fill="#ffffff"
+                                d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-        
+
+        <!-- Mobile menu, show/hide based on menu state -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+                <a href="../index.html"
+                    class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+                    Go to Aventra Home
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+            alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center" />
+        <div aria-hidden="true"
+            class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
+            <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+                class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"></div>
+        </div>
+        <div aria-hidden="true"
+            class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0">
+            <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+                class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"></div>
+        </div>
+        <div class="mx-auto max-w-7xl px-6 lg:px-8" style="position: relative;">
+            <div class="mx-auto max-w-2xl lg:mx-0">
+                <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">MCB vs MCCB</h2>
+                <p class="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
+                    The Complete Selection Guide for MSMEs & Engineers</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
         <div class="content">
             <!-- Understanding Basics -->
             <div class="section">
