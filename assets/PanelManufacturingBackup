@@ -1,0 +1,104 @@
+
+    <section class="py-16 px-6" id="panel-manufacturing"
+        style="background-color: var(--color-aventra-light-blue); border-radius: 2em 0 0 2em;">
+        <div class="max-w-5xl mx-auto text-center mb-12 mt-5">
+            <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                Our Panel Manufacturing Process
+            </h2>
+            <p class="text-gray-600 text-lg">
+                From Concept to Commissioning—Every Step Managed.
+            </p>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto">
+            <!-- Vertical Line -->
+            <div class="absolute left-1/2 top-0 w-1 bg-blue-100 h-full transform -translate-x-1/2"></div>
+
+            <div class="space-y-12">
+
+                <!-- Step 1 -->
+                <div class="relative flex items-center">
+                    <div class="left-fade-in w-1/2 pr-8 text-right">
+                        <h3 class="text-xl font-semibold text-gray-800">Step 1: Requirement Gathering</h3>
+                        <p class="text-gray-600 mt-2">
+                            We start with your load list, SLD/GA drawings, site conditions, and compliance requirements.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <div
+                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                            1</div>
+                    </div>
+                    <div class="w-1/2"></div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative flex items-center">
+                    <div class="w-1/2"></div>
+                    <div class="flex-shrink-0">
+                        <div
+                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                            2</div>
+                    </div>
+                    <div class="right-fade-in w-1/2 pl-8">
+                        <h3 class="text-xl font-semibold text-gray-800">Step 2: Engineering & BOM</h3>
+                        <p class="text-gray-600 mt-2">
+                            IS/IEC-aligned design, component selection, and detailed bill of materials with transparent
+                            costing.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative flex items-center">
+                    <div class="left-fade-in w-1/2 pr-8 text-right">
+                        <h3 class="text-xl font-semibold text-gray-800">Step 3: Manufacturing & QA</h3>
+                        <p class="text-gray-600 mt-2">
+                            Precision assembly, systematic wiring, torque verification, and multi-stage quality testing.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <div
+                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                            3</div>
+                    </div>
+                    <div class="w-1/2"></div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative flex items-center">
+                    <div class="w-1/2"></div>
+                    <div class="flex-shrink-0">
+                        <div
+                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                            4</div>
+                    </div>
+                    <div class="right-fade-in w-1/2 pl-8">
+                        <h3 class="text-xl font-semibold text-gray-800">Step 4: Factory Acceptance Test (FAT)</h3>
+                        <p class="text-gray-600 mt-2">
+                            Full functional testing, documentation, and client inspection before dispatch.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="relative flex items-center">
+                    <div class="left-fade-in w-1/2 pr-8 text-right">
+                        <h3 class="text-xl font-semibold text-gray-800">Step 5: Dispatch & Site Acceptance Test (SAT)
+                        </h3>
+                        <p class="text-gray-600 mt-2">
+                            Delivery, installation support, on-site commissioning, and final sign-off.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <div
+                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
+                            5</div>
+                    </div>
+                    <div class="w-1/2"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+

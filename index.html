@@ -13,9 +13,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    <link rel="stylesheet" href="/css/style.css">
     <style>
-        
-
         .card {
             border: 2px solid #c3c6ce;
             transition: border-color 0.1s ease-out, box-shadow 0.1s ease-out, transform 1s ease-out;
@@ -26,6 +25,7 @@
             border-color: #008bf8;
             box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
         }
+
         section {
             overflow-x: hidden;
         }
@@ -251,12 +251,17 @@
                 <!-- Desktop Menu -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
-                        <a href="#solutions" class="hover:underline px-3 py-2">Solutions</a>
-                        <a href="#industries" class="hover:underline px-3 py-2">Industries</a>
-                        <a href="#panel-manufacturing" class="hover:underline px-3 py-2">Panel Manufacturing</a>
-                        <a href="#impact" class="hover:underline px-3 py-2">Impact</a>
-                        <a href="#resources" class="hover:underline px-3 py-2">Resources</a>
-                        <a href="#about" class="hover:underline px-3 py-2">About Us</a>
+                        <a onclick="scrollToId('why-aventra')" class="hover:underline px-3 py-2 cursor-pointer">Why
+                            Aventra</a>
+                        <a onclick="scrollToId('solutions')"
+                            class="hover:underline px-3 py-2 cursor-pointer">Solutions</a>
+                        <a onclick="scrollToId('industries')"
+                            class="hover:underline px-3 py-2 cursor-pointer">Industries</a>
+                        <!-- <a href="#panel-manufacturing" class="hover:underline px-3 py-2">Panel Manufacturing</a> -->
+                        <a onclick="scrollToId('impact')" class="hover:underline px-3 py-2 cursor-pointer">Impact</a>
+                        <a onclick="scrollToId('resources')"
+                            class="hover:underline px-3 py-2 cursor-pointer">Resources</a>
+                        <a onclick="scrollToId('about')" class="hover:underline px-3 py-2 cursor-pointer">About Us</a>
                         <a href="#footer" class="bg-blue-600 text-white px-4 py-2 rounded-md">Contact</a>
                     </div>
                 </div>
@@ -279,13 +284,16 @@
         <!-- Mobile menu, show/hide based on menu state -->
         <div id="mobile-menu" class="hidden md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+                <a href="#why-aventra"
+                    class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Why
+                    Aventra</a>
                 <a href="#solutions"
                     class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Solutions</a>
                 <a href="#industries"
                     class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Industries</a>
-                <a href="#panel-manufacturing"
+                <!-- <a href="#panel-manufacturing"
                     class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Panel
-                    Manufacturing</a>
+                    Manufacturing</a> -->
                 <a href="#impact"
                     class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Impact</a>
                 <a href="#resources"
@@ -320,8 +328,7 @@
                 </p>
                 <div class="mt-5 max-w-md mx-0 sm:flex sm:justify-start md:mt-8 left-fade-in">
                     <div class="rounded-md shadow">
-                        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=L_urEE6ZdkuZTbXRkmkltjKnbANZT4hMq6eBGxCnJ-xUQU42REIzRFZCM0g0RFk5Q0VVRUFWN1A0RC4u"
-                            target="_blank" rel="noopener noreferrer"
+                        <a onclick="openRequestQuoteForm()"
                             class="aventra-button-bg w-full flex items-center justify-center text-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white md:py-4 md:text-lg md:px-10">
                             Request a Quote
                         </a>
@@ -336,38 +343,53 @@
                 </div>
 
                 <!-- Trust Badges -->
-                <div class="flex flex-wrap gap-2 justify-start mt-5 left-fade-in">
+                <div class="flex flex-wrap gap-5 justify-start mt-5 left-fade-in">
                     <div class="landing-chips text-sm flex items-center justify-center text-center 
                             backdrop-blur-xl bg-gray-200/20 border border-white/20 
-                            rounded-lg shadow-sm p-4
+                            rounded-lg shadow-sm p-2
                             ">
                         <p class="font-semibold">Authorized Siemens LV Dealer</p>
                     </div>
                     <div class="landing-chips text-sm flex items-center justify-center text-center 
                             backdrop-blur-xl bg-gray-200/20 border border-white/20 
-                            rounded-lg shadow-sm p-4
+                            rounded-lg shadow-sm p-2
                             ">
-                        <p class="font-semibold">Panel Manufacturing</p>
+                        <p class="font-semibold">Panel</p>
                     </div>
                     <div class="landing-chips text-sm flex items-center justify-center text-center 
                             backdrop-blur-xl bg-gray-200/20 border border-white/20 
-                            rounded-lg shadow-sm p-4
+                            rounded-lg shadow-sm p-2
                             ">
-                        <p class="font-semibold">Odoo ERP Implementation Partner</p>
+                        <p class="font-semibold">Odoo ERP</p>
                     </div>
                     <div class="landing-chips text-sm flex items-center justify-center text-center 
                             backdrop-blur-xl bg-gray-200/20 border border-white/20 
-                            rounded-lg shadow-sm p-4
+                            rounded-lg shadow-sm p-2
                             ">
                         <p class="font-semibold">MSME Consultation</p>
                     </div>
-                    <div class="landing-chips text-sm flex items-center justify-center text-center 
-                            backdrop-blur-xl bg-gray-200/20 border border-white/20 
-                            rounded-lg shadow-sm p-4
-                            ">
-                        <p class="font-semibold">Regional Reach (Jharkhand • Bihar • Odisha • West Bengal • Africa)</p>
+                </div>
+                <div class="relative group mt-3 left-fade-in max-w-xl ml-0 mr-auto">
+                    <div class="flex items-center justify-center text-center
+  bg-white/30 border border-white/40 rounded-xl shadow-sm px-4 py-3
+  backdrop-blur-md transition-all duration-300
+  hover:scale-[1.02] hover:shadow-md hover:border-gray-300/60">
+                        <svg class="w-7 h-7 mr-3" xmlns="http://www.w3.org/2000/svg" height="48px"
+                            viewBox="0 -960 960 960" width="48px" fill="#000000">
+                            <path
+                                d="M480-100q-79.38 0-148.73-29.96t-120.85-81.27q-51.5-51.31-80.96-120.96Q100-401.85 100-481.62q0-79.38 29.46-148.42 29.46-69.04 80.96-120.34 51.5-51.31 120.85-80.46Q400.62-860 480-860t148.73 29.16q69.35 29.15 120.85 80.46 51.5 51.3 80.96 120.34Q860-561 860-481.62q0 79.77-29.46 149.43-29.46 69.65-80.96 120.96-51.5 51.31-120.85 81.27Q559.38-100 480-100Zm0-43.39q37.31-40.23 61.38-87.3 24.08-47.08 39.47-110.31H379.77q15.15 62.31 39.23 110.11 24.08 47.81 61 87.5Zm-63.46-8.15q-28.08-36.46-49.73-84.88-21.66-48.43-34.04-104.58H173.54q38.38 77.54 96.46 122.46 58.08 44.93 146.54 67Zm127.92-.61q78.54-17.62 142-66.7 63.46-49.07 100-122.15H627.85q-14.93 56.31-36.08 104.35-21.16 48.03-47.31 84.5ZM158.92-386.38h165.54q-3.77-27.39-4.84-50.43-1.08-23.04-1.08-44.81 0-24.23 1.38-45.84 1.39-21.62 5.16-46.77H158.92q-7.38 23.23-10.46 44.92-3.07 21.69-3.07 47.69 0 26.39 3.07 49 3.08 22.62 10.46 46.24Zm212.16 0h218.46q4.38-30.23 5.77-51.47 1.38-21.23 1.38-43.77 0-21.53-1.38-41.96-1.39-20.42-5.77-50.65H371.08q-4.39 30.23-5.77 50.65-1.39 20.43-1.39 41.96 0 22.54 1.39 43.77 1.38 21.24 5.77 51.47Zm263.84 0h166.16q7.38-23.62 10.46-46.24 3.07-22.61 3.07-49 0-26-3.07-47.69-3.08-21.69-10.46-44.92H635.92q3.39 33.08 4.77 53.88 1.39 20.81 1.39 38.73 0 22.39-1.7 44-1.69 21.62-5.46 51.24Zm-7.69-233.23h159.23q-35.31-76.7-97.81-125.2t-145.19-64.04q28.08 37.77 49.04 84.81t34.73 104.43Zm-247.46 0h202.08q-13.31-56.47-39.5-106.54-26.2-50.08-62.35-89.23-33.92 31.23-57.27 77.15t-42.96 118.62Zm-206.23 0h159.85q12.53-55.54 33-102.08 20.46-46.54 49.15-86.54-82.69 15.92-144.08 63.61-61.38 47.7-97.92 125.01Z" />
+                        </svg>
+                        <p class="font-semibold text-black text-sm md:text-base">
+                            Regional Reach: Jharkhand • Bihar • Odisha • West Bengal • Africa
+                        </p>
                     </div>
                 </div>
+
+
+
+
+
+
 
                 <div class="partner-logos left-fade-in" style="position:relative">
                     <img src="assets/partners/siemens.png" alt="Siemens Logo"
@@ -388,29 +410,29 @@
     </section>
 
     <!-- Why Aventra Section -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white" id="why-aventra">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">
                     Why Aventra
                 </h2>
-                <h3 class="left-fade-in mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                <h3 class="left-fade-in mt-2 text-lg text-gray-600 max-w-2xl mx-auto">
                     One Partner. Total Integration.
                 </h3>
-                <p class="left-fade-in mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                <p class="left-fade-in mt-3 text-lg text-gray-600 max-w-6xl mx-auto">
                     At Aventra Systems, we don't just supply equipment—we engineer complete solutions. Whether you need
                     genuine Siemens switchgear, custom-built electrical panels, or digital systems to modernize your
                     operations, we bring everything together with precision and accountability.
                 </p>
                 <!-- Subheading: What Sets Us Apart (centered) -->
-                <h3 class="left-fade-in mt-8 text-2xl sm:text-3xl font-semibold text-gray-900 max-w-2xl mx-auto">
+                <h3 class="left-fade-in mt-6 text-2xl sm:text-3xl font-bold text-gray-900 max-w-2xl mx-auto">
                     What Sets Us Apart
                 </h3>
             </div>
-            <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3">
 
                 <!-- Integration -->
-                <div class="card  bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card  bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">Integration-First Engineering</h3>
                     <p class="text-gray-600">
                         End-to-end design, manufacturing, and commissioning ensure every component works together
@@ -418,39 +440,39 @@
                     </p>
                 </div>
                 <!-- Digital Mindset -->
-                <div class="card  bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Built for Your Operations</h3>
+                <div class="card  bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Built for Your Operations</h3>
                     <p class="text-gray-600">
                         Every panel, every process is customized to your industry requirements, site conditions, and
                         compliance standards.
                     </p>
                 </div>
                 <!-- Future-Ready -->
-                <div class="card  bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Single Point of Accountability</h3>
+                <div class="card  bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Single Point of Accountability</h3>
                     <p class="text-gray-600">
                         From initial design to final commissioning and beyond, you have one trusted partner managing the
                         entire lifecycle.
                     </p>
                 </div>
                 <!-- Single Point of Accountability -->
-                <div class="card  bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Powered by Siemens</h3>
+                <div class="card  bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Powered by Siemens</h3>
                     <p class="text-gray-600">
                         Authentic Siemens low-voltage switchgear backed by certified engineering and genuine support.
                     </p>
                 </div>
                 <!-- Future-Ready -->
-                <div class="card  bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Digital-First Mindset</h3>
+                <div class="card  bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Digital-First Mindset</h3>
                     <p class="text-gray-600">
                         We bridge traditional manufacturing with modern technology—ERP systems, AI tools, and smart
                         processes designed specifically for MSMEs.
                     </p>
                 </div>
                 <!-- Future-Ready -->
-                <div class="card  bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Future-Ready Infrastructure </h3>
+                <div class="card  bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Future-Ready Infrastructure </h3>
                     <p class="text-gray-600">
                         Scalable, Industry 4.0-enabled systems that grow with your business, not against it.
                     </p>
@@ -471,110 +493,311 @@
             <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
                 <div class="max-w-4xl mx-auto space-y-8">
 
-                    <!-- Card 1: Trading – Siemens LV Switchgear -->
-                    <div class="left-fade-in bg-white rounded-2xl shadow-lg p-8">
-                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Trading – Siemens LV Switchgear &
-                            Accessories</h2>
-                        <p class="text-gray-700 mb-4">
-                            Authentic Siemens low-voltage products for every industrial and commercial application:
-                        </p>
-                        <ul class="text-gray-600 space-y-1 mb-4 list-disc list-inside">
-                            <li><strong>Protection:</strong> MCBs • MCCBs • ACBs • RCCBs • RCBOs</li>
-                            <li><strong>Control:</strong> Contactors • Relays • Overload Relays • Motor Starters</li>
-                            <li><strong>Automation:</strong> Drives • Soft Starters • PLCs</li>
-                            <li><strong>Distribution:</strong> Busbars • Panel Meters • Terminals • Switches</li>
-                            <li><strong>Accessories:</strong> Labels • Indicators • Enclosures • Cable Management</li>
-                        </ul>
-                        <p class="text-gray-700 mb-4">✓ Genuine Products | ✓ Technical Support | ✓ Competitive Pricing |
-                            ✓ Fast Delivery</p>
-                        <button
-                            class="mt-4 bg-blue-600 text-white font-medium px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-                            Request a Quote
-                        </button>
+
+
+                    <div class="plan">
+                        <div class="inner">
+                            <p class="title">Trading - Siemens LV Switchgear & Accessories</p>
+                            <p class="info">Authentic Siemens low-voltage products for every industrial and commercial
+                                application:</p>
+                            <ul class="features">
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>Protection:</strong> MCBs • MCCBs • ACBs • RCCBs • RCBOs</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>Control:</strong> Contactors • Relays • Overload Relays • Motor
+                                        Starters</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>Automation:</strong> Drives • Soft Starters • PLCs</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>Distribution:</strong> Busbars • Panel Meters • Terminals •
+                                        Switches</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>Accessories:</strong> Labels • Indicators • Enclosures • Cable
+                                        Management</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span>Genuine Products • Technical Support • Competitive Pricing • Fast
+                                        Delivery</span>
+                                </li>
+                            </ul>
+                            <div class="action">
+                                <a class="button" onclick="openRequestQuoteForm()">Request a Quote</a>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Card 2: Panel Manufacturing -->
-                    <div class="left-fade-in bg-white rounded-2xl shadow-lg p-8">
-                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Panel Manufacturing</h2>
-                        <p class="text-gray-700 mb-4">
-                            Custom-Engineered Electrical Panels. Certified. Factory & Site Tested.
-                        </p>
-                        <p class="text-gray-700 mb-2">
-                            We design and manufacture electrical panels that meet the toughest industry and government
-                            standards—built for performance, safety, and long-term reliability.
-                        </p>
-
-                        <h3 class="font-semibold text-gray-800 mt-4 mb-2">Our Panel Range</h3>
-                        <ul class="text-gray-600 list-disc list-inside space-y-1 mb-4">
-                            <li><strong>Power Distribution:</strong> PCC, MCC, Distribution Boards, Capacitor Panels
-                            </li>
-                            <li><strong>Automation & Control:</strong> PLC Panels, AMF, Synchronization, SCADA
-                                Integration</li>
-                            <li><strong>Specialized Solutions:</strong> OEM Panels, Retrofit, Explosion-Proof, Custom
-                                Control</li>
-                        </ul>
-
-                        <h3 class="font-semibold text-gray-800 mt-4 mb-2">Every Panel Includes:</h3>
-                        <p class="text-gray-700 mb-4">✓ IS/IEC Compliant Design |
-                            ✓ Full FAT (Factory Acceptance Test) |
-                            ✓ SAT (Site Acceptance Test) Support |
-                            ✓ As-Built Documentation |
-                            ✓ Warranty & AMC Options</p>
-                        <button
-                            class="mt-4 bg-blue-600 text-white font-medium px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-                            Request a Quote
-                        </button>
+                    <div class="plan">
+                        <div class="inner">
+                            <p class="title">Panel</p>
+                            <p class="info">Custom-Engineered Electrical Panels. Certified. Factory & Site Tested.</p>
+                            <p class="info">We design and manufacture electrical panels that meet the toughest industry
+                                and government standards—built for performance, safety, and long-term reliability.</p>
+                            <ul class="features">
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>Power Distribution:</strong> PCC, MCC, Distribution Boards, Capacitor
+                                        Panels</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>Automation & Control:</strong> PLC Panels, AMF, Synchronization, SCADA
+                                        Integration</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>Specialized Solutions:</strong> OEM Panels, Retrofit, Explosion-Proof,
+                                        Custom
+                                        Control</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span>IS / IEC Compliant Design • Full FAT • SAT Support • As-Built
+                                        Documentation • Warranty & AMC Options</span>
+                                </li>
+                            </ul>
+                            <div class="action">
+                                <a class="button" onclick="openRequestQuoteForm()">Request a Quote</a>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Card 3: ERP Implementation -->
-                    <div class="left-fade-in bg-white rounded-2xl shadow-lg p-8">
-                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">ERP Implementation for MSMEs</h2>
-                        <p class="text-gray-700 mb-2">Simple. Affordable. Effective.</p>
-                        <p class="text-gray-700 mb-4">
-                            Stop losing time to manual processes, missing invoices, and compliance headaches. We
-                            implement lightweight ERP solutions tailored for small and medium manufacturers.
-                        </p>
-                        <h3 class="font-semibold text-gray-800 mb-2">What We Offer:</h3>
-                        <ul class="text-gray-600 list-disc list-inside mb-4">
-                            <li>Odoo ERP Setup – Production, inventory, sales, purchase, accounting in one system</li>
-                            <li>Process Digitization – Order tracking, GST compliance, e-way bill automation</li>
-                            <li>Excel-to-ERP Migration – Clean data migration and staff training</li>
-                            <li>QuickBooks Integration – For businesses wanting familiar platforms</li>
-                        </ul>
-                        <p class="text-gray-700 mb-4">Results: Faster invoicing • Real-time inventory • GST-ready
-                            reporting • Reduced errors</p>
-                        <button
-                            class="mt-4 bg-green-600 text-white font-medium px-6 py-2 rounded-lg hover:bg-green-700 transition">
-                            Download Free ERP Readiness Checklist
-                        </button>
+                    <div class="plan">
+                        <div class="inner">
+                            <p class="title">ERP Implementation for MSMEs</p>
+                            <p class="info">Simple. Affordable. Effective.</p>
+                            <p class="info">Stop losing time to manual processes, missing invoices, and compliance
+                                headaches. We implement lightweight ERP solutions tailored for small and medium
+                                manufacturers.</p>
+                            <ul class="features">
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>Odoo ERP Setup:</strong> Production, inventory, sales, purchase,
+                                        accounting in one
+                                        system</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>Process Digitization:</strong> Order tracking, GST compliance, e-way
+                                        bill
+                                        automation</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>Excel-to-ERP Migration:</strong> Clean data migration and staff
+                                        training</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>QuickBooks Integration:</strong> For businesses wanting familiar
+                                        platforms</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>Results:</strong> Faster invoicing • Real-time inventory • GST-ready
+                                        reporting •
+                                        Reduced errors</span>
+                                </li>
+                            </ul>
+                            <div class="action">
+                                <a class="button" onclick="openRequestQuoteForm()">Request a Quote</a>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Card 4: MSME Consulting -->
-                    <div class="left-fade-in bg-white rounded-2xl shadow-lg p-8">
-                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">MSME Consulting</h2>
-                        <p class="text-gray-700 mb-4">Practical. Cost-Effective. Results-Driven.</p>
-                        <p class="text-gray-700 mb-2">
-                            We help MSMEs adopt smarter operations without overwhelming budgets or disrupting
-                            production.
-                        </p>
-
-                        <div class="space-y-3 text-gray-600">
-                            <div>
-                                <strong>Industrial & Process Audits:</strong> Shop-floor assessments to identify
-                                bottlenecks, energy waste, and safety gaps. Get actionable recommendations within 48
-                                hours.
-                            </div>
-                            <div>
-                                <strong>AI & Automation Advisory:</strong> Implement chatbots, dashboards, and AI
-                                assistants to reduce manual work and improve decision-making.
-                            </div>
-                            <div>
-                                <strong>Compliance & Documentation Support:</strong> Tender documentation, IS/IEC
-                                compliance, FAT/SAT preparation, and government submissions.
-                            </div>
-                            <div>
-                                <strong>Training Programs:</strong> ERP basics, lean operations, electrical safety, and
-                                AI adoption workshops for your team.
+                    <div class="plan">
+                        <div class="inner">
+                            <p class="title">MSME Consulting</p>
+                            <p class="info">Practical. Cost-Effective. Results-Driven.</p>
+                            <ul class="features">
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span>Industrial & Process Audits: Shop-floor assessments to identify bottlenecks,
+                                        energy waste, and safety gaps. Get actionable recommendations within 48
+                                        hours.</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>AI & Automation Advisory:</strong> Implement chatbots, dashboards, and
+                                        AI assistants to
+                                        reduce manual work and improve decision-making.</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>Compliance & Documentation Support:</strong> Tender documentation,
+                                        IS/IEC compliance,
+                                        FAT/SAT preparation, and government submissions.</span>
+                                </li>
+                                <li>
+                                    <span class="icon">
+                                        <svg height="24" width="24" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 0h24v24H0z" fill="none"></path>
+                                            <path fill="currentColor"
+                                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <span><strong>Training Programs:</strong> ERP basics, lean operations, electrical
+                                        safety, and AI
+                                        adoption workshops for your team.</span>
+                                </li>
+                            </ul>
+                            <div class="action">
+                                <a class="button" onclick="openRequestQuoteForm()">Request a Quote</a>
                             </div>
                         </div>
                     </div>
@@ -593,178 +816,69 @@
                     Industries We Serve
                 </h2>
             </div>
-            <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <!-- Steel -->
-                <div class="card  bg-gray-50 rounded-xl p-8  shadow-md hover:shadow-lg">
+            <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div class="card bg-gray-50 rounded-lg p-3 shadow hover:shadow-md">
                     <img src="assets/industries/steel.jpg" alt="Steel industry"
-                        class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Steel & Metal Processing</h3>
-                    <p class="text-gray-600">
+                        class="w-full h-28 object-cover rounded-md mb-1">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Steel & Metal Processing</h3>
+                    <p class="text-gray-600 text-base leading-snug industry-description">
                         Rugged MCCs, automation panels, and process control systems designed for maximum uptime and
                         harsh environments.
                     </p>
                 </div>
 
-                <!-- Cement -->
-                <div class="card  bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bg-gray-50 rounded-lg p-3 shadow hover:shadow-md">
                     <img src="assets/industries/cement.jpg" alt="Cement industry"
-                        class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Cement & Heavy Manufacturing</h3>
-                    <p class="text-gray-600">
+                        class="w-full h-28 object-cover rounded-md mb-1">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Cement & Heavy Manufacturing</h3>
+                    <p class="text-gray-600 text-base leading-snug industry-description">
                         Heavy-duty panels engineered for continuous operation, extreme temperatures, and dust-laden
                         conditions.
                     </p>
                 </div>
 
-                <!-- FMCG -->
-                <div class="card  bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bg-gray-50 rounded-lg p-3 shadow hover:shadow-md">
                     <img src="assets/industries/fmcg.jpg" alt="FMCG industry"
-                        class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">FMCG & Packaging</h3>
-                    <p class="text-gray-600">
+                        class="w-full h-28 object-cover rounded-md mb-1">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-1">FMCG & Packaging</h3>
+                    <p class="text-gray-600 text-base leading-snug industry-description">
                         Audit-ready electrical systems with precise control, energy monitoring, and compliance
                         documentation.
                     </p>
                 </div>
 
-                <!-- Water/Infrastructure -->
-                <div class="card  bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bg-gray-50 rounded-lg p-3 shadow hover:shadow-md">
                     <img src="assets/industries/water-infra.jpg" alt="Water / Infrastructure"
-                        class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Water Treatment & Infrastructure</h3>
-                    <p class="text-gray-600">
+                        class="w-full h-28 object-cover rounded-md mb-1">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Water Treatment & Infrastructure</h3>
+                    <p class="text-gray-600 text-base leading-snug industry-description">
                         Pumping stations, treatment plants, and utility-grade automation panels with full regulatory
                         compliance.
                     </p>
                 </div>
 
-                <!-- Government & EB -->
-                <div class="card  bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bg-gray-50 rounded-lg p-3 shadow hover:shadow-md">
                     <img src="assets/industries/govt-docs.jpg" alt="Government & EB"
-                        class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Government & Electricity Boards</h3>
-                    <p class="text-gray-600">
+                        class="w-full h-28 object-cover rounded-md mb-1">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Government & Electricity Boards</h3>
+                    <p class="text-gray-600 text-base leading-snug industry-description">
                         Tender-ready, IS/IEC-aligned panels with complete documentation packages and technical support.
                     </p>
                 </div>
 
-                <!-- Commercial -->
-                <div class="card  bg-gray-50 rounded-xl p-8 shadow-md hover:shadow-lg">
+                <div class="card bg-gray-50 rounded-lg p-3 shadow hover:shadow-md">
                     <img src="assets/industries/panels.jpg" alt="Commercial"
-                        class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Commercial Buildings & Institutions</h3>
-                    <p class="text-gray-600">
+                        class="w-full h-28 object-cover rounded-md mb-1">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-1">Commercial Buildings & Institutions</h3>
+                    <p class="text-gray-600 text-base leading-snug industry-description">
                         Safe, aesthetic, and efficient electrical distribution for offices, hospitals, schools, and
                         shopping complexes.
                     </p>
                 </div>
             </div>
+
         </div>
     </section>
-
-    <section class="py-16 px-6" id="panel-manufacturing"
-        style="background-color: var(--color-aventra-light-blue); border-radius: 2em 0 0 2em;">
-        <div class="max-w-5xl mx-auto text-center mb-12 mt-5">
-            <h2 class="left-fade-in text-3xl font-extrabold text-gray-900 sm:text-4xl">
-                Our Panel Manufacturing Process
-            </h2>
-            <p class="text-gray-600 text-lg">
-                From Concept to Commissioning—Every Step Managed.
-            </p>
-        </div>
-
-        <div class="relative max-w-4xl mx-auto">
-            <!-- Vertical Line -->
-            <div class="absolute left-1/2 top-0 w-1 bg-blue-100 h-full transform -translate-x-1/2"></div>
-
-            <div class="space-y-12">
-
-                <!-- Step 1 -->
-                <div class="relative flex items-center">
-                    <div class="left-fade-in w-1/2 pr-8 text-right">
-                        <h3 class="text-xl font-semibold text-gray-800">Step 1: Requirement Gathering</h3>
-                        <p class="text-gray-600 mt-2">
-                            We start with your load list, SLD/GA drawings, site conditions, and compliance requirements.
-                        </p>
-                    </div>
-                    <div class="flex-shrink-0">
-                        <div
-                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
-                            1</div>
-                    </div>
-                    <div class="w-1/2"></div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="relative flex items-center">
-                    <div class="w-1/2"></div>
-                    <div class="flex-shrink-0">
-                        <div
-                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
-                            2</div>
-                    </div>
-                    <div class="right-fade-in w-1/2 pl-8">
-                        <h3 class="text-xl font-semibold text-gray-800">Step 2: Engineering & BOM</h3>
-                        <p class="text-gray-600 mt-2">
-                            IS/IEC-aligned design, component selection, and detailed bill of materials with transparent
-                            costing.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="relative flex items-center">
-                    <div class="left-fade-in w-1/2 pr-8 text-right">
-                        <h3 class="text-xl font-semibold text-gray-800">Step 3: Manufacturing & QA</h3>
-                        <p class="text-gray-600 mt-2">
-                            Precision assembly, systematic wiring, torque verification, and multi-stage quality testing.
-                        </p>
-                    </div>
-                    <div class="flex-shrink-0">
-                        <div
-                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
-                            3</div>
-                    </div>
-                    <div class="w-1/2"></div>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="relative flex items-center">
-                    <div class="w-1/2"></div>
-                    <div class="flex-shrink-0">
-                        <div
-                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
-                            4</div>
-                    </div>
-                    <div class="right-fade-in w-1/2 pl-8">
-                        <h3 class="text-xl font-semibold text-gray-800">Step 4: Factory Acceptance Test (FAT)</h3>
-                        <p class="text-gray-600 mt-2">
-                            Full functional testing, documentation, and client inspection before dispatch.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Step 5 -->
-                <div class="relative flex items-center">
-                    <div class="left-fade-in w-1/2 pr-8 text-right">
-                        <h3 class="text-xl font-semibold text-gray-800">Step 5: Dispatch & Site Acceptance Test (SAT)
-                        </h3>
-                        <p class="text-gray-600 mt-2">
-                            Delivery, installation support, on-site commissioning, and final sign-off.
-                        </p>
-                    </div>
-                    <div class="flex-shrink-0">
-                        <div
-                            class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-semibold">
-                            5</div>
-                    </div>
-                    <div class="w-1/2"></div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
 
     <!-- Impact Section -->
     <section id="impact" class="py-20 bg-gray-50">
@@ -802,8 +916,7 @@
                 </div>
 
                 <!-- Results Overview -->
-                <div
-                    class="card  bg-white rounded-xl p-8 shadow-md hover:shadow-lg flex flex-col justify-center">
+                <div class="card  bg-white rounded-xl p-8 shadow-md hover:shadow-lg flex flex-col justify-center">
                     <h3 class="text-xl font-semibold text-gray-900 mb-4">
                         Proven Outcomes
                     </h3>
@@ -1077,9 +1190,9 @@
     <script>
         // Map keys to section IDs
         const keyMap = {
-            2: "solutions",
-            3: "industries",
-            4: "panel-manufacturing",
+            2: "why-aventra",
+            3: "solutions",
+            4: "industries",
             5: "impact",
             6: "resources",
             7: "about",
@@ -1099,8 +1212,14 @@
                 }
             }
         });
+        function scrollToId(id) {
+            const section = document.getElementById(id);
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        }
     </script>
-    <script>
+    <!-- <script>
         if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
             navigator.serviceWorker.register('/sw.js')
@@ -1108,8 +1227,16 @@
             .catch(err => console.log('Service Worker registration failed', err));
         });
         }
+    </script> -->
+    <script>
+        function openRequestQuoteForm() {
+            window.open(
+                "https://forms.office.com/Pages/ResponsePage.aspx?id=L_urEE6ZdkuZTbXRkmkltjKnbANZT4hMq6eBGxCnJ-xUQU42REIzRFZCM0g0RFk5Q0VVRUFWN1A0RC4u",
+                "_blank",
+                "noopener,noreferrer"
+            );
+        }
     </script>
-
     <script src="js/main.js"></script>
     <script src="js/scroll.js"></script>
 </body>
