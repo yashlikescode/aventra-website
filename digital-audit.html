@@ -1,153 +1,521 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MSME Digital Audit</title>
-  <link rel="stylesheet" href="css/tailwind.min.css" defer>
-</head>
-<body class="bg-gradient-to-br from-slate-50 to-slate-100 p-4 md:p-8">
 
-  <div class="max-w-6xl mx-auto">
-    <!-- Header -->
-    <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-900 rounded-xl shadow-2xl p-8 mb-8 text-center relative overflow-hidden">
-      <div class="relative">
-        <img 
-          src="https://cdn.prod.website-files.com/679c600e41c2c993e087876c/679c60e23c96e5e8ebe5f7bd_Group%201.svg" 
-          alt="Aventra Systems Logo" 
-          class="h-24 mx-auto mb-4 filter brightness-0 invert"
-        />
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-2 tracking-wide">AVENTRA SYSTEMS</h1>
-        <p class="text-indigo-200 text-lg md:text-xl tracking-widest">SMART SYSTEMS DELIVERED</p>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MSME Digital Audit</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+      <nav class="header shadow-lg fixed w-full z-50" style="padding:0;margin:0;color: white;">
+        <div class=" max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <img src="../assets/AV LOGO.png" alt="Aventra Systems logo"
+                        class="h-12 w-12 object-contain inline-block mr-2">
+                    <a href="/" style="color: white;" class="text-xl font-bold">AVENTRA SYSTEMS</a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="../index.html" class="hover:underline px-3 py-2 cursor-pointer">
+                            Go to Aventra Home
+                        </a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger icon -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path fill="#ffffff"
+                                d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+                <a href="../index.html"
+                    class="hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+                    Go to Aventra Home
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+            alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center" />
+        <div aria-hidden="true"
+            class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
+            <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+                class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"></div>
+        </div>
+        <div aria-hidden="true"
+            class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0">
+            <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+                class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"></div>
+        </div>
+        <div class="mx-auto max-w-7xl px-6 lg:px-8" style="position: relative;">
+            <div class="mx-auto max-w-2xl lg:mx-0">
+                <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">MSME Digital Audit</h2>
+                <p class="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">
+                    The Comprehensive Technology Readiness Assessment</p>
+            </div>
+        </div>
+    </div>
+
+  <div class="max-w-6xl mx-auto" id="app">
+    <!-- Navigation -->
+
+    <!-- Modal (hidden by default) -->
+    <div id="completionModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 p-4 flex items-center justify-center overflow-y-auto">
+
+      <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8">
+        <div class="text-center">
+          <div
+            class="w-20 h-20 rounded-full bg-green-100 mx-auto mb-4 flex items-center justify-center text-green-600 text-3xl">
+            ✔️</div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Audit Complete!</h2>
+          <p class="text-gray-600 mb-6">Congratulations! You've completed your digital audit assessment.</p>
+          <div id="maturityBox" class="rounded-lg p-4 mb-6"></div>
+          <div class="bg-indigo-50 border-2 border-indigo-200 rounded-lg p-2 mb-6 text-center">
+            <div class="mb-3">📧</div>
+            <p class="text-gray-800 font-semibold mb-2">Ready to Transform Your Business?</p>
+            <p class="text-sm text-gray-600 mb-3">Contact us for a tailored and customized plan for your digital journey
+            </p>
+            <a href="mailto:sales@aventrasystems.in"
+              class="text-indigo-600 font-bold hover:text-indigo-800">sales@aventrasystems.in</a>
+          </div>
+          <button id="closeModal"
+            class="bg-indigo-600 text-white px-8 py-3 rounded-lg hover:bg-indigo-700 transition-colors font-semibold w-full">View
+            Full Report</button>
+        </div>
       </div>
     </div>
 
-    <!-- Company Info -->
-    <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">MSME Digital Audit</h2>
-      <p class="text-gray-600 mb-4">Technology Readiness Assessment</p>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+
+    <!-- Main card -->
+    <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8 mt-5">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900">MSME Digital Audit</h2>
+          <p class="text-gray-600 mt-1">Technology Readiness Assessment</p>
+          <p class="text-sm text-indigo-600 font-semibold mt-2" id="progressText">Progress: 0/0 Questions (0%)</p>
+        </div>
+        <button id="downloadBtn"
+          class="flex items-center justify-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors font-semibold">
+          ⬇️ Download Report
+        </button>
+      </div>
+
+      <!-- Company Info -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2">Company Name *</label>
-          <input type="text" id="companyName" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Enter company name">
+          <input id="companyName"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            placeholder="Enter company name" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2">Audit Date</label>
-          <input type="date" id="auditDate" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+          <input id="auditDate" type="date"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
-          <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="your@email.com">
+          <input id="email" type="email"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            placeholder="your@email.com" />
         </div>
         <div>
           <label class="block text-sm font-medium text-gray-700 mb-2">Contact Number *</label>
-          <input type="tel" id="contactNumber" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="+91 XXXXX XXXXX">
+          <input id="contactNumber" type="tel"
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+            placeholder="+91 XXXXX XXXXX" />
         </div>
       </div>
-      <button id="downloadReportBtn" class="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors font-semibold">
-        Download Report
-      </button>
+
+      <!-- Overall Score -->
+      <div id="overallScoreBox" class="hidden mt-6 rounded-lg p-6 border-2 border-opacity-20"></div>
     </div>
 
-    <!-- Audit Categories Container -->
+    <!-- Rating Guide -->
+    <div class="bg-white rounded-xl shadow-lg p-6 mb-8">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Quick Rating Guide</h2>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-3" id="ratingGuide"></div>
+    </div>
+
+    <!-- Categories container -->
     <div id="categoriesContainer"></div>
+
+    <!-- Footer -->
+    <div
+      class="mb-5 bg-gradient-to-r from-blue-900 via-indigo-900 to-blue-900 rounded-xl shadow-2xl p-8 mt-8 text-center relative overflow-hidden text-indigo-100">
+      <div class="h-16 md:h-20 mx-auto mb-4 text-white flex items-center justify-center font-bold">LOGO</div>
+      <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">AVENTRA SYSTEMS</h2>
+      <p class="text-indigo-200 mb-4 tracking-widest">SMART SYSTEMS DELIVERED</p>
+      <div class="flex flex-col md:flex-row justify-center gap-4 mb-4 text-indigo-200">
+        <a href="mailto:sales@aventrasystems.in" class="hover:text-white transition-colors">📧
+          sales@aventrasystems.in</a>
+        <span class="hidden md:inline">|</span>
+        <a href="http://www.aventrasystems.in" class="hover:text-white transition-colors">🌐 www.aventrasystems.in</a>
+      </div>
+      <div class="border-t border-indigo-500 pt-4 mt-4">
+        <p class="text-white font-semibold mb-2">© 2025 Aventra Systems. All Rights Reserved.</p>
+        <p class="text-indigo-200 text-sm max-w-3xl mx-auto">This content is the intellectual property of Aventra
+          Systems and may not be copied, reproduced, distributed, or used without explicit written permission.</p>
+      </div>
+    </div>
   </div>
 
   <script>
-    // JS Variables
+    // Data: categories and rating scale (ported from original React file)
     const categories = [
       {
-        name: "Digital Infrastructure",
-        areas: [
+        name: "Digital Infrastructure", areas: [
           { id: 1, area: "Internet Connectivity & Speed", description: "Quality and reliability of internet connection" },
-          { id: 2, area: "Hardware & Devices", description: "Computers, laptops, tablets, smartphones availability" }
+          { id: 2, area: "Hardware & Devices", description: "Computers, laptops, tablets, smartphones availability" },
+          { id: 3, area: "Software Licensing", description: "Legitimate software licenses and regular updates" },
+          { id: 4, area: "Cloud Services Adoption", description: "Use of cloud storage and computing services" },
+          { id: 5, area: "IT Support & Maintenance", description: "Technical support availability and response time" }
         ]
       },
       {
-        name: "Business Operations",
-        areas: [
-          { id: 3, area: "Accounting & Finance Software", description: "Digital accounting, invoicing, and financial management" }
+        name: "Business Operations", areas: [
+          { id: 6, area: "Accounting & Finance Software", description: "Digital accounting, invoicing, and financial management" },
+          { id: 7, area: "Inventory Management", description: "Digital tracking of stock, orders, and supplies" },
+          { id: 8, area: "Customer Relationship Management (CRM)", description: "Digital customer data and interaction tracking" },
+          { id: 9, area: "Project Management Tools", description: "Digital task and project tracking systems" },
+          { id: 10, area: "Document Management", description: "Digital filing, storage, and retrieval systems" }
+        ]
+      },
+      {
+        name: "Digital Marketing & Sales", areas: [
+          { id: 11, area: "Website Presence", description: "Professional, mobile-responsive website" },
+          { id: 12, area: "Social Media Marketing", description: "Active presence on relevant social platforms" },
+          { id: 13, area: "E-commerce Capabilities", description: "Online selling and payment processing" },
+          { id: 14, area: "Digital Advertising", description: "Use of Google Ads, Facebook Ads, etc." },
+          { id: 15, area: "Email Marketing", description: "Email campaigns and automation tools" }
+        ]
+      },
+      {
+        name: "Communication & Collaboration", areas: [
+          { id: 16, area: "Email Systems", description: "Professional email with company domain" },
+          { id: 17, area: "Video Conferencing", description: "Tools like Zoom, Teams, Google Meet" },
+          { id: 18, area: "Team Collaboration Platforms", description: "Slack, Teams, or similar collaboration tools" },
+          { id: 19, area: "File Sharing Systems", description: "Secure digital file sharing capabilities" },
+          { id: 20, area: "Internal Communication", description: "Digital channels for employee communication" }
+        ]
+      },
+      {
+        name: "Data & Analytics", areas: [
+          { id: 21, area: "Data Collection Systems", description: "Systematic digital data gathering" },
+          { id: 22, area: "Analytics & Reporting", description: "Business intelligence and reporting tools" },
+          { id: 23, area: "Performance Dashboards", description: "Real-time KPI tracking and visualization" },
+          { id: 24, area: "Customer Analytics", description: "Customer behavior and sales analytics" },
+          { id: 25, area: "Data-Driven Decision Making", description: "Using data insights for strategy" }
+        ]
+      },
+      {
+        name: "Cybersecurity & Compliance", areas: [
+          { id: 26, area: "Antivirus & Security Software", description: "Updated security protection systems" },
+          { id: 27, area: "Data Backup Systems", description: "Regular automated backups" },
+          { id: 28, area: "Password Management", description: "Secure password policies and tools" },
+          { id: 29, area: "Employee Security Training", description: "Cybersecurity awareness programs" },
+          { id: 30, area: "Data Privacy Compliance", description: "GDPR, data protection compliance" }
+        ]
+      },
+      {
+        name: "Automation & Innovation", areas: [
+          { id: 31, area: "Process Automation", description: "Automated workflows and processes" },
+          { id: 32, area: "AI/ML Implementation", description: "Use of artificial intelligence tools" },
+          { id: 33, area: "Digital Payment Systems", description: "Multiple digital payment options" },
+          { id: 34, area: "Mobile App Presence", description: "Mobile applications for business" },
+          { id: 35, area: "Innovation Mindset", description: "Openness to adopting new technologies" }
         ]
       }
     ];
 
     const ratingScale = [
-      { value: 1, label: "Not Implemented", examples: "Paper-based, Manual processes" },
-      { value: 2, label: "Basic", examples: "Excel, Email, WhatsApp" },
-      { value: 3, label: "Developing", examples: "Software, Website, Social Media" },
-      { value: 4, label: "Advanced", examples: "ERP, CRM, Cloud, E-commerce" },
-      { value: 5, label: "Leading", examples: "AI, Automation, Analytics" }
+      { value: 1, label: 'Not Implemented', color: 'bg-red-500', examples: 'Paper-based, Manual processes' },
+      { value: 2, label: 'Basic', color: 'bg-orange-500', examples: 'Excel, Email, WhatsApp' },
+      { value: 3, label: 'Developing', color: 'bg-yellow-500', examples: 'Software, Website, Social Media' },
+      { value: 4, label: 'Advanced', color: 'bg-blue-500', examples: 'ERP, CRM, Cloud, E-commerce' },
+      { value: 5, label: 'Leading', color: 'bg-green-500', examples: 'AI, Automation, Analytics' }
     ];
 
-    const ratings = {};
-    const comments = {};
+    // State
+    const ratings = {}; // areaId -> rating
+    const comments = {}; // areaId -> comment
 
-    const categoriesContainer = document.getElementById('categoriesContainer');
+    // Init
+    document.addEventListener('DOMContentLoaded', () => {
+      // set default audit date to today
+      const d = new Date();
+      document.getElementById('auditDate').value = d.toISOString().split('T')[0];
 
-    // Render categories and areas
-    categories.forEach(category => {
-      const catDiv = document.createElement('div');
-      catDiv.className = 'bg-white rounded-xl shadow-lg p-6 md:p-8 mb-6';
-      catDiv.innerHTML = `<h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-4">${category.name}</h2>`;
+      renderRatingGuide();
+      renderCategories();
+      updateProgress();
 
-      category.areas.forEach(area => {
-        const areaDiv = document.createElement('div');
-        areaDiv.className = 'mb-6 pb-6 border-b border-gray-200';
-        areaDiv.innerHTML = `
-          <h3 class="text-base md:text-lg font-semibold text-gray-900">${area.area}</h3>
-          <p class="text-sm text-gray-600 mt-1 mb-2">${area.description}</p>
-          <div class="grid grid-cols-5 gap-2 mb-2" id="ratings-${area.id}"></div>
-          <textarea placeholder="Add comments..." class="w-full px-4 py-2 border border-gray-300 rounded-lg resize-none" rows="2" id="comment-${area.id}"></textarea>
-        `;
-
-        // Render rating buttons
-        const ratingContainer = areaDiv.querySelector(`#ratings-${area.id}`);
-        ratingScale.forEach(r => {
-          const btn = document.createElement('button');
-          btn.className = 'p-3 rounded-lg border border-gray-300 hover:border-indigo-400';
-          btn.innerHTML = `<div>${r.value} - ${r.label}</div><small>${r.examples}</small>`;
-          btn.addEventListener('click', () => {
-            ratings[area.id] = r.value;
-            console.log('Ratings:', ratings);
-          });
-          ratingContainer.appendChild(btn);
-        });
-
-        // Save comments
-        areaDiv.querySelector(`#comment-${area.id}`).addEventListener('input', (e) => {
-          comments[area.id] = e.target.value;
-          console.log('Comments:', comments);
-        });
-
-        catDiv.appendChild(areaDiv);
+      document.getElementById('closeModal').addEventListener('click', () => {
+        document.getElementById('completionModal').classList.add('hidden');
       });
 
-      categoriesContainer.appendChild(catDiv);
+      document.getElementById('downloadBtn').addEventListener('click', generateReport);
     });
 
-    // Download report
-    document.getElementById('downloadReportBtn').addEventListener('click', () => {
-      const companyName = document.getElementById('companyName').value || 'N/A';
-      const auditDate = document.getElementById('auditDate').value || new Date().toISOString().split('T')[0];
-      const email = document.getElementById('email').value || 'N/A';
-      const contactNumber = document.getElementById('contactNumber').value || 'N/A';
-
-      let report = `Company: ${companyName}\nAudit Date: ${auditDate}\nEmail: ${email}\nContact: ${contactNumber}\n\n`;
-      categories.forEach(category => {
-        report += `${category.name.toUpperCase()}\n`;
-        category.areas.forEach(area => {
-          report += `${area.area}\nRating: ${ratings[area.id] || 'Not Rated'}\nComments: ${comments[area.id] || 'No comments'}\n\n`;
-        });
+    function renderRatingGuide() {
+      const container = document.getElementById('ratingGuide');
+      container.innerHTML = '';
+      ratingScale.forEach(scale => {
+        const div = document.createElement('div');
+        div.className = 'flex flex-col items-center text-center p-3 bg-gray-50 rounded-lg hover:shadow-md transition-shadow';
+        div.innerHTML = `
+          <div class="w-12 h-12 ${scale.color} rounded-full flex items-center justify-center text-white font-bold text-xl mb-2">${scale.value}</div>
+          <p class="font-semibold text-sm text-gray-900">${scale.label}</p>
+          <p class="text-xs text-gray-600 mt-1">${scale.examples}</p>
+        `;
+        container.appendChild(div);
       });
+    }
+
+    function renderCategories() {
+      const container = document.getElementById('categoriesContainer');
+      container.innerHTML = '';
+
+      categories.forEach((category, idx) => {
+        const catCard = document.createElement('div');
+        catCard.className = 'bg-white rounded-xl shadow-lg p-6 md:p-8 mb-6';
+        catCard.innerHTML = `
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-2">
+            <h2 class="text-xl md:text-2xl font-bold text-gray-900">${category.name}</h2>
+            <div class="text-left md:text-right">
+              <p class="text-sm text-gray-600">Category Score</p>
+              <p class="text-2xl font-bold text-indigo-600" id="catScore_${idx}">0.0 / 5.0</p>
+            </div>
+          </div>
+        `;
+
+        category.areas.forEach(area => {
+          const areaEl = document.createElement('div');
+          areaEl.className = 'mb-6 pb-6 border-b border-gray-200 last:border-0';
+          areaEl.innerHTML = `
+            <div class="mb-3">
+              <h3 class="text-base md:text-lg font-semibold text-gray-900">${area.area}</h3>
+              <p class="text-sm text-gray-600 mt-1">${area.description}</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-3 mb-3" id="ratings_${area.id}"></div>
+            <textarea placeholder="Add comments, observations, or recommendations..." rows="2" id="comment_${area.id}" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-none"></textarea>
+          `;
+
+          catCard.appendChild(areaEl);
+
+          // render rating buttons
+          const ratingContainer = areaEl.querySelector(`#ratings_${area.id}`);
+          [1, 2, 3, 4, 5].forEach(r => {
+            const btn = document.createElement('button');
+            btn.className = 'p-3 md:p-4 rounded-lg font-medium transition-all border-2 text-left bg-white text-gray-700 border-gray-300 hover:border-indigo-400 hover:shadow-md';
+            btn.innerHTML = `
+              <div class="flex items-center gap-1 md:gap-2 mb-1">
+                <span class="text-xl md:text-2xl font-bold">${r}</span>
+                <span class="text-xs font-semibold">${ratingScale[r - 1].label}</span>
+              </div>
+              <p class="text-xs italic text-gray-500">${ratingScale[r - 1].examples}</p>
+            `;
+            btn.addEventListener('click', () => { handleRating(area.id, r); updateRatingButtons(area.id); updateCategoryScore(idx); updateProgress(); });
+            ratingContainer.appendChild(btn);
+          });
+
+          // comment handler
+          const ta = areaEl.querySelector(`#comment_${area.id}`);
+          ta.addEventListener('input', (e) => { comments[area.id] = e.target.value; });
+        });
+
+        container.appendChild(catCard);
+      });
+    }
+
+    function updateRatingButtons(areaId) {
+      const container = document.getElementById(`ratings_${areaId}`);
+      const nodes = Array.from(container.children);
+      nodes.forEach((btn, i) => {
+        const ratingValue = i + 1;
+        if (ratings[areaId] === ratingValue) {
+          btn.className = `p-3 md:p-4 rounded-lg font-medium transition-all border-2 text-left ${ratingScale[ratingValue - 1].color} text-white border-transparent shadow-lg scale-105`;
+        } else {
+          btn.className = 'p-3 md:p-4 rounded-lg font-medium transition-all border-2 text-left bg-white text-gray-700 border-gray-300 hover:border-indigo-400 hover:shadow-md';
+        }
+      });
+    }
+
+    function handleRating(areaId, value) {
+      ratings[areaId] = value;
+      // when all answered, show modal
+      updateProgress();
+      if (Object.keys(ratings).length === totalQuestions()) {
+        showCompletion();
+      }
+      updateOverallBox();
+    }
+
+    function updateCategoryScore(catIdx) {
+      const cat = categories[catIdx];
+      const vals = cat.areas.map(a => ratings[a.id] || 0);
+      const sum = vals.reduce((s, v) => s + v, 0);
+      const score = vals.length > 0 ? (sum / vals.length).toFixed(1) : '0.0';
+      document.getElementById(`catScore_${catIdx}`).innerText = `${score} / 5.0`;
+    }
+
+    function totalQuestions() {
+      return categories.reduce((sum, c) => sum + c.areas.length, 0);
+    }
+
+    function updateProgress() {
+      const answered = Object.keys(ratings).length;
+      const total = totalQuestions();
+      const percent = total === 0 ? 0 : Math.round((answered / total) * 100);
+      document.getElementById('progressText').innerText = `Progress: ${answered}/${total} Questions (${percent}%)`;
+
+      // update progress bar if visible
+      // update category scores
+      categories.forEach((_, idx) => updateCategoryScore(idx));
+      updateOverallBox();
+    }
+
+    function calculateOverallScore() {
+      const vals = Object.values(ratings);
+      if (vals.length === 0) return 0;
+      const sum = vals.reduce((s, v) => s + v, 0);
+      return (sum / vals.length).toFixed(1);
+    }
+
+    function getMaturityLevel(score) {
+      const s = parseFloat(score);
+      if (s >= 4.5) return { level: "Digital Leader", color: "text-green-600", bg: "bg-green-50" };
+      if (s >= 3.5) return { level: "Digitally Advanced", color: "text-blue-600", bg: "bg-blue-50" };
+      if (s >= 2.5) return { level: "Digitally Developing", color: "text-yellow-600", bg: "bg-yellow-50" };
+      if (s >= 1.5) return { level: "Digital Beginner", color: "text-orange-600", bg: "bg-orange-50" };
+      return { level: "Digital Laggard", color: "text-red-600", bg: "bg-red-50" };
+    }
+
+    function updateOverallBox() {
+      const overall = calculateOverallScore();
+      const box = document.getElementById('overallScoreBox');
+      if (Object.keys(ratings).length > 0) {
+        const maturity = getMaturityLevel(overall);
+        box.className = `mt-6 ${maturity.bg} rounded-lg p-6 border-2 border-opacity-20`;
+        box.innerHTML = `
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-700">Digital Maturity Score</h3>
+              <p class="text-4xl font-bold mt-2 ${maturity.color}">${overall} / 5.0</p>
+              <p class="text-lg font-medium mt-1 ${maturity.color}">${maturity.level}</p>
+            </div>
+            <div class="mt-4 md:mt-0 text-right">
+              <p class="text-sm text-gray-600">Completion Status</p>
+              <div class="flex items-center gap-2 mt-1">
+                <div class="w-32 bg-gray-200 rounded-full h-3">
+                  <div id="progressBarFill" class="bg-indigo-600 h-3 rounded-full" style="width:${Math.round((Object.keys(ratings).length / totalQuestions()) * 100)}%"></div>
+                </div>
+                <span class="text-sm font-semibold text-gray-700">${Math.round((Object.keys(ratings).length / totalQuestions()) * 100)}%</span>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        box.className = 'hidden';
+        box.innerHTML = '';
+      }
+    }
+
+    function showCompletion() {
+      const overall = calculateOverallScore();
+      const maturity = getMaturityLevel(overall);
+      const mb = document.getElementById('maturityBox');
+      mb.className = `${maturity.bg} rounded-lg p-4 mb-6`;
+      mb.innerHTML = `
+        <p class="text-sm text-gray-700 mb-2">Your Digital Maturity Score</p>
+        <p class="text-4xl font-bold ${maturity.color}">${overall}/5.0</p>
+        <p class="text-lg font-semibold ${maturity.color} mt-1">${maturity.level}</p>
+      `;
+      document.getElementById('completionModal').classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function generateReport() {
+      const companyName = document.getElementById('companyName').value || 'N_A';
+      const auditDate = document.getElementById('auditDate').value || new Date().toISOString().split('T')[0];
+      const email = document.getElementById('email').value || 'N_A';
+      const contact = document.getElementById('contactNumber').value || 'N_A';
+
+      const overallScore = calculateOverallScore();
+      const maturity = getMaturityLevel(overallScore);
+
+      let report = ''.padEnd(70, '=') + '\n';
+      report += '                    AVENTRA SYSTEMS\n';
+      report += '                SMART SYSTEMS DELIVERED\n';
+      report += '           MSME DIGITAL AUDIT REPORT\n';
+      report += ''.padEnd(70, '=') + '\n\n';
+      report += `Company: ${companyName}\n`;
+      report += `Audit Date: ${auditDate}\n`;
+      report += `Email: ${email}\n`;
+      report += `Contact Number: ${contact}\n\n`;
+      report += `Overall Digital Maturity Score: ${overallScore}/5.0\n`;
+      report += `Maturity Level: ${maturity.level}\n`;
+      report += `Progress: ${Object.keys(ratings).length}/${totalQuestions()} Questions Completed\n\n`;
+      report += ''.padEnd(70, '=') + '\n\n';
+
+      categories.forEach(category => {
+        const score = (category.areas.map(a => ratings[a.id] || 0).reduce((s, v) => s + v, 0) / category.areas.length).toFixed(1);
+        report += `\n${category.name.toUpperCase()}\n`;
+        report += `Category Score: ${isNaN(score) ? '0.0' : score}/5.0\n`;
+        report += ''.padEnd(70, '-') + '\n';
+        category.areas.forEach(area => {
+          const rating = ratings[area.id] || 'Not Rated';
+          const comment = comments[area.id] || 'No comments';
+          report += `\n${area.area}\n`;
+          report += `Rating: ${rating}/5\n`;
+          report += `Comments: ${comment}\n`;
+        });
+        report += `\n`;
+      });
+
+      report += ''.padEnd(70, '=') + '\n';
+      report += 'RATING SCALE GUIDE:\n';
+      report += ''.padEnd(70, '-') + '\n';
+      report += '1 - Not Implemented: Paper-based, Manual processes\n';
+      report += '2 - Basic: Excel, Email, WhatsApp\n';
+      report += '3 - Developing: Software, Website, Social Media\n';
+      report += '4 - Advanced: ERP, CRM, Cloud, E-commerce\n';
+      report += '5 - Leading: AI, Automation, Analytics\n\n';
+      report += ''.padEnd(70, '=') + '\n';
+      report += '                    AVENTRA SYSTEMS\n';
+      report += '              Email: sales@aventrasystems.in\n';
+      report += '              Website: www.aventrasystems.in\n';
+      report += ''.padEnd(70, '=') + '\n\n';
+      report += '© 2025 Aventra Systems. All Rights Reserved.\n\n';
 
       const blob = new Blob([report], { type: 'text/plain' });
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `Audit_Report_${companyName.replace(/\s+/g,'_')}.txt`;
+      a.download = `Aventra_Digital_Audit_${companyName.replace(/\s+/g, '_')}_${auditDate}.txt`;
       a.click();
-    });
+    }
   </script>
-
 </body>
+
 </html>
