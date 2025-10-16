@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MSME Digital Audit</title>
+  
+  <link rel="stylesheet" href="digital-audit.css" />
+    <link rel="stylesheet" href="../css/tailwind.min.css" defer>
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body>
+  <div id="app">
+        <nav class="header shadow-lg fixed w-full z-50" style="padding:0;margin:0">
+        <div class=" max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <img src="../assets/AV LOGO.png" alt="Aventra Systems logo"
+                        class="h-12 w-12 object-contain inline-block mr-2">
+                    <a href="/" style="color: white;" class="text-xl font-bold">AVENTRA SYSTEMS</a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="../index.html" style="color: white;" class="hover:underline px-3 py-2 cursor-pointer">
+                            Go to Aventra Home
+                        </a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button"
+                        class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Hamburger icon -->
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path fill="#ffffff"
+                                d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+                <a href="../index.html"
+                    class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+                    Go to Aventra Home
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- Selection Step -->
+    <section id="selection-step" class="step">
+      <div class="container">
+        
+
+        <main class="card">
+          <h2>Digital Readiness Assessment for MSMEs</h2>
+          <p class="muted">Evaluate your business's digital transformation journey.</p>
+
+          <div class="grid cols-4 inputs">
+            <label>Company Name *
+              <input id="companyName" type="text" placeholder="Enter company name" />
+            </label>
+            <label>Audit Date
+              <input id="auditDate" type="date" />
+            </label>
+            <label>Email *
+              <input id="email" type="email" placeholder="your@email.com" />
+            </label>
+            <label>Contact Number *
+              <input id="contactNumber" type="tel" placeholder="+91 XXXXX XXXXX" />
+            </label>
+          </div>
+        </main>
+
+        <section class="card">
+          <div class="row between">
+            <div>
+              <h3>Select Audit Categories</h3>
+              <p class="muted">Choose areas to assess</p>
+            </div>
+            <div class="btn-group">
+              <button id="selectAllBtn" class="btn small">Select All</button>
+              <button id="clearAllBtn" class="btn ghost small">Clear All</button>
+            </div>
+          </div>
+
+          <div id="categoriesGrid" class="grid cols-3 categories"></div>
+
+          <div class="cta-card">
+            <div>
+              <p class="muted">Selected Categories</p>
+              <p><strong id="selectedCount">0</strong> of <span id="totalCategories">0</span></p>
+              <p class="muted">Total Questions: <span id="totalQuestions">0</span></p>
+            </div>
+            <button id="startAuditBtn" class="btn primary">Start Audit →</button>
+          </div>
+        </section>
+
+        <footer class="brand-footer">
+          <div>
+            <img src="https://cdn.prod.website-files.com/679c600e41c2c993e087876c/679c60e23c96e5e8ebe5f7bd_Group%201.svg" alt="logo" class="brand-logo-small"/>
+          </div>
+          <div class="brand-info">
+            <div>📧 sales@aventrasystems.in</div>
+            <div>🌐 www.aventrasystems.in</div>
+            <div>© 2025 Aventra Systems</div>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <!-- Audit Step -->
+    <section id="audit-step" class="step hidden">
+      <div class="container">
+        <header class="mini-hero">
+          <button id="backBtn" class="btn ghost">← Back</button>
+          <div>
+            <h2>Digital Audit Assessment</h2>
+            <p id="auditSummary" class="muted"></p>
+          </div>
+          <div>
+            <button id="downloadReportBtn" class="btn primary">Download Report</button>
+          </div>
+        </header>
+
+        <div id="scorePanel" class="card hidden">
+          <div class="row between">
+            <div>
+              <h3>Digital Maturity Score</h3>
+              <div id="overallScoreLarge" class="big-score">0 / 5.0</div>
+              <div id="maturityLabel" class="maturity muted">-</div>
+            </div>
+            <div class="completion">
+              <p class="muted">Completion Status</p>
+              <div class="progress">
+                <div id="progressBar" class="progress-fill" style="width:0%"></div>
+              </div>
+              <div><span id="progressPercent">0%</span> — <span id="answeredQuestions">0</span> / <span id="allQuestions">0</span></div>
+            </div>
+          </div>
+        </div>
+
+        <section id="ratingScale" class="card">
+          <h3>Rating Scale Reference</h3>
+          <div class="grid cols-5 scale-grid" id="ratingScaleGrid"></div>
+          <p class="muted center">Each question shows specific examples. Click a rating to set it and add comments where needed.</p>
+        </section>
+
+        <div id="categoriesContainer"></div>
+
+        <footer class="brand-footer">
+          <div>
+            <img src="https://cdn.prod.website-files.com/679c600e41c2c993e087876c/679c60e23c96e5e8ebe5f7bd_Group%201.svg" alt="logo" class="brand-logo-small"/>
+          </div>
+          <div class="brand-info">
+            <div>📧 sales@aventrasystems.in</div>
+            <div>🌐 www.aventrasystems.in</div>
+            <div>© 2025 Aventra Systems</div>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <!-- Completion Modal -->
+    <div id="completionModal" class="modal hidden">
+      <div class="modal-card">
+        <h2>Audit Complete!</h2>
+        <p class="muted">Congratulations — you have completed the digital audit.</p>
+        <div class="score-summary">
+          <div id="modalScore" class="big-score">0 / 5.0</div>
+          <div id="modalMaturity" class="maturity muted">-</div>
+        </div>
+        <div class="row">
+          <button id="modalCloseBtn" onclick="document.getElementById('downloadReportBtn').click()" class="btn primary">View Full Report</button>
+          <a id="contactMail" class="btn ghost" href="mailto:sales@aventrasystems.in">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <script src="digital-audit.js"></script>
+</body>
+</html>

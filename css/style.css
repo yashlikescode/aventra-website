@@ -111,6 +111,7 @@
     width: 100%;
     padding: 0.625em 0.75em;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .plan .button:hover,
@@ -346,4 +347,16 @@ img.responsive-img {
     img.responsive-img {
         height: 125vh;
     }
+}
+
+.plan-blogs, .plan-downloads{
+    background-color: #37a8ff;
+}
+
+.plan-blogs:hover, .plan-downloads:hover{
+    background-color: #0090fe;
+}
+
+.plan-sol:hover{
+    background-color: #dfeefa;
 }
