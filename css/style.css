@@ -122,6 +122,41 @@
 li>.icon+span {
     width: 90%;
 }
+.plan {
+    border-radius: 16px;
+    box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
+    padding: 10px;
+    background-color: #fff;
+    color: #111111;
+    width: 100%;
+    max-width: 70vw;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .plan {
+        max-width: 90vw;
+        padding: 8px;
+    }
+
+    .plan .inner {
+        padding: 15px;
+        padding-top: 25px;
+    }
+
+    .plan .title {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .plan .button {
+        font-size: 1rem;
+    }
+
+    .plan .features li {
+        align-items: flex-start;
+    }
+}
 
 .industry-description {
     font-size: 15px;
