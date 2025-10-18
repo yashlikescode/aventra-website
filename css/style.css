@@ -20,6 +20,7 @@
     background-color: #ecf0ff;
     border-radius: 12px;
     position: relative;
+    height:100%;
 }
 
 .plan .pricing {
@@ -100,7 +101,7 @@
 }
 
 .plan .button {
-    background-color: #6558d3;
+    background-color: #1900ff;
     border-radius: 6px;
     color: #fff;
     font-weight: 500;
@@ -416,4 +417,51 @@ img.responsive-img {
 
 .plan-sol:hover{
     background-color: #2fa1ff;
+}
+
+/* Putting background image in inners of plan sol */
+
+.inner-panel{
+    background-image: url('/assets/industries/panels.jpg'); /* replace with your image path */
+}
+.inner-lv{
+    background-image: url('/assets/lv-switchgear.png'); /* replace with your image path */
+}
+.inner-erp{
+    background-image: url('/assets/erp.jpeg'); /* replace with your image path */
+}
+.inner-msme{
+    background-image: url('/assets/msme.jpg'); /* replace with your image path */
+}
+.plan-sol .inner {
+    background-size: cover;       /* ensures the image covers the entire area */
+    background-position: center;  /* centers the image */
+    background-repeat: no-repeat; /* prevents tiling */
+    color: #fff;                  /* optional – ensures text is readable */
+    border-radius: 8px;           /* optional – keep rounded corners */
+}
+.plan-sol .inner .title {
+    color: #fff;
+}
+
+.plan-sol .inner {
+    position: relative;
+    overflow: hidden;
+}
+
+.plan-sol .inner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(16, 16, 67, 0.88); /* dark overlay */
+    z-index: 0;
+}
+
+.plan-sol .inner > * {
+    position: relative;
+    z-index: 1;
+}
+.plansol-strong {
+    color: #fff;
+    font-weight: 600;
 }
