@@ -122,6 +122,14 @@
 li>.icon+span {
     width: 90%;
 }
+.card-plan-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* space between cards */
+    justify-content: center;
+    align-items: stretch;
+}
+
 .plan {
     border-radius: 16px;
     box-shadow: 0 30px 30px -25px rgba(0, 38, 255, 0.205);
@@ -130,11 +138,16 @@ li>.icon+span {
     color: #111111;
     width: 100%;
     max-width: 70vw;
-    margin: auto;
+    margin: 0;
+    flex: 1 1 calc(50% - 20px); /* 2 in a row */
+    display: flex;          /* ✅ allows inner content to stretch */
+    flex-direction: column; /* ✅ ensures vertical layout stays intact */
 }
+
 
 @media (max-width: 768px) {
     .plan {
+        flex: 1 1 100%;
         max-width: 90vw;
         padding: 8px;
     }
@@ -153,11 +166,20 @@ li>.icon+span {
         font-size: 1rem;
     }
 
+}
+
     .plan .features li {
         align-items: flex-start;
     }
+    .plan .features .icon {
+        margin-top: 4px;
+    }
+/* Make it one card per row on small screens */
+@media (max-width: 768px) {
+    .plan {
+        flex: 1 1 100%;
+    }
 }
-
 .industry-description {
     font-size: 15px;
 }
@@ -393,5 +415,5 @@ img.responsive-img {
 }
 
 .plan-sol:hover{
-    background-color: #dfeefa;
+    background-color: #2fa1ff;
 }
