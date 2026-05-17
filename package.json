@@ -1,0 +1,21 @@
+{
+  "name": "aventra-website",
+  "version": "1.0.0",
+  "description": "Aventra Systems - Smart electrical systems, panels, and switchgear solutions",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'No build step required for static site'",
+    "dev": "npx serve .",
+    "lint": "echo 'No linter configured'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  },
+  "keywords": [
+    "aventra",
+    "electrical",
+    "systems"
+  ],
+  "author": "",
+  "license": "ISC"
+}
