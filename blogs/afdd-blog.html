@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What is AFDD and Why It Matters | Aventra Systems</title>
+  <meta name="description" content="A plain-language guide to Arc Fault Detection Devices (AFDD) — what they are, how they work, and why every modern electrical panel needs one. By Aventra Systems, Ranchi." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/tailwind.min.css" defer>
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Vercel Web Analytics -->
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <!-- Vercel Speed Insights -->
+  <script>window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .section-icon { font-size: 2rem; line-height: 1; }
+    .check { color: #16a34a; font-weight: 700; }
+    .cross { color: #dc2626; font-weight: 700; }
+
+    /* Responsive table wrapper */
+    .table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+    /* Mobile content padding */
+    @media (max-width: 768px) {
+      .content-wrapper { padding-left: 1rem !important; padding-right: 1rem !important; }
+      .cta-buttons { flex-direction: column; align-items: stretch; }
+      .cta-buttons a { text-align: center; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+  <!-- NAVIGATION -->
+  <nav class="header shadow-lg fixed w-full z-50" style="padding:0;margin:0">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <img src="../assets/AV LOGO.png" alt="Aventra Systems logo"
+            class="h-12 w-12 object-contain inline-block mr-2"
+            onerror="this.style.display='none'">
+          <a href="/" style="color: white;" class="text-xl font-bold">AVENTRA SYSTEMS</a>
+        </div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="../index.html" class="hover:underline px-3 py-2 cursor-pointer" style="color:white;">
+              Go to Aventra Home
+            </a>
+          </div>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button"
+            class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+              <path fill="#ffffff"
+                d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+        <a href="../index.html"
+          class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+          Go to Aventra Home
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+      alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center" />
+    <div aria-hidden="true"
+      class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
+      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"></div>
+    </div>
+    <div aria-hidden="true"
+      class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0">
+      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"></div>
+    </div>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8" style="position: relative;">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">AFDD: The Device That Stops Electrical Fires Before They Start</h2>
+        <p class="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">A plain-language guide to Arc Fault Detection Devices — what they are, how they work, and why every responsible electrical installation needs one.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="max-w-4xl mx-auto px-6 py-12 content-wrapper">
+
+    <!-- INTRO -->
+    <div class="bg-gray-50 border-l-4 border-green-600 rounded-r-lg p-6 mb-12">
+      <p class="text-gray-700 text-lg leading-relaxed">
+        Every year, hundreds of industrial and commercial fires in India are caused by a silent, invisible hazard — arc faults inside electrical wiring. The surprising part? Your existing MCBs and RCCBs <strong>cannot detect them</strong>. That's exactly what an <strong>AFDD (Arc Fault Detection Device)</strong> is designed to fix.
+      </p>
+    </div>
+
+    <!-- SECTION 1: WHAT IS AFDD -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+        <span class="section-icon">🤔</span>
+        What is an AFDD? Think of it this way...
+      </h2>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-blue-900 mb-2">🏠 A Simple Analogy: Gas Pipeline vs. Gas Detector</p>
+        <p class="text-gray-700 mb-3">
+          Your home has a gas pipeline. You have a <strong>pressure relief valve</strong> (like an MCB) — it activates only if there is a massive leak. But what about a tiny pinhole leak that is too small to trigger the valve, yet slowly fills a room with gas?
+        </p>
+      </div>
+
+      <p class="text-gray-700 mb-4">
+        An <strong>Arc Fault Detection Device (AFDD)</strong> is a smart protective device fitted in your distribution board or panel. It continuously "listens" to the electrical current flowing through your wires and detects the unique pattern created by dangerous arcing. The moment it finds one, it shuts off the circuit — in less than 5 milliseconds.
+      </p>
+      <p class="text-gray-700">
+        AFDDs are standardized under <strong>IEC 62606</strong> and are available as combined units with an MCB — offering both arc fault protection and conventional overcurrent protection in a single compact DIN-rail device. Siemens (Aventra's principal partner) manufactures the <strong>AFDD 5SM6 series</strong> for 230V single-phase circuits.
+      </p>
+    </section>
+
+    <!-- SECTION 2: WHAT IS AN ARC FAULT -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+        <span class="section-icon">⚡</span>
+        What exactly is an "arc fault"?
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-red-50 border border-red-200 rounded-xl p-6">
+          <p class="font-semibold text-red-800 mb-3">❌ Normal short circuit (MCB handles this)</p>
+          <p class="text-gray-700 text-sm mb-2"><strong>Example:</strong> A live wire directly touches the earth wire behind your switchboard.</p>
+          <p class="text-gray-700 text-sm mb-2">⚡ Massive current surge → MCB trips in milliseconds → circuit is safe.</p>
+          <p class="text-green-700 text-sm font-medium">✓ Your existing MCB was designed exactly for this.</p>
+        </div>
+        <div class="bg-orange-50 border border-orange-200 rounded-xl p-6">
+          <p class="font-semibold text-orange-800 mb-3">⚠️ Arc fault (MCB cannot detect this)</p>
+          <p class="text-gray-700 text-sm mb-2"><strong>Example:</strong> A wire inside your factory wall is partially chewed by a rat — not fully broken, but damaged.</p>
+          <p class="text-gray-700 text-sm mb-2">💥 Current "jumps" the gap → 3,000°C arc → smoulders inside the wall for minutes.</p>
+          <p class="text-red-700 text-sm font-medium">✗ MCB sees almost-normal current — it never trips. Fire starts quietly.</p>
+        </div>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 rounded-r-lg p-5 mb-6">
+        <p class="font-semibold text-yellow-900 mb-1">🌡️ Just how hot is 3,000°C?</p>
+        <p class="text-gray-700 text-sm">Steel melts at about 1,370°C. An electrical arc burns at <strong>3,000°C</strong> — more than twice that. It can ignite PVC wire insulation, wooden wall studs, and cable duct covers in seconds — while your MCB stays happily in the ON position.</p>
+      </div>
+
+      <p class="text-gray-700">
+        Arc faults happen because of <strong>ageing wiring, loose terminal connections, insulation cracked by heat or rodents, over-bent cables, or old plug points</strong>. India has enormous amounts of wiring that is 15–30 years old — especially in factories, housing societies, and commercial buildings — making this a real and present danger every day.
+      </p>
+    </section>
+
+    <!-- SECTION 3: HOW IT WORKS -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+        <span class="section-icon">🧠</span>
+        How does an AFDD actually work?
+      </h2>
+
+      <div class="bg-gray-50 border border-blue-200 rounded-xl p-6 mb-8">
+        <p class="font-semibold text-blue-900 mb-2">📻 Analogy: FM Radio Signal vs. Static Noise</p>
+        <p class="text-gray-700 text-sm">
+          Your electrical current flows at 50Hz — a clean, regular sine wave, like a clear FM signal. An arc fault creates tiny rapid "crackling" vibrations on top of that wave — like static noise breaking into your FM signal. A conventional MCB only checks the <em>volume</em> (current level). An AFDD also checks the <em>quality</em> of the waveform — and the moment it detects that "static," it acts.
+        </p>
+      </div>
+
+      <div class="space-y-0 mb-6">
+        <div class="flex items-start gap-4">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+            <div class="w-0.5 h-10 bg-gray-300"></div>
+          </div>
+          <div class="pb-6">
+            <p class="font-semibold text-gray-900">Arc event occurs</p>
+            <p class="text-gray-600 text-sm">Loose terminal, damaged insulation, or degraded cable creates a small arc. Current level stays almost normal — MCB does not trip.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
+            <div class="w-0.5 h-10 bg-gray-300"></div>
+          </div>
+          <div class="pb-6">
+            <p class="font-semibold text-gray-900">Current sensor reads the waveform</p>
+            <p class="text-gray-600 text-sm">The AFDD's built-in sensor reads the current waveform in real time — thousands of samples per second.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
+            <div class="w-0.5 h-10 bg-gray-300"></div>
+          </div>
+          <div class="pb-6">
+            <p class="font-semibold text-gray-900">Digital processor analyses the pattern</p>
+            <p class="text-gray-600 text-sm">A microprocessor compares the waveform against thousands of known arc fault signatures. Smart filtering ignores normal "noise" from motors, dimmers, and inverters — so it does <em>not</em> trip unnecessarily.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-sm flex-shrink-0">4</div>
+          </div>
+          <div class="pb-2">
+            <p class="font-semibold text-gray-900">Circuit disconnected in &lt;5 milliseconds</p>
+            <p class="text-gray-600 text-sm">Arc fault confirmed → breaker trips instantly → fire is prevented before it can start.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: REAL SCENARIOS -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+        <span class="section-icon">🚨</span>
+        Why does it matter? See yourself in these stories
+      </h2>
+
+      <!-- Scenario 1 -->
+      <div class="border border-gray-200 rounded-xl overflow-hidden mb-6">
+        <div class="bg-gray-900 px-6 py-3">
+          <p class="text-white font-semibold">🏭 Scenario 1: The Steel Plant, Jharkhand</p>
+        </div>
+        <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+          <div class="p-6">
+            <p class="text-red-700 font-medium mb-2">❌ Without AFDD</p>
+            <p class="text-gray-700 text-sm">Cable tray wiring in the furnace bay is 22 years old. A loose terminal in the MCC panel starts arcing every time the furnace switches on. Over 3 weeks, insulation inside the duct quietly chars. One night, a fire breaks out — ₹40 lakh damage, 6-day production shutdown.</p>
+            <p class="text-gray-500 text-xs mt-2 italic">MCB never tripped. RCCB never tripped. Nobody knew.</p>
+          </div>
+          <div class="p-6">
+            <p class="text-green-700 font-medium mb-2">✓ With AFDD</p>
+            <p class="text-gray-700 text-sm">The AFDD on that MCC outgoing feeder trips on Day 1 of the arcing. The electrician finds the loose terminal next morning, tightens it in 10 minutes. Panel back online. Total downtime: 45 minutes.</p>
+            <p class="text-green-600 text-xs mt-2 italic font-medium">Fire prevented. Production saved. ₹40 lakh saved.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scenario 2 -->
+      <div class="border border-gray-200 rounded-xl overflow-hidden mb-6">
+        <div class="bg-gray-900 px-6 py-3">
+          <p class="text-white font-semibold">🏨 Scenario 2: The Hotel, Ranchi</p>
+        </div>
+        <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+          <div class="p-6">
+            <p class="text-red-700 font-medium mb-2">❌ Without AFDD</p>
+            <p class="text-gray-700 text-sm">A rodent chews through a concealed wire in Room 204's wall cavity. Circuit runs fine — current still flows through the partial conductor. At 2am, smouldering starts. By the time the smoke alarm triggers, the wall cavity is on fire. Guests evacuated. Extensive structural damage.</p>
+          </div>
+          <div class="p-6">
+            <p class="text-green-700 font-medium mb-2">✓ With AFDD</p>
+            <p class="text-gray-700 text-sm">The AFDD protecting Floor 2 circuits trips the moment arcing begins. Maintenance is alerted. Damaged cable section is replaced the next day. Guests sleep undisturbed.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scenario 3 -->
+      <div class="border border-gray-200 rounded-xl overflow-hidden mb-6">
+        <div class="bg-gray-900 px-6 py-3">
+          <p class="text-white font-semibold">🏢 Scenario 3: The Office Building, Patna</p>
+        </div>
+        <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+          <div class="p-6">
+            <p class="text-red-700 font-medium mb-2">❌ Without AFDD</p>
+            <p class="text-gray-700 text-sm">Building is 18 years old, wiring never replaced. A cracked wire behind a false ceiling starts arcing near an AC unit. AC keeps working normally. Three months later, a slow fire destroys the entire floor — servers, documents, workstations.</p>
+          </div>
+          <div class="p-6">
+            <p class="text-green-700 font-medium mb-2">✓ With AFDD</p>
+            <p class="text-gray-700 text-sm">AFDD on the AC feeder trips during the very first arcing event. Electrician traces and replaces the cracked wire. The AFDD cost ₹3,500. Potential loss prevented: ₹50+ lakh.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-green-50 border border-green-200 rounded-xl p-6">
+        <p class="font-semibold text-green-900 mb-2">💡 Key Insight</p>
+        <p class="text-gray-700 text-sm">In all three scenarios, the MCBs and RCCBs were <strong>perfectly functional and doing their jobs correctly</strong>. Arc faults are simply outside what those devices were ever designed to detect. AFDD doesn't replace your MCB — it adds the one layer of protection that nothing else provides.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 5: COMPARISON TABLE -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+        <span class="section-icon">📊</span>
+        MCB vs RCCB vs AFDD — what does each protect against?
+      </h2>
+
+      <div class="table-responsive rounded-xl border border-gray-200 mb-6">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="bg-gray-900 text-white">
+              <th class="text-left px-5 py-4 font-semibold">Device</th>
+              <th class="text-center px-4 py-4 font-semibold">Overload</th>
+              <th class="text-center px-4 py-4 font-semibold">Short Circuit</th>
+              <th class="text-center px-4 py-4 font-semibold">Earth Leakage / Shock</th>
+              <th class="text-center px-4 py-4 font-semibold">Arc Fault / Fire</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-gray-100">
+              <td class="px-5 py-4 font-medium text-gray-900">MCB only</td>
+              <td class="text-center px-4 py-4 check">✓ Yes</td>
+              <td class="text-center px-4 py-4 check">✓ Yes</td>
+              <td class="text-center px-4 py-4 cross">✗ No</td>
+              <td class="text-center px-4 py-4 cross">✗ No</td>
+            </tr>
+            <tr class="bg-gray-50 border-b border-gray-100">
+              <td class="px-5 py-4 font-medium text-gray-900">MCB + RCCB</td>
+              <td class="text-center px-4 py-4 check">✓ Yes</td>
+              <td class="text-center px-4 py-4 check">✓ Yes</td>
+              <td class="text-center px-4 py-4 check">✓ Yes</td>
+              <td class="text-center px-4 py-4 cross">✗ No</td>
+            </tr>
+            <tr class="border-b border-gray-100">
+              <td class="px-5 py-4 font-medium text-gray-900">MCB + AFDD</td>
+              <td class="text-center px-4 py-4 check">✓ Yes</td>
+              <td class="text-center px-4 py-4 check">✓ Yes</td>
+              <td class="text-center px-4 py-4 cross">✗ No</td>
+              <td class="text-center px-4 py-4 check">✓ Yes</td>
+            </tr>
+            <tr class="bg-green-50">
+              <td class="px-5 py-4 font-bold text-green-900">RCBO + AFDD ⭐ Most complete</td>
+              <td class="text-center px-4 py-4 check">✓ Yes</td>
+              <td class="text-center px-4 py-4 check">✓ Yes</td>
+              <td class="text-center px-4 py-4 check">✓ Yes</td>
+              <td class="text-center px-4 py-4 check">✓ Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-gray-600 text-sm">The RCBO + AFDD combination gives complete protection against all four hazard types. This is what Aventra recommends for all critical circuits in new panels and retrofits.</p>
+    </section>
+
+    <!-- SECTION 6: COMMON MISTAKES -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+        <span class="section-icon">⚠️</span>
+        Common mistakes — and what to do instead
+      </h2>
+
+      <div class="space-y-5">
+        <div class="border border-gray-200 rounded-xl p-6">
+          <p class="font-semibold text-red-700 mb-2">❌ Mistake #1: "I have MCB and RCCB — that's enough"</p>
+          <p class="text-gray-700 text-sm mb-1"><strong>Example:</strong> A warehouse manager installs the best MCBs and RCCBs money can buy — but his wiring is 18 years old in unknown condition.</p>
+          <p class="text-orange-700 text-sm mb-2">⚠️ Problem: Neither device detects arc faults. Both will work perfectly while a fire starts inside the wall.</p>
+          <p class="text-green-700 text-sm">✓ Fix: Add AFDD to circuits in older buildings or circuits with long cable runs that can't be easily inspected.</p>
+        </div>
+
+        <div class="border border-gray-200 rounded-xl p-6">
+          <p class="font-semibold text-red-700 mb-2">❌ Mistake #2: "AFDD will keep tripping because of my motors"</p>
+          <p class="text-gray-700 text-sm mb-1"><strong>Example:</strong> Engineer avoids AFDD on motor circuits, fearing nuisance trips every time a motor starts.</p>
+          <p class="text-orange-700 text-sm mb-2">⚠️ Problem: Modern AFDDs (like Siemens 5SM6) have intelligent filtering built in. They distinguish arc fault signatures from motor inrush, VFD harmonics, and dimmer noise.</p>
+          <p class="text-green-700 text-sm">✓ Fix: Use an AFDD rated for your load type. Aventra's team can help specify the right model.</p>
+        </div>
+
+        <div class="border border-gray-200 rounded-xl p-6">
+          <p class="font-semibold text-red-700 mb-2">❌ Mistake #3: "AFDD is only for homes, not factories"</p>
+          <p class="text-gray-700 text-sm mb-1"><strong>Example:</strong> Plant manager dismisses AFDD as a "residential product" and skips it for the factory distribution board.</p>
+          <p class="text-orange-700 text-sm mb-2">⚠️ Problem: Industrial environments have MORE arc fault risk — longer cable runs, mechanical vibration loosening terminals, rodents in cable trays, ageing wiring.</p>
+          <p class="text-green-700 text-sm">✓ Fix: Prioritise AFDD on MCC outgoing feeders, lighting circuits, and office/control room circuits in industrial facilities.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: WHERE TO INSTALL -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+        <span class="section-icon">📍</span>
+        Where should AFDD be installed?
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-5 mb-6">
+        <div class="bg-green-50 border border-green-200 rounded-xl p-6">
+          <p class="font-semibold text-green-900 mb-3">✓ High Priority Circuits</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>• Circuits feeding areas with old or concealed wiring</li>
+            <li>• Office areas, server rooms, control rooms</li>
+            <li>• Sleeping areas (hotels, hospitals, hostels)</li>
+            <li>• Lighting circuits with long cable runs</li>
+            <li>• Circuits where wiring inspection is difficult</li>
+            <li>• Critical process circuits where downtime is expensive</li>
+          </ul>
+        </div>
+        <div class="bg-blue-50 border border-blue-200 rounded-xl p-6">
+          <p class="font-semibold text-blue-900 mb-3">📌 Practical Notes</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li>• AFDD occupies 2 DIN rail modules — plan panel space accordingly</li>
+            <li>• Must be wired load-side after the supply terminals</li>
+            <li>• Test button must be accessible for periodic testing</li>
+            <li>• Siemens 5SM6: rated for 230V, 6kA breaking capacity</li>
+            <li>• Combined RCBO+AFDD gives most complete protection</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: STATS & STANDARDS -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+        <span class="section-icon">📋</span>
+        Quick facts every engineer &amp; facility manager should know
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-5 mb-8">
+        <div class="bg-gray-900 rounded-xl p-6 text-center">
+          <p class="text-4xl font-bold text-green-400 mb-2">~40%</p>
+          <p class="text-gray-300 text-sm">of electrical fires globally are caused by arc faults — not overloads or short circuits</p>
+        </div>
+        <div class="bg-gray-900 rounded-xl p-6 text-center">
+          <p class="text-4xl font-bold text-green-400 mb-2">3,000°C</p>
+          <p class="text-gray-300 text-sm">arc temperature — more than twice the melting point of steel</p>
+        </div>
+        <div class="bg-gray-900 rounded-xl p-6 text-center">
+          <p class="text-4xl font-bold text-green-400 mb-2">&lt;5ms</p>
+          <p class="text-gray-300 text-sm">response time of a modern AFDD from fault detection to circuit trip</p>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 border border-blue-200 rounded-xl p-6">
+        <p class="font-semibold text-blue-900 mb-3">📜 What do the standards say?</p>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li>• <strong>IEC 62606</strong> — International standard defining AFDD performance, sensitivity, and testing requirements.</li>
+          <li>• <strong>BS 7671 UK 18th Edition</strong> — Mandates AFDD in bedrooms and sleeping areas in new and significantly modified installations.</li>
+          <li>• <strong>India — IS 732 / National Building Code</strong> — Not yet mandated, but alignment with IEC standards is progressing. Leading industrial clients and EPC contractors already specify AFDD for fire risk management and insurance compliance.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 9: HOW AVENTRA HELPS -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+        <span class="section-icon">🤝</span>
+        How Aventra Systems helps you
+      </h2>
+
+      <p class="text-gray-700 mb-6">As an <strong>authorized Siemens channel partner</strong> and custom panel manufacturer, Aventra is your single point of contact for AFDD — from product to panel to commissioning:</p>
+
+      <div class="space-y-4 mb-6">
+        <div class="flex items-start gap-4 p-5 rounded-xl border border-gray-200">
+          <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-xl flex-shrink-0">🛒</div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-1">Product supply — Siemens AFDD 5SM6 series</p>
+            <p class="text-gray-600 text-sm">Genuine Siemens AFDD units. Competitive pricing, OEM warranty, fast delivery across Jharkhand, Bihar, Odisha, and West Bengal.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-5 rounded-xl border border-gray-200">
+          <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-xl flex-shrink-0">🔧</div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-1">Panel design with AFDD built in from the start</p>
+            <p class="text-gray-600 text-sm">Custom PCC, MCC, and distribution boards with AFDD on specified outgoing circuits — IS/IEC compliant, fully factory-tested.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-5 rounded-xl border border-gray-200">
+          <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-xl flex-shrink-0">📞</div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-1">Technical consultation — which circuits need AFDD?</p>
+            <p class="text-gray-600 text-sm">Not sure where to start? Our engineers assess your facility, identify highest-risk circuits, and give you a prioritized, cost-effective plan.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 p-5 rounded-xl border border-gray-200">
+          <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-xl flex-shrink-0">🔄</div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-1">Retrofit into existing panels</p>
+            <p class="text-gray-600 text-sm">Through our AMC and Technical Services division, we retrofit AFDDs into existing distribution boards — no full panel replacement needed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM LINE -->
+    <section class="mb-14">
+      <div class="bg-gray-900 rounded-2xl p-8">
+        <h3 class="text-xl font-bold text-white mb-4">💡 The Bottom Line</h3>
+        <p class="text-gray-300 mb-4">Your MCB and RCCB are essential — but they were never designed to stop arc fault fires. They protect against too much current and earth leakage. AFDD protects against the fire that starts at <em>normal</em> current levels, inside walls and ducts you cannot see.</p>
+        <p class="text-gray-300 mb-4">In India's industrial landscape — with ageing wiring, rodents in cable trays, and frequent terminal loosening from vibration — arc faults are a daily, invisible risk.</p>
+        <p class="text-green-400 font-semibold text-lg">One AFDD costs ₹3,000–5,000. One electrical fire costs ₹10 lakh to ₹10 crore. The math is simple.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- CTA -->
+  <div class="bg-gray-100 border-t border-gray-200 py-16 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4">Ready to add AFDD protection to your facility or next panel?</h3>
+      <p class="text-gray-600 mb-8 text-lg">Book a free 30-minute consultation with Aventra's technical team. No jargon. No commitment. Just honest advice on whether AFDD makes sense for your specific installation.</p>
+      <div class="flex flex-wrap justify-center gap-4 cta-buttons">
+        <a href="https://aventrasystems.odoo.com/book/book-your-30-min-consultation-with-aventra-systems"
+           class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors text-sm">
+          Book Free 30-Min Consultation →
+        </a>
+        <a href="https://wa.me/917970798555?text=Hello, I want to know more about AFDD for my electrical panel"
+           class="inline-block bg-white border border-gray-300 hover:border-gray-500 text-gray-700 font-semibold px-8 py-3.5 rounded-lg transition-colors text-sm">
+          💬 WhatsApp Us
+        </a>
+      </div>
+      <p class="text-gray-400 text-xs mt-6">Serving Jharkhand · Bihar · Odisha · West Bengal · Africa</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 px-6 py-10">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <p class="text-white font-semibold mb-1">Aventra Systems</p>
+        <p class="text-gray-400 text-sm">Ranchi, Jharkhand, India</p>
+        <p class="text-gray-400 text-sm">📞 <a href="tel:+917970798555" class="hover:text-white transition-colors">+91-7970798555</a></p>
+        <p class="text-gray-400 text-sm">✉️ <a href="mailto:sales@aventrasystems.in" class="hover:text-white transition-colors">sales@aventrasystems.in</a></p>
+      </div>
+      <div class="text-center md:text-right">
+        <a href="https://www.aventrasystems.in" class="text-green-400 hover:text-green-300 text-sm transition-colors">www.aventrasystems.in</a>
+        <p class="text-gray-500 text-xs mt-2">© Aventra Systems. All rights reserved.</p>
+        <div class="flex gap-4 mt-3 justify-center md:justify-end text-xs text-gray-500">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms</a>
+          <a href="https://www.aventrasystems.in/#blog" class="hover:text-white transition-colors">More Blogs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
+</body>
+</html>
