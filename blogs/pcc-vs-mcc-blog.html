@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PCC vs MCC: The Complete Panel Selection Guide | Aventra Systems</title>
+<meta name="description" content="PCC vs MCC panels explained — the real difference, where each belongs, IS/IEC standards, and how to choose the right one for your plant. A practical guide from Aventra Systems, authorized Siemens channel partner, Ranchi.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/tailwind.min.css" defer>
+<link rel="stylesheet" href="../css/style.css">
+<!-- Vercel Web Analytics -->
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<!-- Vercel Speed Insights -->
+<script>window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+<style>
+  :root {
+    --primary-700: #0B64A0;
+    --primary-600: #0E74B8;
+    --primary-500: #1185D0;
+    --primary-100: #E6F2FB;
+    --secondary-700: #5A48A6;
+    --secondary-600: #6B57C0;
+    --secondary-100: #F0EDFB;
+    --ink-900: #1B2633;
+    --ink-700: #334154;
+    --ink-500: #5B6B80;
+    --ink-200: #D6DEE8;
+    --ink-050: #F5F7FA;
+    --success: #2E7D32;
+    --warning: #E69B00;
+    --error: #D32F2F;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--ink-050);
+    color: var(--ink-700);
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── LAYOUT ── */
+  .layout {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 56px 40px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 48px;
+    align-items: start;
+    background: white;
+  }
+
+  /* ── ARTICLE BODY ── */
+  .article h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ink-900);
+    margin: 48px 0 16px;
+    padding-left: 16px;
+    border-left: 4px solid var(--primary-600);
+    line-height: 1.2;
+  }
+  .article h2:first-child { margin-top: 0; }
+  .article h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-700);
+    margin: 32px 0 12px;
+  }
+  .article p {
+    color: var(--ink-700);
+    margin-bottom: 16px;
+    font-size: 15.5px;
+    line-height: 1.8;
+  }
+  .article strong { color: var(--ink-900); font-weight: 600; }
+  .article ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+  .article ul li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+    color: var(--ink-700);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .article ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--primary-600);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  /* ── INFO CARD ── */
+  .info-card {
+    background: var(--primary-100);
+    border: 1px solid #C5DFF4;
+    border-left: 4px solid var(--primary-600);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 28px 0;
+  }
+  .info-card .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary-700);
+    margin-bottom: 10px;
+  }
+  .info-card p { margin: 0; font-size: 14.5px; color: var(--ink-700); }
+
+  /* ── SELECTION TABLE ── */
+  .sel-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 28px 0;
+    font-size: 14px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(17, 133, 208, 0.08);
+  }
+  .sel-table th {
+    background: var(--primary-600);
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 14px 16px;
+    text-align: left;
+  }
+  .sel-table td {
+    padding: 12px 16px;
+    color: var(--ink-700);
+    border-bottom: 1px solid var(--ink-200);
+    vertical-align: top;
+  }
+  .sel-table tr:last-child td { border-bottom: none; }
+  .sel-table tr:hover td { background: var(--primary-100); }
+  .sel-table td:first-child { font-weight: 600; color: var(--ink-900); }
+
+  /* ── STEP CARDS ── */
+  .steps { display: flex; flex-direction: column; gap: 16px; margin: 28px 0; }
+  .step-card {
+    background: white;
+    border: 2px solid var(--ink-200);
+    border-radius: 12px;
+    padding: 20px 22px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    box-shadow: 0 4px 12px rgba(17, 133, 208, 0.06);
+    transition: all 0.2s ease;
+  }
+  .step-card:hover {
+    border-color: var(--primary-500);
+    box-shadow: 0 6px 20px rgba(17, 133, 208, 0.12);
+    transform: translateY(-2px);
+  }
+  .step-num {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-500);
+    line-height: 1;
+    min-width: 36px;
+    margin-top: 2px;
+  }
+  .step-content h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink-900);
+    margin-bottom: 6px;
+  }
+  .step-content p { font-size: 14px; margin: 0; line-height: 1.6; color: var(--ink-700); }
+
+  /* ── MISTAKE CARDS ── */
+  .mistake-list { display: flex; flex-direction: column; gap: 14px; margin: 28px 0; }
+  .mistake-card {
+    background: #FFEBEE;
+    border: 1px solid #FFCDD2;
+    border-left: 4px solid var(--error);
+    border-radius: 12px;
+    padding: 18px 22px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .mistake-card .icon {
+    font-size: 20px;
+    color: var(--error);
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .mistake-card h4 {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink-900);
+    margin-bottom: 4px;
+  }
+  .mistake-card p { font-size: 14px; margin: 0; color: var(--ink-700); line-height: 1.6; }
+
+  /* ── FLOW DIAGRAM ── */
+  .flow-box {
+    background: var(--ink-050);
+    border: 2px solid var(--ink-200);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 24px 0;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 14px;
+    color: var(--ink-700);
+    line-height: 1.8;
+    overflow-x: auto;
+  }
+  .flow-box .highlight { color: var(--primary-700); font-weight: 700; }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--ink-200), transparent);
+    margin: 40px 0;
+  }
+
+  /* ── CALLOUT CTA ── */
+  .cta-block {
+    background: linear-gradient(135deg, #1185D0 0%, #6B57C0 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin: 48px 0 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-block h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 12px;
+  }
+  .cta-block p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.92);
+    margin: 0 0 24px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: white;
+    color: var(--primary-700) !important;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.28); }
+  .cta-btn-ghost {
+    display: inline-block;
+    border: 2px solid rgba(255,255,255,0.7);
+    color: white !important;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px 28px;
+    border-radius: 999px;
+    margin-left: 12px;
+    transition: all 0.2s ease;
+  }
+  .cta-btn-ghost:hover { background: rgba(255,255,255,0.15); border-color: white; }
+
+  /* ── SIDEBAR ── */
+  .sidebar { display: flex; flex-direction: column; gap: 20px; }
+  .sidebar-card {
+    background: white;
+    border: 2px solid var(--ink-200);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(17, 133, 208, 0.06);
+  }
+  .sidebar-head {
+    background: var(--primary-600);
+    padding: 12px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: white;
+  }
+  .sidebar-body { padding: 18px; }
+  .toc-list { list-style: none; }
+  .toc-list li {
+    padding: 7px 0;
+    border-bottom: 1px solid var(--ink-200);
+    font-size: 13px;
+  }
+  .toc-list li:last-child { border-bottom: none; }
+  .toc-list a {
+    color: var(--ink-700);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+  }
+  .toc-list a:hover { color: var(--primary-600); }
+  .toc-list a::before { content: '›'; color: var(--primary-600); font-size: 18px; line-height: 1; font-weight: 700; }
+  .quick-facts { display: flex; flex-direction: column; gap: 10px; }
+  .qf { display: flex; justify-content: space-between; align-items: center; }
+  .qf .k { font-size: 12px; color: var(--ink-500); }
+  .qf .v { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--primary-700); font-weight: 600; }
+  .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    background: var(--ink-050);
+    border: 1px solid var(--ink-200);
+    color: var(--ink-700);
+    font-size: 11px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .tag:hover { border-color: var(--primary-500); color: var(--primary-600); background: var(--primary-100); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink-900);
+    border-top: 1px solid var(--ink-200);
+    padding: 24px 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #8fa3bf;
+  }
+  footer span { color: #7dd3fc; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; padding: 32px 20px; }
+    .sidebar { display: none; }
+  }
+
+  @media (max-width: 768px) {
+    .layout { padding: 24px 16px; }
+    .sel-table { font-size: 13px; }
+    .sel-table th, .sel-table td { padding: 10px 12px; }
+    .cta-block { padding: 32px 20px; }
+    .cta-btn-ghost { margin-left: 0; margin-top: 12px; display: block; }
+    .article h2 { font-size: 22px; }
+  }
+
+  @media (max-width: 480px) {
+    .article h2 { font-size: 20px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="header shadow-lg fixed w-full z-50" style="padding:0;margin:0">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <img src="../assets/AV LOGO.png" alt="Aventra Systems logo"
+            class="h-12 w-12 object-contain inline-block mr-2">
+          <a href="/" style="color: white;" class="text-xl font-bold">AVENTRA SYSTEMS</a>
+        </div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="../index.html" class="hover:underline px-3 py-2 cursor-pointer" style="color:white;">
+              Go to Aventra Home
+            </a>
+          </div>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button"
+            class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+              <path fill="#ffffff"
+                d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+        <a href="../index.html"
+          class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+          Go to Aventra Home
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+      alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center" />
+    <div aria-hidden="true"
+      class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
+      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"></div>
+    </div>
+    <div aria-hidden="true"
+      class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0">
+      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"></div>
+    </div>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8" style="position: relative;">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">PCC vs MCC: The Complete Panel Selection Guide</h2>
+        <p class="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">They look similar on a quotation, but they do fundamentally different jobs. Here is the practical difference — and how to choose the right one for your plant.</p>
+      </div>
+    </div>
+  </div>
+
+<!-- MAIN LAYOUT -->
+<div class="layout">
+
+  <!-- ARTICLE -->
+  <article class="article">
+
+    <p>If you have ever opened two panel quotations side by side and wondered why one says <strong>PCC</strong> and the other says <strong>MCC</strong> — and whether it actually matters for your plant — this guide is for you. Both are floor-mounted LV distribution boards, both carry busbars, both can look almost identical from the front. But they sit at different points in your power distribution and they are built to different priorities. Getting this right at the enquiry stage saves money, panel-room space, and a lot of retrofit pain later.</p>
+
+    <div class="info-card">
+      <div class="label">⚡ In One Line</div>
+      <p><strong>PCC (Power Control Centre)</strong> receives and distributes incoming power to large feeders. <strong>MCC (Motor Control Centre)</strong> takes power and controls many individual motors. A PCC distributes; an MCC controls.</p>
+    </div>
+
+    <h2 id="pcc">What is a PCC (Power Control Centre)?</h2>
+    <p>A PCC is the panel that sits right after your incoming supply — typically downstream of the transformer or the main LT incomer. Its job is to <strong>receive a large block of power and split it into outgoing feeders</strong>: feeders to sub-distribution boards, to MCCs, to large standalone loads, and to capacitor (APFC) panels.</p>
+    <p>Because it handles the full incoming current, a PCC is built around <strong>high-rated ACBs and MCCBs</strong>, heavy busbars (often 1000A–4000A+), and high short-circuit withstand. It is a power-handling panel first. Control and automation, if present, are minimal.</p>
+    <ul>
+      <li>Incomer protection via ACB (Air Circuit Breaker), often with bus-coupler in 2-incomer schemes</li>
+      <li>Outgoing feeders via MCCBs to downstream panels</li>
+      <li>Heavy busbar system rated for full incomer current</li>
+      <li>Metering, energy monitoring, and protection relays at the incomer</li>
+    </ul>
+
+    <h2 id="mcc">What is an MCC (Motor Control Centre)?</h2>
+    <p>An MCC takes power (very often <em>from</em> a PCC) and uses it to <strong>start, stop, protect and control many motors</strong> — pumps, fans, conveyors, compressors, agitators. Where a PCC thinks in terms of feeders, an MCC thinks in terms of motor starters.</p>
+    <p>Each motor gets its own <strong>feeder module</strong>: a starter built from an MPCB (or MCCB + overload), a contactor, and control wiring — DOL, Star-Delta, or VFD/soft-starter depending on the motor. MCCs are typically built in a <strong>compartmentalised, modular</strong> form so each starter sits in its own withdrawable or fixed compartment for safe maintenance without shutting the whole panel.</p>
+    <ul>
+      <li>One feeder module per motor — DOL / Star-Delta / VFD / soft starter</li>
+      <li>MPCB + contactor combination per starter (Siemens 3RV2 + 3RT2 is typical)</li>
+      <li>Compartmentalised / modular construction (fixed or draw-out)</li>
+      <li>Control logic — PLC, relay interlocks, local/remote, field signals</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h2 id="comparison">PCC vs MCC: Side-by-Side</h2>
+    <table class="sel-table">
+      <thead>
+        <tr><th>Parameter</th><th>PCC (Power Control Centre)</th><th>MCC (Motor Control Centre)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Primary job</td><td>Distribute incoming power to feeders</td><td>Control & protect individual motors</td></tr>
+        <tr><td>Position in system</td><td>Upstream — right after transformer / incomer</td><td>Downstream — fed from the PCC</td></tr>
+        <tr><td>Key devices</td><td>ACBs, large MCCBs, heavy busbars</td><td>MPCBs, contactors, overloads, VFDs, PLC</td></tr>
+        <tr><td>Current rating</td><td>High (1000A–4000A+ bus)</td><td>Moderate per feeder; sum of motor loads</td></tr>
+        <tr><td>Construction</td><td>Fixed, robust, power-focused</td><td>Compartmentalised / modular, draw-out option</td></tr>
+        <tr><td>Control / automation</td><td>Minimal — metering & protection</td><td>Extensive — interlocks, PLC, field I/O</td></tr>
+        <tr><td>Feeder count</td><td>Few, large</td><td>Many, smaller</td></tr>
+        <tr><td>Maintenance</td><td>Feeder-level, usually needs isolation</td><td>Module-level, hot-maintenance in draw-out type</td></tr>
+        <tr><td>Governing standard</td><td>IS 8623 / IEC 61439-1, -2</td><td>IS 8623 / IEC 61439-1, -2</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size: 12px; color: var(--ink-500); margin-top: 8px;">Ratings indicative. Final selection depends on load study, fault level, and site conditions.</p>
+
+    <h2 id="together">How They Work Together in a Real Plant</h2>
+    <p>In most steel, cement, and process plants across eastern India, you do not choose <em>one or the other</em> — you have both, in sequence:</p>
+    <div class="flow-box">
+      Transformer / LT Supply<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;↓<br>
+      <span class="highlight">PCC</span> — receives full power, distributes to feeders<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;↓ &nbsp;&nbsp;&nbsp;&nbsp;↓ &nbsp;&nbsp;&nbsp;&nbsp;↓<br>
+      <span class="highlight">MCC-1</span> &nbsp;<span class="highlight">MCC-2</span> &nbsp;APFC Panel &nbsp;Sub-DBs<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;↓<br>
+      Motors (pumps · fans · conveyors · compressors)
+    </div>
+    <p>The PCC is the "main switchboard" that splits power; the MCCs are where that power is turned into controlled motor operation. A small workshop with a handful of motors might combine both functions into a single panel — but as soon as you have many motors or need clean fault isolation, separating PCC and MCC is the right engineering call.</p>
+
+    <div class="divider"></div>
+
+    <h2 id="choose">How to Decide What You Need</h2>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h4>Count your motor loads</h4>
+          <p>If your scope is dominated by motors that need individual start/stop, protection, and control — you need an MCC. Many motor feeders = MCC, no question.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h4>Check where the panel sits</h4>
+          <p>If it is the first board after the transformer feeding several downstream panels, it is a PCC. If it is fed by another panel and drives motors, it is an MCC.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h4>Match the fault level</h4>
+          <p>A PCC near the transformer sees higher fault current and needs higher Icw/Icu busbars and breakers. Under-rating the PCC is a safety and compliance failure.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h4>Plan for maintenance & growth</h4>
+          <p>If you cannot afford to shut the plant to service one motor, specify a draw-out (withdrawable) MCC. If you expect to add motors, leave spare modules.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-card">
+      <div class="label">📌 Aventra Panel Design Note</div>
+      <p>For most MSME and mid-size industrial clients in Jharkhand, Bihar and Odisha, we build PCCs around Siemens ACBs/MCCBs and MCCs around Siemens 3RV2 MPCBs + 3RT2 contactors, with full FAT before dispatch and SAT support on site. As-built drawings and test certificates are part of the standard handover — essential for tender and discom compliance.</p>
+    </div>
+
+    <h2 id="mistakes">Common Mistakes When Specifying</h2>
+    <div class="mistake-list">
+      <div class="mistake-card">
+        <span class="icon">✗</span>
+        <div>
+          <h4>Asking for an "MCC" when you mean main distribution</h4>
+          <p>Loosely calling every floor-mounted panel an MCC leads to wrong quotes. If it distributes power to feeders, say PCC.</p>
+        </div>
+      </div>
+      <div class="mistake-card">
+        <span class="icon">✗</span>
+        <div>
+          <h4>Ignoring fault level on the PCC</h4>
+          <p>A PCC bus rated below the available short-circuit current is dangerous. Always provide the transformer rating and impedance.</p>
+        </div>
+      </div>
+      <div class="mistake-card">
+        <span class="icon">✗</span>
+        <div>
+          <h4>No spare feeders / modules</h4>
+          <p>Plants grow. A panel with zero spare capacity forces a full replacement instead of adding a module. Budget 15–20% spare.</p>
+        </div>
+      </div>
+      <div class="mistake-card">
+        <span class="icon">✗</span>
+        <div>
+          <h4>Choosing fixed type to save cost on critical lines</h4>
+          <p>For continuous-process motors, the savings on a fixed MCC are wiped out by the first unplanned shutdown to service one feeder.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA BLOCK -->
+    <div class="cta-block">
+      <h3>Not sure whether you need a PCC, an MCC, or both?</h3>
+      <p>Send us your load list or single-line diagram. As an authorized Siemens channel partner, Aventra Systems will size the right panel configuration for your plant — across Jharkhand, Bihar & Odisha.</p>
+      <a href="https://aventrasystems.odoo.com/book/book-your-30-min-consultation-with-aventra-systems" class="cta-btn">Book a Free Consultation</a>
+      <a href="https://wa.me/917970798555?text=Hi%20Aventra%2C%20I%20need%20help%20choosing%20between%20PCC%20and%20MCC%20panels" class="cta-btn-ghost">WhatsApp Us</a>
+    </div>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-card">
+      <div class="sidebar-head">📋 Table of Contents</div>
+      <div class="sidebar-body">
+        <ul class="toc-list">
+          <li><a href="#pcc">What is a PCC?</a></li>
+          <li><a href="#mcc">What is an MCC?</a></li>
+          <li><a href="#comparison">PCC vs MCC: Side-by-Side</a></li>
+          <li><a href="#together">How They Work Together</a></li>
+          <li><a href="#choose">How to Decide</a></li>
+          <li><a href="#mistakes">Common Mistakes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-head">⚡ Quick Reference</div>
+      <div class="sidebar-body">
+        <div class="quick-facts">
+          <div class="qf"><span class="k">PCC role</span><span class="v">Distribute power</span></div>
+          <div class="qf"><span class="k">MCC role</span><span class="v">Control motors</span></div>
+          <div class="qf"><span class="k">PCC devices</span><span class="v">ACB / MCCB</span></div>
+          <div class="qf"><span class="k">MCC devices</span><span class="v">MPCB + contactor</span></div>
+          <div class="qf"><span class="k">Standard</span><span class="v">IS 8623 / IEC 61439</span></div>
+          <div class="qf"><span class="k">Spare capacity</span><span class="v">15–20%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-head">🏷️ Related Topics</div>
+      <div class="sidebar-body">
+        <div class="tag-cloud">
+          <a href="mpcb-selection-blog.html" class="tag">MPCB Selection</a>
+          <a href="mcb_mccb_guide.html" class="tag">MCB vs MCCB</a>
+          <a href="apfc-power-factor-blog.html" class="tag">APFC Panels</a>
+          <a href="#" class="tag">Draw-out MCC</a>
+          <a href="#" class="tag">IS 8623</a>
+          <a href="#" class="tag">FAT / SAT</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card" style="border-color: rgba(17, 133, 208, 0.3);">
+      <div class="sidebar-head">🏭 About Aventra Systems</div>
+      <div class="sidebar-body">
+        <p style="font-size:13px; color: var(--ink-700); margin-bottom:14px;">Authorized Siemens channel partner. Custom PCC / MCC / AMF / APFC panel manufacturing. Odoo ERP consulting for MSMEs. Based in Ranchi, serving Jharkhand, Bihar & Odisha.</p>
+        <a href="../index.html" style="display:block; text-align:center; background: var(--primary-600); color:white; font-weight:700; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; padding:10px; border-radius:4px; text-decoration:none;">Visit aventrasystems.in</a>
+      </div>
+    </div>
+
+  </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 <span>Aventra Systems</span> · Ranchi, Jharkhand · Authorized Siemens Channel Partner · All technical data indicative — verify against datasheets, load study, and applicable standards before application.
+</footer>
+
+<script>
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  }
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
