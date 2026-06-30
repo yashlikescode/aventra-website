@@ -87,6 +87,11 @@ const resourceData = {
         url: "/blogs/msme_erp_adoption.html",
         meta: "6 min read",
       },
+      {
+        title: "Road & Pavement Design Consulting",
+        url: "/blogs/road-consulting.html",
+        meta: "6 min read",
+      },
     ],
   },
   downloads: {
