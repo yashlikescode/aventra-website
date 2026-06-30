@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Road &amp; Pavement Design Consulting | Aventra Systems</title>
+<meta name="description" content="Expert road and pavement design consulting for industrial roads, factory pavements, logistics yards and commercial pavements. IRC-based design, failure analysis, material mix optimisation and value engineering.">
+<link rel="stylesheet" href="../css/tailwind.min.css" defer>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<!-- Vercel Web Analytics -->
+<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<!-- Vercel Speed Insights -->
+<script>window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+<style>
+  :root {
+    --primary-700: #0B64A0;
+    --primary-600: #0E74B8;
+    --primary-500: #1185D0;
+    --primary-100: #E6F2FB;
+    --secondary-700: #5A48A6;
+    --secondary-600: #6B57C0;
+    --secondary-100: #F0EDFB;
+    --ink-900: #1B2633;
+    --ink-700: #334154;
+    --ink-500: #5B6B80;
+    --ink-200: #D6DEE8;
+    --ink-050: #F5F7FA;
+    --success: #2E7D32;
+    --warning: #E69B00;
+    --error: #D32F2F;
+    --info: #0288D1;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--ink-050);
+    color: var(--ink-700);
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ── BLOG LAYOUT ── */
+  .layout {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 56px 40px;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 48px;
+    align-items: start;
+    background: white;
+  }
+
+  .article h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--ink-900);
+    margin: 48px 0 16px;
+    padding-left: 16px;
+    border-left: 4px solid var(--primary-600);
+    line-height: 1.2;
+  }
+  .article h2:first-child { margin-top: 0; }
+  .article h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-700);
+    margin: 30px 0 12px;
+    line-height: 1.3;
+  }
+  .article h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink-900);
+    margin-bottom: 6px;
+  }
+  .article p {
+    color: var(--ink-700);
+    margin-bottom: 16px;
+    font-size: 15.5px;
+    line-height: 1.8;
+  }
+  .article strong { color: var(--ink-900); font-weight: 600; }
+  .article ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+  .article ul li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+    color: var(--ink-700);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .article ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--primary-600);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .intro-card {
+    background: linear-gradient(135deg, var(--primary-100) 0%, var(--ink-050) 100%);
+    border: 1px solid #C5DFF4;
+    border-left: 4px solid var(--primary-600);
+    border-radius: 12px;
+    padding: 24px 26px;
+    margin: 0 0 30px;
+  }
+  .intro-card p { margin: 0; font-size: 16px; }
+
+  .info-card {
+    background: var(--primary-100);
+    border: 1px solid #C5DFF4;
+    border-left: 4px solid var(--primary-600);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 28px 0;
+  }
+  .info-card .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary-700);
+    margin-bottom: 10px;
+  }
+  .info-card p { margin: 0; font-size: 14.5px; color: var(--ink-700); }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 28px 0;
+  }
+  .stat-card {
+    background: white;
+    border: 2px solid var(--ink-200);
+    border-radius: 12px;
+    padding: 20px 18px;
+    box-shadow: 0 4px 12px rgba(17, 133, 208, 0.06);
+  }
+  .stat-card .value {
+    display: block;
+    font-size: 22px;
+    line-height: 1.15;
+    font-weight: 700;
+    color: var(--primary-700);
+    margin-bottom: 6px;
+  }
+  .stat-card .label {
+    display: block;
+    color: var(--ink-500);
+    font-size: 12.5px;
+    line-height: 1.45;
+  }
+
+  .service-grid,
+  .why-grid,
+  .distress-grid,
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin: 24px 0 8px;
+  }
+  .service-card,
+  .why-card,
+  .distress-card,
+  .step-card {
+    background: white;
+    border: 2px solid var(--ink-200);
+    border-radius: 12px;
+    padding: 20px 22px;
+    box-shadow: 0 4px 12px rgba(17, 133, 208, 0.06);
+    transition: all 0.2s ease;
+  }
+  .service-card:hover,
+  .why-card:hover,
+  .distress-card:hover,
+  .step-card:hover {
+    border-color: var(--primary-500);
+    box-shadow: 0 6px 20px rgba(17, 133, 208, 0.12);
+    transform: translateY(-2px);
+  }
+  .service-card h4,
+  .why-card h4,
+  .distress-card h4,
+  .step-card h4 { margin-bottom: 8px; }
+  .service-card p,
+  .why-card p,
+  .distress-card p,
+  .step-card p { margin: 0; font-size: 14px; line-height: 1.6; }
+
+  .expertise-list { display: flex; flex-direction: column; gap: 16px; margin: 28px 0; }
+  .expertise-card {
+    background: white;
+    border: 2px solid var(--ink-200);
+    border-radius: 12px;
+    padding: 22px 24px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    box-shadow: 0 4px 12px rgba(17, 133, 208, 0.06);
+    transition: all 0.2s ease;
+  }
+  .expertise-card:hover {
+    border-color: var(--primary-500);
+    box-shadow: 0 6px 20px rgba(17, 133, 208, 0.12);
+    transform: translateY(-2px);
+  }
+  .expertise-num {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-500);
+    line-height: 1;
+    min-width: 42px;
+    margin-top: 2px;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+  }
+  .expertise-body p { font-size: 14.5px; margin: 0 0 12px; line-height: 1.65; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .tag {
+    background: var(--ink-050);
+    border: 1px solid var(--ink-200);
+    color: var(--ink-700);
+    font-size: 11px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .tag.code {
+    background: var(--primary-100);
+    border-color: #C5DFF4;
+    color: var(--primary-700);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+  }
+
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--ink-200), transparent);
+    margin: 40px 0;
+  }
+
+  .cta-block {
+    background: linear-gradient(135deg, #1185D0 0%, #6B57C0 100%);
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin: 48px 0 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-block h3 {
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 12px;
+  }
+  .cta-block p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.92);
+    margin: 0 0 24px;
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: white;
+    color: var(--primary-700) !important;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 12px 32px;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.28); }
+  .cta-btn-ghost {
+    display: inline-block;
+    border: 2px solid rgba(255,255,255,0.7);
+    color: white !important;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px 28px;
+    border-radius: 999px;
+    margin-left: 12px;
+    transition: all 0.2s ease;
+  }
+  .cta-btn-ghost:hover { background: rgba(255,255,255,0.15); border-color: white; }
+
+  /* ── SIDEBAR ── */
+  .sidebar { display: flex; flex-direction: column; gap: 20px; }
+  .sidebar-card {
+    background: white;
+    border: 2px solid var(--ink-200);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(17, 133, 208, 0.06);
+  }
+  .sidebar-head {
+    background: var(--primary-600);
+    padding: 12px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: white;
+  }
+  .sidebar-body { padding: 18px; }
+  .toc-list { list-style: none; }
+  .toc-list li {
+    padding: 7px 0;
+    border-bottom: 1px solid var(--ink-200);
+    font-size: 13px;
+  }
+  .toc-list li:last-child { border-bottom: none; }
+  .toc-list a {
+    color: var(--ink-700);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+  }
+  .toc-list a:hover { color: var(--primary-600); }
+  .toc-list a::before { content: '›'; color: var(--primary-600); font-size: 18px; line-height: 1; font-weight: 700; }
+  .quick-facts { display: flex; flex-direction: column; gap: 10px; }
+  .qf { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .qf .k { font-size: 12px; color: var(--ink-500); }
+  .qf .v { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--primary-700); font-weight: 600; text-align: right; }
+  .tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink-900);
+    border-top: 1px solid var(--ink-200);
+    padding: 24px 40px;
+    text-align: center;
+    font-size: 13px;
+    color: #8fa3bf;
+  }
+  footer span { color: #7dd3fc; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; padding: 32px 20px; }
+    .sidebar { display: none; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .layout { padding: 24px 16px; }
+    .article h2 { font-size: 22px; }
+    .service-grid, .why-grid, .distress-grid, .steps-grid { grid-template-columns: 1fr; }
+    .expertise-card { flex-direction: column; gap: 10px; }
+    .cta-block { padding: 32px 20px; }
+    .cta-btn-ghost { margin-left: 0; margin-top: 12px; display: block; }
+  }
+
+  @media (max-width: 480px) {
+    .article h2 { font-size: 20px; }
+    .stat-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="header shadow-lg fixed w-full z-50" style="padding:0;margin:0">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <img src="../assets/AV LOGO.png" alt="Aventra Systems logo"
+            class="h-12 w-12 object-contain inline-block mr-2">
+          <a href="/" style="color: white;" class="text-xl font-bold">AVENTRA SYSTEMS</a>
+        </div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-baseline space-x-4">
+            <a href="../index.html" class="hover:underline px-3 py-2 cursor-pointer" style="color:white;">
+              Go to Aventra Home
+            </a>
+          </div>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button"
+            class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+              <path fill="#ffffff"
+                d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white">
+        <a href="../index.html"
+          class="text-gray-700 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+          Go to Aventra Home
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+      alt="" class="absolute inset-0 -z-10 size-full object-cover object-right md:object-center" />
+    <div aria-hidden="true"
+      class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl">
+      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"></div>
+    </div>
+    <div aria-hidden="true"
+      class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0">
+      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+        class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"></div>
+    </div>
+    <div class="mx-auto max-w-7xl px-6 lg:px-8" style="position: relative;">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-5xl font-semibold tracking-tight text-white sm:text-7xl">Road &amp; Pavement Design Consulting</h2>
+        <p class="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">Specialist consulting for industrial roads, factory pavements, logistics yards and commercial pavements — designed for real axle loads, turning traffic, monsoon drainage and lifecycle cost.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN LAYOUT -->
+  <div class="layout">
+
+    <!-- ARTICLE -->
+    <article class="article">
+      <div class="intro-card">
+        <p><strong>Aventra Systems Road &amp; Pavement Consulting</strong> helps project owners, factories, EPC contractors and infrastructure developers make better pavement decisions before concrete, bitumen and budget are committed on site. The offering is led by V. Kumar, M.Tech in Transportation Engineering from NIT Patna.</p>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-card"><span class="value">5 areas</span><span class="label">Design, failure, material, optimisation &amp; review</span></div>
+        <div class="stat-card"><span class="value">Flexible + rigid</span><span class="label">Bituminous, concrete &amp; paver-block systems</span></div>
+        <div class="stat-card"><span class="value">Lifecycle cost</span><span class="label">Designed for total cost, not just first cost</span></div>
+        <div class="stat-card"><span class="value">Heavy-duty</span><span class="label">Trailers, forklifts, loaders &amp; high axle loads</span></div>
+      </div>
+
+      <h2 id="serve">Who We Serve</h2>
+      <p>If your surfaces handle continuous heavy movement, slow-turning vehicles, and material handling equipment, ordinary road design under-performs. We work with the people who own that problem.</p>
+      <div class="service-grid">
+        <div class="service-card"><h4>Industrial plants &amp; factories</h4><p>Internal roads, plant circulation, movement surfaces and operating areas exposed to heavy use.</p></div>
+        <div class="service-card"><h4>Steel, cement, power &amp; mining</h4><p>High-tonnage zones, plant roads and heavy-duty pavement areas that see repeated industrial traffic.</p></div>
+        <div class="service-card"><h4>Warehousing &amp; logistics parks</h4><p>Container movement, trailer parking, loading-dock yards and high-turning-radius pavement zones.</p></div>
+        <div class="service-card"><h4>Infrastructure developers</h4><p>Townships, campuses, access roads and internal road networks that need cost-checked design.</p></div>
+        <div class="service-card"><h4>EPC &amp; civil contractors</h4><p>Independent review, design validation and value engineering before execution begins.</p></div>
+        <div class="service-card"><h4>Project owners &amp; consultants</h4><p>Second opinions on drawings, layer thickness, materials, failure causes and repair strategy.</p></div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2 id="expertise">Consulting Expertise</h2>
+      <p>From a fresh industrial road to a yard that keeps failing, we bring pavement design, material technology and failure diagnostics to one table — grounded in IRC and MoRTH practice.</p>
+      <div class="expertise-list">
+        <div class="expertise-card">
+          <div class="expertise-num">01</div>
+          <div class="expertise-body">
+            <h4>Industrial road &amp; heavy-duty pavement design</h4>
+            <p>Industrial surfaces face turning loads, braking, forklifts, trailers and slow-moving high-axle traffic — conditions that quietly destroy a standard road. We design for the real load spectrum, with strength, drainage and surface performance treated as one system.</p>
+            <div class="tag-row"><span class="tag">Factory internal roads</span><span class="tag">Loading bays</span><span class="tag">Container zones</span><span class="tag code">Axle-load survey</span><span class="tag code">MSA &amp; VDF</span></div>
+          </div>
+        </div>
+        <div class="expertise-card">
+          <div class="expertise-num">02</div>
+          <div class="expertise-body">
+            <h4>Commercial road &amp; pavement design</h4>
+            <p>End-to-end design and design review for campus roads, access roads and parking — choosing the right pavement type for each stretch and proving it on cost and performance before a rupee is spent on the ground.</p>
+            <div class="tag-row"><span class="tag">Flexible design</span><span class="tag">Rigid design</span><span class="tag">Paver-block yards</span><span class="tag code">IRC:37</span><span class="tag code">IRC:58</span><span class="tag code">IRC:SP:63</span></div>
+          </div>
+        </div>
+        <div class="expertise-card">
+          <div class="expertise-num">03</div>
+          <div class="expertise-body">
+            <h4>Pavement failure analysis</h4>
+            <p>Most failures are symptoms, not causes. We trace cracking, rutting, settlement and potholes back to their real driver — weak subgrade, thin layers, bad drainage or poor construction — and recommend the most economical fix, repair or redesign.</p>
+            <div class="tag-row"><span class="tag">Root-cause diagnosis</span><span class="tag">Distress mapping</span><span class="tag">Drainage review</span><span class="tag">Repair vs redesign</span></div>
+          </div>
+        </div>
+        <div class="expertise-card">
+          <div class="expertise-num">04</div>
+          <div class="expertise-body">
+            <h4>Material mix design &amp; technology consulting</h4>
+            <p>The right mix decides both cost and life. We match material selection to traffic, climate, subgrade strength, local availability and budget — reviewing bituminous and concrete mixes, base/sub-base improvement and proven alternative materials.</p>
+            <div class="tag-row"><span class="tag">Bituminous mix review</span><span class="tag">Concrete materials</span><span class="tag">Subgrade improvement</span><span class="tag code">MoRTH specs</span><span class="tag code">IS / IRC compliance</span></div>
+          </div>
+        </div>
+        <div class="expertise-card">
+          <div class="expertise-num">05</div>
+          <div class="expertise-body">
+            <h4>Design optimisation &amp; value engineering</h4>
+            <p>Under-designed roads fail early; over-designed roads waste capital. We find the technical-commercial balance — trimming unnecessary thickness, optimising material use and comparing flexible vs rigid vs block options on whole-life cost.</p>
+            <div class="tag-row"><span class="tag">Thickness optimisation</span><span class="tag">Contractor design review</span><span class="tag">Lifecycle-cost analysis</span><span class="tag code">Value engineering</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="label">In One Line</div>
+        <p><strong>Our consulting is structural, not cosmetic.</strong> We design and review roads based on load, layer, material, subgrade and water — not just surface appearance.</p>
+      </div>
+
+      <h2 id="failure">Pavement Failure Analysis</h2>
+      <p>Every failure mode tells a story about loads, layers and water. We investigate the surface, the structure and the history — not just patch what is visible.</p>
+      <div class="distress-grid">
+        <div class="distress-card"><h4>Cracking</h4><p>Fatigue, block and reflective cracking caused by repeated loading, layer weakness or movement below the surface.</p></div>
+        <div class="distress-card"><h4>Rutting</h4><p>Channelised wheel-path deformation due to heavy traffic, weak layers or material instability.</p></div>
+        <div class="distress-card"><h4>Settlement</h4><p>Subgrade or fill consolidation that causes differential movement, uneven pavement and long-term service issues.</p></div>
+        <div class="distress-card"><h4>Potholes</h4><p>Localised structural breakdown, often accelerated by water entry and repeated wheel loading.</p></div>
+        <div class="distress-card"><h4>Surface deformation</h4><p>Shoving, corrugation and heaving caused by braking, turning, material issues or poor confinement.</p></div>
+        <div class="distress-card"><h4>Water damage</h4><p>Stripping, pumping, poor drainage and moisture-induced layer deterioration during monsoon cycles.</p></div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h2 id="approach">Consulting Approach</h2>
+      <p>A clear path from site reality to a buildable, cost-checked recommendation you can hand to your contractor.</p>
+      <div class="steps-grid">
+        <div class="step-card"><h4>Step 01 — Understand the site</h4><p>Site condition, traffic movement and operational requirement — how the surface is actually used.</p></div>
+        <div class="step-card"><h4>Step 02 — Review what exists</h4><p>Existing design, drawings, material details and failure history are studied in full.</p></div>
+        <div class="step-card"><h4>Step 03 — Analyse the structure</h4><p>Pavement layers, material suitability and load conditions assessed against IRC practice.</p></div>
+        <div class="step-card"><h4>Step 04 — Find the gaps</h4><p>Technical weaknesses and cost-saving opportunities are identified and quantified.</p></div>
+        <div class="step-card"><h4>Step 05 — Recommend the fix</h4><p>The right design, material mix or improvement method — sized for load, climate and budget.</p></div>
+        <div class="step-card"><h4>Step 06 — Support execution</h4><p>Technical documentation and on-call guidance through construction and commissioning.</p></div>
+      </div>
+
+      <h2 id="why">Why Choose Aventra</h2>
+      <p>Our objective is the surface holding up under real working conditions, year after year, at a cost you can defend.</p>
+      <div class="why-grid">
+        <div class="why-card"><h4>Technically sound design</h4><p>Code-based, load-driven pavement design — not rules of thumb.</p></div>
+        <div class="why-card"><h4>Cost-effective material selection</h4><p>Right material for the load, climate and local availability.</p></div>
+        <div class="why-card"><h4>Fewer premature failures</h4><p>Problems caught on paper before they cost you on site.</p></div>
+        <div class="why-card"><h4>Longer pavement life</h4><p>Designed and detailed for durability under heavy movement.</p></div>
+        <div class="why-card"><h4>Independent design review</h4><p>Validate a contractor's proposal before you commit to it.</p></div>
+        <div class="why-card"><h4>Lower lifecycle cost</h4><p>Decisions weighed on total cost of ownership, not first cost.</p></div>
+      </div>
+
+      <div class="cta-block" id="contact">
+        <h3>Planning a road, yard or pavement upgrade?</h3>
+        <p>Send us your drawings, traffic details or failure photos. Aventra Systems can review the design, identify risks and recommend a practical pavement solution for your site.</p>
+        <a href="mailto:info@aventrasystems.in?subject=Road%20%26%20Pavement%20Consulting%20Enquiry" class="cta-btn">Request a Technical Review</a>
+        <a href="../index.html" class="cta-btn-ghost">Visit Aventra Home</a>
+      </div>
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="sidebar-head">📋 Table of Contents</div>
+        <div class="sidebar-body">
+          <ul class="toc-list">
+            <li><a href="#serve">Who We Serve</a></li>
+            <li><a href="#expertise">Consulting Expertise</a></li>
+            <li><a href="#failure">Failure Analysis</a></li>
+            <li><a href="#approach">Approach</a></li>
+            <li><a href="#why">Why Choose Aventra</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-head">🛣️ Quick Reference</div>
+        <div class="sidebar-body">
+          <div class="quick-facts">
+            <div class="qf"><span class="k">Consulting lead</span><span class="v">V. Kumar</span></div>
+            <div class="qf"><span class="k">Qualification</span><span class="v">M.Tech, NIT Patna</span></div>
+            <div class="qf"><span class="k">Design basis</span><span class="v">IRC / MoRTH</span></div>
+            <div class="qf"><span class="k">Pavement types</span><span class="v">Flexible / Rigid</span></div>
+            <div class="qf"><span class="k">Focus</span><span class="v">Industrial roads</span></div>
+            <div class="qf"><span class="k">Region</span><span class="v">JH · BR · OD</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-head">🏷️ Related Services</div>
+        <div class="sidebar-body">
+          <div class="tag-cloud">
+            <span class="tag">Industrial Roads</span>
+            <span class="tag">Yard Pavements</span>
+            <span class="tag">Failure Diagnosis</span>
+            <span class="tag">IRC:37</span>
+            <span class="tag">IRC:58</span>
+            <span class="tag">Value Engineering</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card" style="border-color: rgba(17, 133, 208, 0.3);">
+        <div class="sidebar-head">🏭 About Aventra Systems</div>
+        <div class="sidebar-body">
+          <p style="font-size:13px; color: var(--ink-700); margin-bottom:14px;">Engineering, automation and consulting for industries across eastern India. Based in Ranchi, serving Jharkhand, Bihar and Odisha.</p>
+          <a href="../index.html" style="display:block; text-align:center; background: var(--primary-600); color:white; font-weight:700; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; padding:10px; border-radius:4px; text-decoration:none;">Visit aventrasystems.in</a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 <span>Aventra Systems</span> · Ranchi, Jharkhand · Road &amp; Pavement Design Consulting · All technical data indicative — verify against site investigation, load study, applicable IRC/MoRTH standards and project specifications before application.
+  </footer>
+
+<script>
+  const btn = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+  if (btn && menu) {
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  }
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
